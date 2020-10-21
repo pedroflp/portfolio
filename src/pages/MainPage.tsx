@@ -147,7 +147,7 @@ function MainPage() {
               </div>
 
               <div className='projects-card-buttons'>
-                <a className='github projects-card-button' href='https://github.com/pedroflp/EJECT2019' target='_blank' data-tip='Ver código'>
+                <a className='github projects-card-button' href='https://github.com/pedroflp/EJECT2020' target='_blank' data-tip='Ver código'>
                   <AiFillGithub size={30}  />
                 </a>
 
