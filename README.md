@@ -3,4 +3,4 @@
 
 <p align='center'>A portfolio app builded with ReactJs & TypeScript</p>
 
-🚀 [Click here to acess the website](pedroflp.me)
+🚀 [Click here to acess the website](http://pedroflp.me)
