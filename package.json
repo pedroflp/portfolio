@@ -12,7 +12,11 @@
     "@types/react-dom": "^16.9.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
+    "react-icons": "^3.11.0",
+    "react-responsive-carousel": "^3.2.10",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
+    "react-tooltip": "^4.2.10",
     "typescript": "~3.7.2"
   },
   "scripts": {
@@ -35,5 +39,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react-icons": "^3.0.0",
+    "@types/react-router-dom": "^5.1.6"
   }
 }

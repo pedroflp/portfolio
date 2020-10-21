@@ -1,0 +1,276 @@
+
+.header-mainpage-container { 
+  background: url('../../images/background-codelines.svg') no-repeat;
+  background-size: 800px;
+  background-position: 30% -7%;
+
+  padding: 50px 0px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+}
+
+.header-mainpage-information-card {
+  background: var(--dark-theme-card-background);
+  max-width: 700px;
+
+  text-align: center;
+  margin: 80px auto 0px;
+  padding: 90px 50px 30px;
+
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+.header-mainpage-information-card h1 {
+  font-weight: 900;
+  font-size: 28px;
+}
+
+.header-mainpage-information-card p {
+  font: 24px;
+}
+
+.header-mainpage-information-card img {
+  width: 150px;
+  margin-top: -160px;
+  margin-bottom: 20px;
+}
+
+.seemore-button {
+  border: 2px solid #04D361;
+  border-radius: 50px;
+  color: #04D361;
+
+  font-size: 16px;
+  font-weight: 900;
+  text-decoration: none;
+
+  margin-top: 20px;
+  padding: 15px 40px;
+
+  transition: background-color 0.3s ease;
+}
+
+.seemore-button:hover {
+  background: #04D361;
+  color: rgb(32, 31, 36);
+}
+
+
+.habilities-container {
+  width: 70%;
+
+  padding: 70px 0px;
+  margin: auto;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.habilities-title {
+  width: 500px;
+}
+
+.habilities-title h1 {
+  font-size: 60px;
+  line-height: 60px;
+  margin-bottom: 30px;
+
+  width: 300px;
+}
+
+.habilities-title p {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.habilities-cards {
+  width: 600px;
+  padding: 0px 50px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+}
+
+.habilities-card {
+  padding: 30px;
+  margin: 10px;
+
+  border-radius: 3px;
+  background: rgb(32, 31, 36);
+}
+
+.html:hover > .html-icon {
+  color: rgb(243, 121, 6);
+}
+
+.css:hover > .css-icon {
+  color: rgb(6, 128, 243);
+}
+
+.js:hover > .js-icon {
+  color: rgb(243, 227, 6);
+}
+
+.reactjs:hover > .reactjs-icon {
+  color: rgb(6, 215, 243);
+}
+
+.nodejs:hover > .nodejs-icon {
+  color: rgb(0, 255, 34);
+}
+
+.django:hover > .django-icon {
+  color: rgb(5, 102, 18);
+}
+
+
+.projects-container {
+  width: 90%;
+  margin: auto;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.projects-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.projects-title h1 {
+  font-size: 40px;
+}
+
+.projects-title p {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+#projects-cards {
+  padding: 20px;
+  margin: auto;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.projects-card {
+  background: var(--dark-theme-card-background);
+  
+  max-width: 350px;
+  max-height: 370px;
+
+  padding: 40px 50px;
+  margin: 20px;
+
+  border-radius: 7px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+
+  text-align: center;
+}
+
+.projects-card-title h1 {
+  font-size: 30px;
+}
+
+.projects-card-icon {
+  margin-top: -100px;
+  margin-bottom: 10px;
+  margin-left: -200px;
+}
+
+.projects-card-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin-top: 10px;
+}
+
+.projects-card-button {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  
+  text-decoration: none;
+  border-radius: 5px;
+
+  background: #04D361;
+  color: rgb(32, 31, 36);
+
+  padding: 10px;
+  margin: 10px;
+
+  width: 100px;
+  max-width: 100px;
+}
+
+.projects-card-languages {
+  margin: 10px;
+  color: #3f3f3f;
+}
+
+.projects-card-languages-icons {
+  margin: 5px auto;
+  width: 70%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.projects-button-showmore {
+  margin-top: 50px;
+
+  font-size: 15px;
+  font-weight: 900;
+
+  background: #04D361;
+  padding: 15px 50px;
+
+  border: none;
+  border-radius: 50px;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.projects-button-showmore:hover {
+  transform: scale(1.02);
+}

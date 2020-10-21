@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@100;400;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Overpass';
+  font-weight: 400;
+}
+
+:root {
+  --dark-theme-background: #121214;
+  --dark-theme-card-background: linear-gradient(140deg, rgb(32, 31, 36) 50%,  rgb(21, 21, 24)); 
+}
+
+::selection { 
+  background: rgba(15, 231, 98, 0.2);
+}
+
+body {
+  color: white;
+  background: var(--dark-theme-background);
+  
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, span, a {
+  margin: 0;
+}
+
+h1 strong, p strong { 
+  font-weight: 900;
+  color: #04D361;
+}
