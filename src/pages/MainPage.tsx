@@ -4,12 +4,13 @@ import ReactTooltip from 'react-tooltip';
 import { BsEject } from 'react-icons/bs';
 import { RiTShirt2Line } from 'react-icons/ri';
 import { FiMusic } from 'react-icons/fi';
-import { FaNodeJs } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaNodeJs, FaTwitter } from 'react-icons/fa';
 import { AiFillHtml5, AiFillGithub, AiFillChrome } from 'react-icons/ai';
 import { DiCss3 } from 'react-icons/di';
 import { SiJavascript, SiReact, SiDjango } from 'react-icons/si';
 
 import Navbar from '../components/navbar/Navbar';
+import Footer from '../components/footer/Footer';
 import ProfileImg from '../images/profile-image.png';
 
 import './styles/mainpage.css';
@@ -25,12 +26,12 @@ function MainPage() {
     <section id='header-mainpage'>
       <div className='header-mainpage-container'>
         <div className='header-mainpage-information-card'>
-          <img src={ProfileImg} />
+          <img src={ProfileImg} className='header-information-card-image' />
           
           <h1>Olá me chamo <strong>Pedro Felipe</strong> e você está em meu Portfólio!</h1>
           <p>Atualmente sou desenvolvedor web e utilizo tecnologias como <strong>HTML5, CSS3, JavaScript</strong> para desenvolver aplicações front-end.</p>
 
-          <a href="" className='seemore-button'>Ver mais sobre!</a>
+          <Link to="/sobre" className='seemore-button'>Ver mais sobre!</Link>
         </div>
       </div>
     </section>
@@ -72,7 +73,8 @@ function MainPage() {
           <p>Abaixo estão alguns <strong>projetos</strong> que desenvolvi para <strong>estudos</strong> e para <strong>clientes</strong>.</p>
         </div>
 
-          <div id='projects-cards'>         
+          <div id='projects-cards'> 
+
             <div className='tieri-beats projects-card'>
               <div className='projects-card-title'>
                 <FiMusic className='projects-card-icon' size={80} />
@@ -81,7 +83,7 @@ function MainPage() {
               </div>
 
               <div className='projects-card-languages'>
-                <span>Linguagens utilizadas:</span>
+                <span>Tecnologias utilizadas:</span>
                 <div className='projects-card-languages-icons'>
                   <AiFillHtml5 className='html-icon' size={22} />
                   <DiCss3 className='css-icon' size={22} />
@@ -109,7 +111,7 @@ function MainPage() {
               </div>
 
               <div className='projects-card-languages'>
-                <span>Linguagens utilizadas:</span>
+                <span>Tecnologias utilizadas:</span>
                 <div className='projects-card-languages-icons'>
                   <AiFillHtml5 className='html-icon' size={22} />
                   <DiCss3 className='css-icon' size={22} />
@@ -131,12 +133,12 @@ function MainPage() {
             <div className='eject projects-card'>
               <div className='projects-card-title'>
                 <BsEject className='projects-card-icon' size={80} />
-                <h1><strong>EJECT</strong> PS2019</h1>
-                <p>Site criado para o processo seletivo de 2019 da empresa <strong data-tip='Empresa Junior da Escola de Ciência e Tecnologia'>EJECT</strong>.</p>
+                <h1><strong>EJECT</strong> PS2020</h1>
+                <p>Site criado para o processo seletivo de 2020 da empresa <strong data-tip='Empresa Junior da Escola de Ciência e Tecnologia'>EJECT</strong>.</p>
               </div>
 
               <div className='projects-card-languages'>
-                <span>Linguagens utilizadas:</span>
+                <span>Tecnologias utilizadas:</span>
                 <div className='projects-card-languages-icons'>
                   <AiFillHtml5 className='html-icon' size={22} />
                   <DiCss3 className='css-icon' size={22} />
@@ -149,16 +151,45 @@ function MainPage() {
                   <AiFillGithub size={30}  />
                 </a>
 
-                <a className='browser projects-card-button' href='https://pedroflp.github.io/EJECT2019' target='_blank' data-tip='Ver site'>
+                <a className='browser projects-card-button' href='https://pedroflp.github.io/EJECT2020' target='_blank' data-tip='Ver site'>
                   <AiFillChrome size={30} />
                 </a>
               </div>
             </div>
+          
           </div>
 
-        {/* <button className='projects-button-showmore'>Mostrar mais...</button> */}
+        <a className='projects-button-github' href='https://github.com/pedroflp' target='_blank'><AiFillGithub size={30} /> Visite meu GitHub para ver mais projetos</a>
       </div>
     </section>
+
+    <section id='contact'>
+      <div className='contact-container'>
+        <div className='contact-cards'>
+
+          <a className='github-icon contact-card' href=''>
+            <AiFillGithub className='githu icon' size={60} />
+          </a>
+          <a className='linkedin-icon contact-card' href=''>
+            <FaLinkedin className='linkedi icon' size={60} />
+          </a>
+          <a className='instagram-icon contact-card' href=''>
+            <FaInstagram className='instagra icon' size={60} />
+          </a>
+          <a className='twitter-icon contact-card' href=''>
+            <FaTwitter className='twitte icon' size={60} />
+          </a>
+
+        </div>
+
+        <div className='contact-title'>
+          <h1>Venha me <strong>Contatar</strong>.</h1>
+          <p>Oi mais uma vez. Vou deixar algumas <strong>redes sociais</strong> para me contatar quando necessário!!</p>
+        </div>
+      </div>
+    </section>
+
+    <Footer />
 
     </>
   )

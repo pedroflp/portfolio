@@ -4,7 +4,32 @@
   box-sizing: border-box;
   font-family: 'Overpass';
   font-weight: 400;
+
+  scroll-behavior: smooth;
+
+  -webkit-user-drag: none;
 }
+
+body {
+  color: white;
+  background: var(--dark-theme-background);
+  
+  margin: 0;
+  padding: 0;
+
+  min-width: 1100px;
+  
+}
+
+h1, h2, span, a {
+  margin: 0;
+}
+
+h1 strong, p strong { 
+  font-weight: 900;
+  color: #04D361;
+}
+
 
 :root {
   --dark-theme-background: #121214;
@@ -15,19 +40,20 @@
   background: rgba(15, 231, 98, 0.2);
 }
 
-body {
-  color: white;
-  background: var(--dark-theme-background);
-  
-  margin: 0;
-  padding: 0;
+::-webkit-scrollbar {
+  width: 4px;
+  height: 1px;
 }
 
-h1, h2, span, a {
-  margin: 0;
+::-webkit-scrollbar-track {
+  background: #f1f1;
 }
 
-h1 strong, p strong { 
-  font-weight: 900;
-  color: #04D361;
+::-webkit-scrollbar-thumb {
+  background: #04D361;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #009c46;
 }

@@ -1,0 +1,105 @@
+#sobre {
+  padding: 50px;
+}
+
+.sobre-container {
+  width: 1000px;
+  margin: auto;
+
+  background: url('../../images/background-codelines.svg') no-repeat;
+  background-size: cover;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sobre-container h1 {
+  font-size: 50px;
+  line-height: 50px;
+  max-width: 400px;
+  margin-left: 30px;
+}
+
+.sobre-card {
+  width: 800px;
+  padding: 50px 50px;
+  border-radius: 5px;
+
+  margin: 120px auto 50px 130px;
+
+  background: var(--dark-theme-card-background);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.sobre-card-image {
+  position: relative;
+  top: 0;
+
+  margin-top: -120px;
+  margin-left: -100px;
+  margin-bottom: 30px;
+
+  border-radius: 10px;
+}
+
+.image-1 {
+  width: 300px;
+  transform: rotate(-3deg);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+.sobre-card-title {
+  position: relative;
+  float: right;
+  top: 0;
+  right: 0;
+
+  margin-top: -200px;
+
+  text-align: end;
+}
+
+.sobre-card-information {
+  clear: both;
+}
+
+.sobre-card-information p {
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+
+.sobre-card-information p a {
+  text-decoration: underline;
+}
+
+.backhome-button {
+  padding: 10px 30px;
+  background: #04D361;
+  color: rgb(0, 0, 0);
+
+  width: 210px;
+  margin-top: 30px;
+
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 900;
+  outline: none;
+
+  border: none;
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+
+  transition: 0.2s;
+}
+
+.backhome-button:hover {
+  opacity: 0.7;
+}

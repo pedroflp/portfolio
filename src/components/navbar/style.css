@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
 #navbar {
   padding: 20px 0px;
   width: 100%;
@@ -14,6 +16,23 @@
   justify-content: space-between;
   align-items: center;
   align-content: center;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  align-content: center;
+
+  cursor: default;
+}
+
+.navbar-logo img {
+  width: 60px;
+}
+
+.navbar-logo h1 {
+  font-family: 'Staatliches';
+  
 }
 
 .navbar-links {
@@ -35,6 +54,8 @@
   text-decoration: none;
 
   transition: 0.3s;
+
+  cursor: pointer;
 }
 
 .navbar-links li a:hover {

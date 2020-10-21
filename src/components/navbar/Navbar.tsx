@@ -1,32 +1,41 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
+import PLogo from '../../images/p-logo.png';
 import './style.css';
+
+const scrollHabilities = () =>{
+  window.scrollTo({top: 0, behavior: 'smooth'});
+};
 
 export default function() {
   return (
     <div id='navbar'>
       <div className='navbar-container'>
-        <h1>Pedro</h1>
+        <div className='navbar-logo'>
+          <img src={PLogo} />
+          <h1>Pedro Felipe</h1>
+        </div>
         <ul className='navbar-links'>
           <li>
-            <a href="">Home</a>
+            <Link to="/">Home</Link>
           </li>
 
           <li>
-            <a href="">Sobre</a>
+            <Link to='/sobre'>Sobre</Link>
           </li>
 
           <li>
-            <a href="">Habilidade</a>
+            <a href="/#habilities">Habilidade</a>
           </li>
 
           <li>
-            <a href="">Projetos</a>
+            <a href="/#projects">Projetos</a>
           </li>
 
 
           <li>
-            <a href="">Contato</a>
+            <a href="/#contact">Contato</a>
           </li>
         </ul>
       </div>

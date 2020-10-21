@@ -4,7 +4,7 @@
   background-size: 800px;
   background-position: 30% -7%;
 
-  padding: 50px 0px;
+  padding: 100px 0px;
 
   display: flex;
   justify-content: center;
@@ -42,9 +42,14 @@
 }
 
 .header-mainpage-information-card img {
-  width: 150px;
-  margin-top: -160px;
-  margin-bottom: 20px;
+  width: 200px;
+  margin-top: -190px;
+  margin-bottom: 30px;
+
+  border: 10px solid rgb(98, 53, 246, 0.4);
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px rgba(98, 53, 246, 0.4);
+
 }
 
 .seemore-button {
@@ -71,7 +76,7 @@
 .habilities-container {
   width: 70%;
 
-  padding: 70px 0px;
+  padding: 70px 30px;
   margin: auto;
 
   display: flex;
@@ -191,7 +196,7 @@
   max-height: 370px;
 
   padding: 40px 50px;
-  margin: 20px;
+  margin: 30px 15px;
 
   border-radius: 7px;
 
@@ -255,22 +260,111 @@
   justify-content: space-between;
 }
 
-.projects-button-showmore {
-  margin-top: 50px;
+.projects-button-github {
+  background: #04D361;
+  color: rgb(21, 20, 24);
 
+  width: 430px;
+  padding: 15px 50px;
+  margin-top: 30px;
+
+  text-decoration: none;
   font-size: 15px;
   font-weight: 900;
-
-  background: #04D361;
-  padding: 15px 50px;
 
   border: none;
   border-radius: 50px;
 
   cursor: pointer;
   transition: 0.3s;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
 }
 
-.projects-button-showmore:hover {
+.projects-button-github:hover {
   transform: scale(1.02);
+}
+
+
+.contact-container {
+  width: 900px;
+
+  padding: 100px 30px;
+  margin: auto;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.contact-cards {
+  width: 400px;
+  padding-right: 50px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+
+.contact-card {
+  padding: 30px;
+  margin: 10px;
+
+  border-radius: 3px;
+  background: rgb(32, 31, 36);
+
+  transition: background-color 0.4s;
+}
+
+.contact-title {
+  width: 500px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  align-content: flex-end;
+  text-align: end;
+}
+
+.contact-title h1 {
+  font-size: 60px;
+  line-height: 60px;
+  margin-bottom: 30px;
+
+  width: 300px;
+}
+
+.contact-title p {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.icon {
+  color: #fff;
+}
+
+.github-icon:hover {
+  background: rgb(0, 0, 0);
+}
+
+.linkedin-icon:hover {
+  background: rgb(25, 69, 151);
+}
+
+.instagram-icon:hover {
+  background: rgb(243, 6, 125);
+}
+
+.twitter-icon:hover {
+  background: rgb(6, 196, 243);
 }
