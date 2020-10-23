@@ -5,7 +5,7 @@ import { BsEject } from 'react-icons/bs';
 import { RiTShirt2Line } from 'react-icons/ri';
 import { FiMusic } from 'react-icons/fi';
 import { FaInstagram, FaLinkedin, FaNodeJs, FaTwitter } from 'react-icons/fa';
-import { AiFillHtml5, AiFillGithub } from 'react-icons/ai';
+import { AiFillHtml5, AiFillGithub, AiFillChrome } from 'react-icons/ai';
 import { DiCss3 } from 'react-icons/di';
 import { SiJavascript, SiReact, SiDjango } from 'react-icons/si';
 
