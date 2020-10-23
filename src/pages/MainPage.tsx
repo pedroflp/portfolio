@@ -139,6 +139,7 @@ function MainPage() {
           <p>Oi mais uma vez. Vou deixar algumas <strong>redes sociais</strong> para me contatar quando necessário!!</p>
         </div>
       </div>
+      
     </section>
 
     <Footer />
