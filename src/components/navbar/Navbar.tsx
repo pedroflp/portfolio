@@ -14,7 +14,7 @@ export default function() {
       <div className='navbar-container'>
         <div className='navbar-logo'>
           <img src={PLogo} />
-          <h1>Pedro Felipe</h1>
+          <h1>edro Felipe</h1>
         </div>
         <ul className='navbar-links'>
           <li>

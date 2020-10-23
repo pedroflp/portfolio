@@ -22,7 +22,8 @@
 }
 
 .footer-left-info img {
-  width: 60px;
+  width: 20px;
+  margin-right: 10px;
 }
 
 .footer-left-info p {
@@ -30,7 +31,7 @@
 }
 .footer-left-info p strong {
   margin-left: 40px;
-  font-weight: 100;
+  font-weight: 900;
 }
 
 .footer-container a {

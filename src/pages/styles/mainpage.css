@@ -43,6 +43,13 @@
 
 .header-mainpage-information-card img {
   width: 200px;
+  min-width: 200px;
+  max-width: 200px;
+  height: 200px;
+  min-height: 200px;
+  max-height: 200px;
+  
+
   margin-top: -190px;
   margin-bottom: 30px;
 
@@ -57,12 +64,16 @@
   border-radius: 50px;
   color: #04D361;
 
+  min-width: 220px;
+  max-width: 220px;
+  width: 220px;
+
   font-size: 16px;
   font-weight: 900;
   text-decoration: none;
 
   margin-top: 20px;
-  padding: 15px 40px;
+  padding: 15px 30px;
 
   transition: background-color 0.3s ease;
 }
@@ -187,77 +198,6 @@
   justify-content: center;
   align-content: center;
   align-items: center;
-}
-
-.projects-card {
-  background: var(--dark-theme-card-background);
-  
-  max-width: 350px;
-  max-height: 370px;
-
-  padding: 40px 50px;
-  margin: 30px 15px;
-
-  border-radius: 7px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-
-  text-align: center;
-}
-
-.projects-card-title h1 {
-  font-size: 30px;
-}
-
-.projects-card-icon {
-  margin-top: -100px;
-  margin-bottom: 10px;
-  margin-left: -200px;
-}
-
-.projects-card-buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-
-  margin-top: 10px;
-}
-
-.projects-card-button {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-  
-  text-decoration: none;
-  border-radius: 5px;
-
-  background: #04D361;
-  color: rgb(32, 31, 36);
-
-  padding: 10px;
-  margin: 10px;
-
-  width: 100px;
-  max-width: 100px;
-}
-
-.projects-card-languages {
-  margin: 10px;
-  color: #3f3f3f;
-}
-
-.projects-card-languages-icons {
-  margin: 5px auto;
-  width: 70%;
-
-  display: flex;
-  justify-content: space-between;
 }
 
 .projects-button-github {

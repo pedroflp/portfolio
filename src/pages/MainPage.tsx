@@ -5,7 +5,7 @@ import { BsEject } from 'react-icons/bs';
 import { RiTShirt2Line } from 'react-icons/ri';
 import { FiMusic } from 'react-icons/fi';
 import { FaInstagram, FaLinkedin, FaNodeJs, FaTwitter } from 'react-icons/fa';
-import { AiFillHtml5, AiFillGithub, AiFillChrome } from 'react-icons/ai';
+import { AiFillHtml5, AiFillGithub } from 'react-icons/ai';
 import { DiCss3 } from 'react-icons/di';
 import { SiJavascript, SiReact, SiDjango } from 'react-icons/si';
 
@@ -15,6 +15,7 @@ import ProfileImg from '../images/profile-image.png';
 
 import './styles/mainpage.css';
 import { Link } from 'react-router-dom';
+import ProjectCard from '../components/projects/ProjectCard';
 
 function MainPage() {
   return(
@@ -76,85 +77,38 @@ function MainPage() {
           <div id='projects-cards'> 
 
             <div className='tieri-beats projects-card'>
-              <div className='projects-card-title'>
-                <FiMusic className='projects-card-icon' size={80} />
-                <h1><strong>Tieri Beats</strong></h1>
-                <p>Site criado para um cliente <strong>produtor musical</strong> com finalidade de mostrar e vender seu produto.</p>
-              </div>
-
-              <div className='projects-card-languages'>
-                <span>Tecnologias utilizadas:</span>
-                <div className='projects-card-languages-icons'>
-                  <AiFillHtml5 className='html-icon' size={22} />
-                  <DiCss3 className='css-icon' size={22} />
-                  <SiJavascript className='js-icon' size={22} />
-                  <SiDjango className='django-icon' size={22} />
-                </div>
-              </div>
-
-              <div className='projects-card-buttons'>
-                <a className='github projects-card-button' href='https://github.com/pedroflp/tieri-beats' target='_blank' data-tip='Ver código'>
-                  <AiFillGithub size={30}  />
-                </a>
-
-                <a className='browser projects-card-button' href='https://tieribeats.herokuapp.com/beats' target='_blank' data-tip='Ver site'>
-                  <AiFillChrome size={30} />
-                </a>
-              </div>
+              <FiMusic className='projects-card-icon' size={70} />
+              <ProjectCard
+                title='Tieri Beats'
+                description='Site criado para um cliente produtor musical com finalidade de mostrar e vender seu produto.'
+                tecnologias='html / css / js / django'
+                ghLink='https://github.com/pedroflp/tieri-beats'
+                brLink='https://tieribeats.herokuapp.com'
+              />
             </div>
 
             <div className='pormazion projects-card'>
+              <RiTShirt2Line className='projects-card-icon' size={70}/>
               <div className='projects-card-title'>
-                <RiTShirt2Line className='projects-card-icon' size={80}/>
-                <h1><strong>PORMAZIONStore</strong></h1>
-                <p>Site criado para um cliente <strong>designer gráfico</strong> com finalidade de mostrar e vender seu produto.</p>
-              </div>
-
-              <div className='projects-card-languages'>
-                <span>Tecnologias utilizadas:</span>
-                <div className='projects-card-languages-icons'>
-                  <AiFillHtml5 className='html-icon' size={22} />
-                  <DiCss3 className='css-icon' size={22} />
-                  <SiJavascript className='js-icon' size={22} />
-                </div>
-              </div>
-
-              <div className='projects-card-buttons'>
-                <a className='github projects-card-button' href='https://github.com/pedroflp/pormazion-store' target='_blank' data-tip='Ver código'>
-                  <AiFillGithub size={30}  />
-                </a>
-
-                <a className='browser projects-card-button' href='https://pormazion.github.io/store' target='_blank' data-tip='Ver site'>
-                  <AiFillChrome size={30} />
-                </a>
+                <ProjectCard
+                title='PORMAZIONStore'
+                description='Site criado para um cliente designer gráfico com finalidade de mostrar e vender seu produto.'
+                tecnologias='html / css / js '
+                ghLink='https://github.com/pedroflp/pormazion-store'
+                brLink='https://pormazion.github.io/pormazion-store'
+              />
               </div>
             </div>
           
             <div className='eject projects-card'>
-              <div className='projects-card-title'>
-                <BsEject className='projects-card-icon' size={80} />
-                <h1><strong>EJECT</strong> PS2020</h1>
-                <p>Site criado para o processo seletivo de 2020 da empresa <strong data-tip='Empresa Junior da Escola de Ciência e Tecnologia'>EJECT</strong>.</p>
-              </div>
-
-              <div className='projects-card-languages'>
-                <span>Tecnologias utilizadas:</span>
-                <div className='projects-card-languages-icons'>
-                  <AiFillHtml5 className='html-icon' size={22} />
-                  <DiCss3 className='css-icon' size={22} />
-                  <SiJavascript className='js-icon' size={22} />
-                </div>
-              </div>
-
-              <div className='projects-card-buttons'>
-                <a className='github projects-card-button' href='https://github.com/pedroflp/EJECT2019' target='_blank' data-tip='Ver código'>
-                  <AiFillGithub size={30}  />
-                </a>
-
-                <a className='browser projects-card-button' href='https://pedroflp.github.io/EJECT2020' target='_blank' data-tip='Ver site'>
-                  <AiFillChrome size={30} />
-                </a>
-              </div>
+              <BsEject className='projects-card-icon' size={70} />
+              <ProjectCard
+              title='EJECT PS2020'
+              description='Site criado para o desafio do processo seletivo de 2020 da empresa EJECT.'
+              tecnologias='html / css / js '
+              ghLink='https://github.com/pedroflp/EJECT2020'
+              brLink='https://pedroflp.github.io/EJECT2020'
+            />
             </div>
           
           </div>
@@ -167,17 +121,17 @@ function MainPage() {
       <div className='contact-container'>
         <div className='contact-cards'>
 
-          <a className='github-icon contact-card' href=''>
-            <AiFillGithub className='githu icon' size={60} />
+          <a className='github-icon contact-card' href='https://github.com/pedroflp' target='_blank'>
+            <AiFillGithub className='github icon' size={60} />
           </a>
-          <a className='linkedin-icon contact-card' href=''>
-            <FaLinkedin className='linkedi icon' size={60} />
+          <a className='linkedin-icon contact-card' href='https://www.linkedin.com/in/pedroflp' target='_blank'>
+            <FaLinkedin className='linkedin icon' size={60} />
           </a>
-          <a className='instagram-icon contact-card' href=''>
-            <FaInstagram className='instagra icon' size={60} />
+          <a className='instagram-icon contact-card' href='https://instagram.com/_pedroflp' target='_blank'>
+            <FaInstagram className='instagram icon' size={60} />
           </a>
-          <a className='twitter-icon contact-card' href=''>
-            <FaTwitter className='twitte icon' size={60} />
+          <a className='twitter-icon contact-card' href='https://twitter.com/pedroflp' target='_blank'>
+            <FaTwitter className='twitter icon' size={60} />
           </a>
 
         </div>
