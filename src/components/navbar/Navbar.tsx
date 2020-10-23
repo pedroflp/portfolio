@@ -4,16 +4,12 @@ import { Link } from 'react-router-dom';
 import PLogo from '../../images/p-logo.png';
 import './style.css';
 
-const scrollHabilities = () =>{
-  window.scrollTo({top: 0, behavior: 'smooth'});
-};
-
 export default function() {
   return (
     <div id='navbar'>
       <div className='navbar-container'>
         <div className='navbar-logo'>
-          <img src={PLogo} />
+          <img src={PLogo} alt='Logo'/>
           <h1>edro Felipe</h1>
         </div>
         <ul className='navbar-links'>

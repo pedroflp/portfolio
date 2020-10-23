@@ -1,8 +1,6 @@
 import React from 'react';
 
-import { AiFillHtml5, AiFillGithub, AiFillChrome } from 'react-icons/ai';
-import { DiCss3 } from 'react-icons/di';
-import { SiJavascript, SiDjango } from 'react-icons/si';
+import { AiFillGithub, AiFillChrome } from 'react-icons/ai';
 
 import './style.css';
 

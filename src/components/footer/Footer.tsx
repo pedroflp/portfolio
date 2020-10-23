@@ -14,7 +14,7 @@ function Footer() {
     <footer id='footer'>
       <div className='footer-container'>
         <div className='footer-left-info'>
-          <img src={PLogo} />
+          <img src={PLogo} alt='Logo' />
           <p> Desenvolvido por <br/> Pedro Felipe © 2020 </p>
           <p><strong>Boost yourself!</strong></p>
         </div>

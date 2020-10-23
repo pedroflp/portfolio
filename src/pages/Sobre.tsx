@@ -25,7 +25,7 @@ function Sobre() {
         <div className='sobre-card'>
 
           <div className='sobre-card-images'>
-            <img src={ProfileImg} className='sobre-card-image image-1' />
+            <img src={ProfileImg} className='sobre-card-image image-1' alt='Profile Image' />
           </div>
           <div className='sobre-card-title'>
             <h1>Um pouco sobre<strong> quem sou eu</strong></h1>
