@@ -89,7 +89,6 @@ function MainPage() {
 
             <div className='pormazion projects-card'>
               <RiTShirt2Line className='projects-card-icon' size={70}/>
-              <div className='projects-card-title'>
                 <ProjectCard
                 title='PORMAZIONStore'
                 description='Site criado para um cliente designer gráfico com finalidade de mostrar e vender seu produto.'
@@ -97,7 +96,6 @@ function MainPage() {
                 ghLink='https://github.com/pedroflp/pormazion-store'
                 brLink='https://pormazion.github.io/pormazion-store'
               />
-              </div>
             </div>
           
             <div className='eject projects-card'>
