@@ -38,9 +38,9 @@ function Sobre() {
             <HiOutlineCode className='sobre-card-personicon' size={60} color='#04D361' />
             <SobreInfo text='Comecei a programar com 17 anos criando coisas em python, até que resolvi criar algo que precisava de uma interface bonita, foi quando aprendi HTML, CSS e peguei o gancho para aprender JavaScript, jQuery e Electron, pois o que eu queria era criar um aplicativo desktop (para computadores). Foquei bastante em desenvolvimento front-end (parte visual das aplicações) ao longo do tempo, mas hoje consigo construir uma aplicaçao completa utilizando tecnologias como as listadas na seção Habilidades. Atualmente estou estudando React Native para construção de aplicações mobile.' />          
 
-            <FiHeadphones className='sobre-card-personicon' size={60} color='#04D361' />
+<!--             <FiHeadphones className='sobre-card-personicon' size={60} color='#04D361' />
             <SobreInfo text='Gosto bastante de jogos eletrônicos, sendo um dos meus favoritos o Sea Of Thieves. Tenho um leque grande de gosto musical mas meus estilos favoritos são eletrônica e rap.' />  
-
+ -->
           </div>
 
           <Link to='/' className='backhome-button'>
