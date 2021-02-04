@@ -33,7 +33,7 @@ function MainPage() {
           <img src={ProfileImg} className='header-information-card-image' />
           
           <h1>Olá me chamo <strong>Pedro Felipe</strong> e você está em meu Portfólio!</h1>
-          <p>Atualmente sou desenvolvedor web e utilizo tecnologias como <strong>HTML5, CSS3, JavaScript</strong> para desenvolver aplicações front-end.</p>
+          <p>Atualmente sou desenvolvedor web e utilizo tecnologias como <strong>HTML5, CSS3, JavaScript e ReactJs</strong> para desenvolver aplicações front-end.</p>
 
           <Link to="/sobre" className='seemore-button'>Ver mais sobre!</Link>
         </div>
