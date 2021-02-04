@@ -1,18 +1,21 @@
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
 
-import { BsEject } from 'react-icons/bs';
-import { RiTShirt2Line } from 'react-icons/ri';
+// Icons
+import { RiHospitalLine, RiTShirt2Line } from 'react-icons/ri';
 import { FiMusic } from 'react-icons/fi';
-import { FaInstagram, FaLinkedin, FaNodeJs, FaTwitter } from 'react-icons/fa';
-import { AiFillHtml5, AiFillGithub } from 'react-icons/ai';
+import { FaInstagram, FaLinkedin, FaNodeJs } from 'react-icons/fa';
+import { AiFillHtml5, AiFillGithub, AiOutlineCalculator } from 'react-icons/ai';
 import { DiCss3 } from 'react-icons/di';
-import { SiJavascript, SiReact, SiDjango } from 'react-icons/si';
+import { SiJavascript, SiReact, SiDjango, SiGmail } from 'react-icons/si';
+import { BiStore } from 'react-icons/bi';
 
+// Components
 import Navbar from '../components/navbar/Navbar';
 import Footer from '../components/footer/Footer';
 import ProfileImg from '../images/profile-image.png';
 
+// Other
 import './styles/mainpage.css';
 import { Link } from 'react-router-dom';
 import ProjectCard from '../components/projects/ProjectCard';
@@ -80,32 +83,74 @@ function MainPage() {
               <FiMusic className='projects-card-icon' size={70} />
               <ProjectCard
                 title='Tieri Beats'
-                description='Site criado para um cliente produtor musical com finalidade de mostrar e vender seu produto.'
-                tecnologias='html / css / js / django'
+                description='Site de uma loja criado para um cliente produtor musical com finalidade de mostrar e vender seu produto.'
+                tecnologias={[
+                  'https://img.icons8.com/material-sharp/48/04D361/html-5.png',
+                  'https://img.icons8.com/ios-filled/100/04D361/css3.png',
+                  'https://img.icons8.com/ios-filled/50/04D361/javascript.png',
+                  'https://img.icons8.com/windows/32/04D361/django.png'
+                ]}
                 ghLink='https://github.com/pedroflp/tieri-beats'
                 brLink='https://tieribeats.herokuapp.com'
               />
             </div>
 
             <div className='pormazion projects-card'>
-              <RiTShirt2Line className='projects-card-icon' size={70}/>
+              <BiStore className='projects-card-icon' size={70}/>
                 <ProjectCard
                 title='PORMAZIONStore'
-                description='Site criado para um cliente designer gráfico com finalidade de mostrar e vender seu produto.'
-                tecnologias='html / css / js '
+                description='Site de uma loja criado para um cliente designer gráfico com finalidade de mostrar e vender seu produto.'
+                tecnologias={[
+                  'https://img.icons8.com/material-sharp/48/04D361/html-5.png',
+                  'https://img.icons8.com/ios-filled/100/04D361/css3.png',
+                  'https://img.icons8.com/ios-filled/50/04D361/javascript.png',
+                ]}
                 ghLink='https://github.com/pedroflp/pormazion-store'
-                brLink='https://pormazion.github.io/pormazion-store'
+                brLink='https://pormazion.github.io/store'
               />
             </div>
-          
-            <div className='eject projects-card'>
-              <BsEject className='projects-card-icon' size={70} />
+
+            <div className='medfamilia projects-card'>
+              <RiHospitalLine className='projects-card-icon' size={70} />
               <ProjectCard
-              title='EJECT PS2020'
-              description='Site criado para o desafio do processo seletivo de 2020 da empresa EJECT.'
-              tecnologias='html / css / js '
-              ghLink='https://github.com/pedroflp/EJECT2020'
-              brLink='https://pedroflp.github.io/EJECT2020'
+              title='MedFamília'
+              description='Site de uma clínica criado para o desafio do processo trainee de 2020 da empresa EJECT.'
+              tecnologias={[
+                'https://img.icons8.com/material-sharp/48/04D361/html-5.png',
+                'https://img.icons8.com/ios-filled/100/04D361/css3.png',
+                'https://img.icons8.com/ios-filled/50/04D361/javascript.png',
+                'https://img.icons8.com/windows/32/04D361/django.png',
+              ]}
+              ghLink='https://github.com/pedroflp/trainee-projeto'
+              brLink='https://user-images.githubusercontent.com/40877357/95579073-50b6b000-0a0b-11eb-9ea8-bdeff3b7ec16.PNG'
+            />
+            </div>
+          
+            <div className='ufcalc projects-card'>
+              <AiOutlineCalculator className='projects-card-icon' size={70} />
+              <ProjectCard
+              title='UFRN Calc'
+              description='Site criado para alunos da UFRN calcularem suas médias semestrais.'
+              tecnologias={[
+                'https://img.icons8.com/material-sharp/48/04D361/html-5.png',
+                'https://img.icons8.com/ios-filled/100/04D361/css3.png',
+                'https://img.icons8.com/ios-filled/50/04D361/javascript.png',
+              ]}
+              ghLink='https://github.com/pedroflp/ufrn-calc'
+              brLink='https://pedroflp.github.io/ufrn-calc/'
+            />
+            </div>
+
+            <div className='shirtstore projects-card'>
+              <RiTShirt2Line className='projects-card-icon' size={70} />
+              <ProjectCard
+              title='T-Shirt Store'
+              description='Site criado para estudar criação de Loja usando Next.js com integração da API do Stripe.'
+              tecnologias={[
+                'https://img.icons8.com/ios-filled/50/04D361/react-native.png',
+              ]}
+              ghLink='https://github.com/pedroflp/nextjs-stripe-store'
+              brLink='https://next-stripe-store.vercel.app/'
             />
             </div>
           
@@ -128,8 +173,8 @@ function MainPage() {
           <a className='instagram-icon contact-card' href='https://instagram.com/_pedroflp' target='_blank'>
             <FaInstagram className='instagram icon' size={60} />
           </a>
-          <a className='twitter-icon contact-card' href='https://twitter.com/pedroflp' target='_blank'>
-            <FaTwitter className='twitter icon' size={60} />
+          <a className='email-icon contact-card' href='mailto: pedrofelipe0940@gmail.com' target='_blank'>
+            <SiGmail className='email icon' size={60} />
           </a>
 
         </div>

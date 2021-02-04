@@ -85,7 +85,7 @@
 
 
 .habilities-container {
-  width: 70%;
+  width: 80%;
 
   padding: 70px 30px;
   margin: auto;
@@ -231,21 +231,21 @@
 
 
 .contact-container {
-  width: 900px;
+  width: 80%;
 
   padding: 100px 30px;
   margin: auto;
 
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   align-content: center;
 }
 
 .contact-cards {
-  width: 400px;
-  padding-right: 50px;
+  max-width: 320px;
+  padding-right: 40px;
 
   display: flex;
   flex-direction: row;
@@ -266,7 +266,7 @@
 }
 
 .contact-title {
-  width: 500px;
+  width: 400px;
 
   display: flex;
   flex-direction: column;
@@ -278,7 +278,7 @@
 
 .contact-title h1 {
   font-size: 60px;
-  line-height: 60px;
+  line-height: 55px;
   margin-bottom: 30px;
 
   width: 300px;
@@ -302,9 +302,9 @@
 }
 
 .instagram-icon:hover {
-  background: rgb(243, 6, 125);
+  background: rgb(255, 37, 146);
 }
 
-.twitter-icon:hover {
-  background: rgb(6, 196, 243);
+.email-icon:hover {
+  background: rgb(255, 58, 58);
 }

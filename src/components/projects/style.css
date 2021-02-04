@@ -2,6 +2,9 @@
   background: var(--dark-theme-card-background);
   
   max-width: 350px;
+  
+  height: 400px;
+  max-height: 400px;
 
   padding: 40px;
   margin: 30px 15px;
@@ -27,6 +30,11 @@
   font-size: 30px;
 }
 
+.projects-card-title p {
+  font-weight: 400;
+}
+
+
 .projects-card-icon {
   margin-top: -70px;
   margin-bottom: 10px;
@@ -36,24 +44,34 @@
 .projects-card-languages h3{
   margin: 10px;
   font-size: 14px;
-  color: #ffffff;
+  color: #5c5c5c;
 }
 
-.projects-card-languages span {
+/* .projects-card-languages span {
   background: #04D361;
   padding: 5px 20px 4px;
   font-size: 16px;
   border-radius: 30px;
   color: black;
+} */
+
+.projects-card-languages-image {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+
+  margin: auto;
 }
 
-/* .projects-card-languages-icons {
-  margin: 5px auto;
-  width: 70%;
+.projects-card-languages-image img {
+  width: 35px !important;
+  height: 35px !important;
 
-  display: flex;
-  justify-content: space-between;
-} */
+  margin: 0px 5px;
+}
+
 
 .projects-card-buttons {
   display: flex;
@@ -61,11 +79,18 @@
   justify-content: space-between;
   align-items: center;
 
+  width: 100%;
+
   margin-top: 30px;
 }
 
 .projects-card-buttons span {
   font-size: 14px;
+  font-weight: 100;
+
+  max-width: 50px;
+  margin-right: 30px;
+
   color: #525252;
   text-align: left;
 }
@@ -88,4 +113,11 @@
 
   width: 100px;
   max-width: 100px;
+
+  transition: 0.4s ease;
+}
+
+.projects-card-button:hover {
+  width: 300px;
+  background: rgb(255, 255, 255);
 }

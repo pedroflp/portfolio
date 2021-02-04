@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@100;400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
 
 * {
   box-sizing: border-box;
-  font-family: 'Overpass';
-  font-weight: 400;
+  font-family: 'Roboto';
+  font-weight: 300;
 
   scroll-behavior: smooth;
 
@@ -23,6 +23,7 @@ body {
 
 h1, h2, span, a {
   margin: 0;
+  font-weight: 400;
 }
 
 h1 strong, p strong { 
