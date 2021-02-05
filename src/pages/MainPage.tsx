@@ -122,7 +122,7 @@ function MainPage() {
                 'https://img.icons8.com/windows/32/04D361/django.png',
               ]}
               ghLink='https://github.com/pedroflp/trainee-projeto'
-              brLink='https://user-images.githubusercontent.com/40877357/95579073-50b6b000-0a0b-11eb-9ea8-bdeff3b7ec16.PNG'
+              brLink=''
             />
             </div>
           

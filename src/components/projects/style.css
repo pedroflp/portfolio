@@ -9,7 +9,7 @@
   padding: 30px;
   margin: 30px 10px;
 
-  border: 1px solid transparent;
+  border-bottom: 5px solid transparent;
   border-radius: 7px;
 
   display: flex;
@@ -24,7 +24,7 @@
 }
 
 .projects-card:hover {
-  border: 1px solid #04D361;
+  border-bottom: 5px solid #04D361;
   transform: scale(1.02);
 }
 
@@ -116,12 +116,12 @@
   padding: 10px;
   margin: 5px;
 
-  width: 100px;
+  width: 100%;
 
   transition: 0.3s ease-in-out;
 }
 
 .projects-card-button:hover {
-  width: 300px;
+  width: 300%;
   background: rgb(255, 255, 255);
 }
