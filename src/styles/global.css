@@ -58,3 +58,10 @@ h1 strong, p strong {
 ::-webkit-scrollbar-thumb:hover {
   background: #009c46;
 }
+
+.line-divisor {
+  height: 2px;
+  width: 120%;
+  margin: 20px 0px;
+  background: #29292E;
+}

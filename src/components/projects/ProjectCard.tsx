@@ -1,12 +1,11 @@
 import React from 'react';
 
-import { AiFillGithub, AiFillChrome } from 'react-icons/ai';
+import { AiFillGithub } from 'react-icons/ai';
+import { RiChromeFill } from 'react-icons/ri';
 
 import './style.css';
 
 import Tecnologias from './components/Tecnologias';
-import { relative } from 'path';
-import { RiChromeFill } from 'react-icons/ri';
 
 interface ProjectCard {
   title: string;
@@ -31,6 +30,8 @@ function ProjectCard(props: ProjectCard) {
         <Tecnologias tecnologiasImageUrl={props.tecnologias}/>
       </div>
     </div>
+
+    <div className='line-divisor'></div>
 
     <div className='projects-card-buttons'>
       <span>Visualizar projeto:</span>
