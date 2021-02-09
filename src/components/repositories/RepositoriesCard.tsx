@@ -33,7 +33,7 @@ function RespositoriesCard() {
           <div className='line-divisor'></div>
 
           <div className='repository-buttons-container'>
-            <a href={repo.html_url}><AiFillGithub size={30} target='_blank' /> <span>Ver repositório no Github</span></a>
+            <a href={repo.html_url} target='_blank' ><AiFillGithub size={30}/> <span>Ver repositório no Github</span></a>
           </div>
         </div>
       ))}
