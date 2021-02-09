@@ -1,10 +1,7 @@
-import React, { useState } from 'react';
-import { FiArrowRight } from 'react-icons/fi';
+import React from 'react';
 
 import PLogo from '../../images/p-logo.png';
 import './style.css';
-
-
 
 
 function Footer() {
