@@ -25,7 +25,7 @@
 
 .projects-card:hover {
   border-bottom: 5px solid #04D361;
-  transform: scale(1.02);
+  transform: translateY(-5px);
 }
 
 .projects-card-title {

@@ -25,7 +25,7 @@
 
 .repository-card:hover {
   border-bottom: 5px solid #04D361;
-  transform: scale(1.02);
+  transform: translateY(-5px)
 }
 
 .repository-card h1{
@@ -85,50 +85,58 @@
   text-decoration: none;
   background: white;
 
-  transition: 0.5s ease;
+  transition: 0.4s ease;
 }
 
 .repository-buttons-container a > span {
   display: none;
 }
 
-.repository-buttons-container a:hover {
+.repository-card:hover .repository-buttons-container a {
   width: 100%;
   justify-content: space-between;
 }
 
-.repository-buttons-container a:hover > span {
+.repository-card:hover .repository-buttons-container a > span {
   display: flex;
   width: 180px;
   min-width: 180px;
   margin-left: 10px;
 }
+
+.repository-buttons-container a:hover {
+  color: #ffffff;
+  background: #000000;
+}
+
+
 /* Wireframe */
 
 .wireframe-description {
-  background: linear-gradient(50deg, #27262b, #29282d);
   width: 100%;
   margin: 20px;
   height: 70px;
   border-radius: 5px;
-  animation: wireframe-background 1.5s infinite ease;
+
+  /* WIREFRAME ANIMATION */
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: wireframe-animation;
+  animation-timing-function: linear;
+  background: #292a2b;
+  background: linear-gradient(to right, #27262c 8%, #313036 38%, #27262c 54%);
+  background-size: 1000px 640px;
+  
+  position: relative;
+  
 }
 
-@keyframes wireframe-background {
-  10% {
-    background: linear-gradient(50deg, #302f35, #27262b, #29282d)
+@keyframes wireframe-animation{
+  0%{
+      background-position: -468px 0
   }
-  15% {
-    background: linear-gradient(50deg, #27262b, #302f35, #29282d, #29282d)
+  100%{
+      background-position: 468px 0
   }
-  20% {
-    background: linear-gradient(50deg, #27262b, #29282d, #302f35,#29282d)
-  }
-  25% {
-    background: linear-gradient(50deg, #27262b, #27262b, #302f35)
-  }
-  30% {
-    background: linear-gradient(50deg, #27262b, #29282d)
-  }
-
 }

@@ -9,8 +9,8 @@ function Routes () {
   return (
     <BrowserRouter>
       <Route path='/' component={MainPage} exact />
-      <Route path='/sobre' component={Sobre} exact />
-      <Route path='/repositorios' component={Repositories} exact />
+      <Route path='/about' component={Sobre} exact />
+      <Route path='/repositories' component={Repositories} exact />
     </BrowserRouter>
   )
 }

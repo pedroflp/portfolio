@@ -19,7 +19,8 @@ import ProjectCard from '../components/projects/ProjectCard';
 // Other
 import './styles/mainpage.css';
 import ProfileImg from '../images/profile-image.png';
-import BackTop from '../components/back-to-top/BackTop';
+import BackTop from '../components/backtop/BackTop';
+
 
 function MainPage() {
   return(
@@ -36,7 +37,7 @@ function MainPage() {
           <h1>Olá me chamo <strong>Pedro Felipe</strong> e você está em meu Portfólio!</h1>
           <p>Atualmente sou desenvolvedor web e utilizo tecnologias como <strong>HTML5, CSS3, JavaScript e ReactJs</strong> para desenvolver aplicações front-end.</p>
 
-          <Link to="/sobre" className='seemore-button'>Ver mais sobre!</Link>
+          <Link to="/about" className='seemore-button'>Ver mais sobre!</Link>
         </div>
       </div>
     </section>
@@ -158,7 +159,7 @@ function MainPage() {
           </div>
 
           <div className='projects-button-container'>
-            <Link className='projects-button-repositories' to='/repositorios' >Ver todos os projetos</Link>
+            <Link to='/repositories' className='projects-button-repositories' >Ver todos os projetos</Link>
           </div>
       </div>
     </section>

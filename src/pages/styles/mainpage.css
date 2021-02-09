@@ -228,7 +228,8 @@
 }
 
 .projects-button-repositories:hover {
-  width: 350px;
+  width: 320px;
+  letter-spacing: 1px;
 }
 
 
