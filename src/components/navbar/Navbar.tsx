@@ -18,7 +18,7 @@ export default function() {
           </li>
 
           <li>
-            <Link to='/sobre'>Sobre</Link>
+            <Link to='/about'>Sobre</Link>
           </li>
 
           <li>
