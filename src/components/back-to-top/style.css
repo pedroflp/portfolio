@@ -1,0 +1,16 @@
+.button-back-top {
+  width: 135px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  color: white;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 100px -30px;
+  outline: none;
+  cursor: pointer;
+  transform: rotate(-90deg);
+}

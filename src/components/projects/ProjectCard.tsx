@@ -35,11 +35,11 @@ function ProjectCard(props: ProjectCard) {
 
     <div className='projects-card-buttons'>
       <span>Visualizar projeto:</span>
-      { props.ghLink && <a className='github projects-card-button' href={props.ghLink} target='_blank' >
+      { props.ghLink && <a className='github projects-card-button' href={props.ghLink} target='_blank' rel='noopener noreferrer'>
         <AiFillGithub size={30} />
       </a> }
 
-      { props.brLink && <a className='browser projects-card-button' href={props.brLink} target='_blank' >
+      { props.brLink && <a className='browser projects-card-button' href={props.brLink} target='_blank' rel='noopener noreferrer'>
         <RiChromeFill size={30} />
       </a> }
     </div>

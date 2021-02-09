@@ -202,16 +202,16 @@
   align-items: center;
 }
 
-.projects-button-github {
+.projects-button-repositories {
+  width: 300px;
   background: #04D361;
   color: rgb(21, 20, 24);
 
-  width: 430px;
   padding: 15px 50px;
-  margin-top: 30px;
+  margin-top: 20px;
 
   text-decoration: none;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 900;
 
   border: none;
@@ -222,13 +222,13 @@
 
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-content: center;
   align-items: center;
 }
 
-.projects-button-github:hover {
-  transform: scale(1.03);
+.projects-button-repositories:hover {
+  width: 350px;
 }
 
 

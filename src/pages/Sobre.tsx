@@ -7,10 +7,11 @@ import Footer from '../components/footer/Footer';
 import ProfileImg from '../images/profile-image.png';
 import './styles/sobre.css';
 
-import { FiUser, FiHeadphones, FiArrowLeft } from 'react-icons/fi';
+import { FiUser, FiArrowLeft } from 'react-icons/fi';
 import { HiOutlineCode } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
 import SobreInfo from '../components/sobre/SobreInfo';
+import BackTop from '../components/back-to-top/BackTop';
 
 function Sobre() {
   return (
@@ -25,7 +26,7 @@ function Sobre() {
         <div className='sobre-card'>
 
           <div className='sobre-card-images'>
-            <img src={ProfileImg} className='sobre-card-image image-1' alt='Profile Image' />
+            <img src={ProfileImg} className='sobre-card-image image-1' alt='Profile' />
           </div>
           <div className='sobre-card-title'>
             <h1>Um pouco sobre<strong> quem sou eu</strong></h1>
@@ -42,13 +43,15 @@ function Sobre() {
 
           <Link to='/' className='backhome-button'>
             <FiArrowLeft size={20} />  
-            Voltar para Home
+            Voltar para o Início
           </Link>
         </div>
       </div>
     </section>
 
     <Footer />
+
+    <BackTop />
 
     </>
   )

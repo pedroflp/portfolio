@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
+import { Link } from 'react-router-dom';
 
 // Icons
 import { RiHospitalLine, RiTShirt2Line } from 'react-icons/ri';
@@ -13,12 +14,12 @@ import { BiStore } from 'react-icons/bi';
 // Components
 import Navbar from '../components/navbar/Navbar';
 import Footer from '../components/footer/Footer';
-import ProfileImg from '../images/profile-image.png';
+import ProjectCard from '../components/projects/ProjectCard';
 
 // Other
 import './styles/mainpage.css';
-import { Link } from 'react-router-dom';
-import ProjectCard from '../components/projects/ProjectCard';
+import ProfileImg from '../images/profile-image.png';
+import BackTop from '../components/back-to-top/BackTop';
 
 function MainPage() {
   return(
@@ -30,7 +31,7 @@ function MainPage() {
     <section id='header-mainpage'>
       <div className='header-mainpage-container'>
         <div className='header-mainpage-information-card'>
-          <img src={ProfileImg} className='header-information-card-image' />
+          <img src={ProfileImg} alt='Profile' className='header-information-card-image' />
           
           <h1>Olá me chamo <strong>Pedro Felipe</strong> e você está em meu Portfólio!</h1>
           <p>Atualmente sou desenvolvedor web e utilizo tecnologias como <strong>HTML5, CSS3, JavaScript e ReactJs</strong> para desenvolver aplicações front-end.</p>
@@ -74,7 +75,7 @@ function MainPage() {
       <div className='projects-container'>
         <div className='projects-title'>
           <h1>Meus <strong>Projetos</strong>.</h1>
-          <p>Abaixo estão alguns <strong>projetos</strong> que desenvolvi para <strong>estudos</strong> e para <strong>clientes</strong>.</p>
+          <p>Abaixo estão meus <strong>projetos favoritos</strong> que desenvolvi para <strong>estudos</strong> e para <strong>clientes</strong>.</p>
         </div>
 
           <div id='projects-cards'> 
@@ -156,7 +157,9 @@ function MainPage() {
           
           </div>
 
-        <a className='projects-button-github' href='https://github.com/pedroflp' target='_blank'><AiFillGithub size={30} /> Visite meu GitHub para ver mais projetos</a>
+          <div className='projects-button-container'>
+            <Link className='projects-button-repositories' to='/repositorios' >Ver todos os projetos</Link>
+          </div>
       </div>
     </section>
 
@@ -164,16 +167,16 @@ function MainPage() {
       <div className='contact-container'>
         <div className='contact-cards'>
 
-          <a className='github-icon contact-card' href='https://github.com/pedroflp' target='_blank'>
+          <a className='github-icon contact-card' href='https://github.com/pedroflp' target='_blank' rel='noopener noreferrer'>
             <AiFillGithub className='github icon' size={60} />
           </a>
-          <a className='linkedin-icon contact-card' href='https://www.linkedin.com/in/pedroflp' target='_blank'>
+          <a className='linkedin-icon contact-card' href='https://www.linkedin.com/in/pedroflp' target='_blank' rel='noopener noreferrer'>
             <FaLinkedin className='linkedin icon' size={60} />
           </a>
-          <a className='instagram-icon contact-card' href='https://instagram.com/_pedroflp' target='_blank'>
+          <a className='instagram-icon contact-card' href='https://instagram.com/_pedroflp' target='_blank' rel='noopener noreferrer'>
             <FaInstagram className='instagram icon' size={60} />
           </a>
-          <a className='email-icon contact-card' href='mailto: pedrofelipe0940@gmail.com' target='_blank'>
+          <a className='email-icon contact-card' href='mailto: pedrofelipe0940@gmail.com' target='_blank' rel='noopener noreferrer'>
             <SiGmail className='email icon' size={60} />
           </a>
 
@@ -188,6 +191,8 @@ function MainPage() {
     </section>
 
     <Footer />
+
+    <BackTop />
 
     </>
   )
