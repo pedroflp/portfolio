@@ -26,7 +26,7 @@ function RespositoriesCard() {
     <>
 
       {repositories?.map(repo => (
-        <div key={repo.name} className='repository-card'>
+        <div key={repo.name} className={`${repo.name} repository-card`}>
           <h1 title={repo.name} >{repo.name}</h1>
           {repo.description ? <p title={repo.description}>{repo.description}</p> : <div className='wireframe-description'></div> }
 
