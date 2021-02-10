@@ -10,7 +10,7 @@ function Footer() {
       <div className='footer-container'>
         <div className='footer-left-info'>
           <img src={PLogo} alt='Logo' />
-          <p> Desenvolvido por <br/> Pedro Felipe © 2020</p>
+          <p> Desenvolvido por <br/> Pedro Felipe © {new Date().getFullYear()}</p>
         </div>
           <p><strong>Boost yourself!</strong></p>
       </div>
