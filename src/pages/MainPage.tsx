@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
 import { Link } from 'react-router-dom';
+import Typewriter from 'typewriter-effect';
 
 // Icons
 import { RiHospitalLine, RiTShirt2Line } from 'react-icons/ri';
@@ -8,7 +9,7 @@ import { FiMusic } from 'react-icons/fi';
 import { FaInstagram, FaLinkedin, FaNodeJs } from 'react-icons/fa';
 import { AiFillHtml5, AiFillGithub, AiOutlineCalculator } from 'react-icons/ai';
 import { DiCss3 } from 'react-icons/di';
-import { SiJavascript, SiReact, SiDjango, SiGmail } from 'react-icons/si';
+import { SiJavascript, SiReact, SiDjango, SiGmail, SiTypescript } from 'react-icons/si';
 import { BiStore } from 'react-icons/bi';
 
 // Components
@@ -34,7 +35,29 @@ function MainPage() {
         <div className='header-mainpage-information-card'>
           <img src={ProfileImg} alt='Profile' className='header-information-card-image' />
           
-          <h1>Olá me chamo <strong>Pedro Felipe</strong> e você está em meu Portfólio!</h1>
+          <h1>Olá me chamo <strong>Pedro Felipe</strong>
+            <Typewriter
+              onInit={(typewriter) => {
+                typewriter.typeString('sou ')
+                typewriter.typeString('Desenvolvedor <strong>Front-End</strong>')
+                .pauseFor(2000)
+                .deleteChars(23)
+                .pauseFor(500)
+                typewriter.typeString('<strong>Designer</strong>')
+                .pauseFor(2000)
+                .deleteAll()
+                typewriter.typeString('e você está em meu <strong>Portfólio</strong>!')
+                .pauseFor(5000)
+                .start()
+              }}
+              options={{
+                delay: 90,
+                autoStart: true,
+                loop: true,
+              }}
+            />
+  
+          </h1>
           <p>Atualmente sou desenvolvedor web e utilizo tecnologias como <strong>HTML5, CSS3, JavaScript e ReactJs</strong> para desenvolver aplicações front-end.</p>
 
           <Link to="/about" className='seemore-button'>Ver mais sobre!</Link>
@@ -62,8 +85,8 @@ function MainPage() {
           <div className='reactjs habilities-card' data-tip='ReactJs'>
             <SiReact className='reactjs-icon' size={50} />
           </div>
-          <div className='nodejs habilities-card' data-tip='NodeJs'>
-            <FaNodeJs className='nodejs-icon' size={50} />
+          <div className='typescript habilities-card' data-tip='Typescript'>
+            <SiTypescript className='typescript-icon' size={50} />
           </div>
           <div className='django habilities-card' data-tip='Django'>
             <SiDjango className='django-icon' size={50} />

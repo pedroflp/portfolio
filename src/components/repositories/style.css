@@ -99,8 +99,9 @@
 
 .repository-card:hover .repository-buttons-container a > span {
   display: flex;
-  width: 180px;
-  min-width: 180px;
+  width: 190px;
+  min-width: 190px;
+  font-weight: 400;
   margin-left: 10px;
 }
 

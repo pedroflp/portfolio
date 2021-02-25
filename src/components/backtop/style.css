@@ -1,5 +1,5 @@
 .button-back-top {
-  width: 135px;
+  width: 150px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -9,7 +9,7 @@
   position: fixed;
   right: 0;
   bottom: 0;
-  margin: 100px -30px;
+  margin: 100px -40px;
   outline: none;
   cursor: pointer;
   transform: rotate(-90deg);
