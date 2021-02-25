@@ -9,7 +9,7 @@
   padding: 30px;
   margin: 30px 10px;
 
-  border-bottom: 5px solid transparent;
+  border-bottom: 4px solid transparent;
   border-radius: 7px;
 
   display: flex;
@@ -24,7 +24,7 @@
 }
 
 .projects-card:hover {
-  border-bottom: 5px solid #04D361;
+  border-bottom: 4px solid #ffffff;
   transform: translateY(-5px);
 }
 
@@ -40,6 +40,8 @@
 
 .projects-card-title p {
   font-weight: 400;
+  font-size: 15px;
+  margin-top: 10px;
 }
 
 
@@ -51,8 +53,9 @@
 
 .projects-card-languages h3{
   margin: 10px;
-  font-size: 14px;
-  color: #5c5c5c;
+  font-size: 12px;
+  font-weight: 100;
+  color: #505050;
 }
 
 /* .projects-card-languages span {

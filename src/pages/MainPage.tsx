@@ -7,7 +7,7 @@ import Typewriter from 'typewriter-effect';
 import { RiHospitalLine, RiTShirt2Line } from 'react-icons/ri';
 import { FiMusic } from 'react-icons/fi';
 import { FaInstagram, FaLinkedin, FaNodeJs } from 'react-icons/fa';
-import { AiFillHtml5, AiFillGithub, AiOutlineCalculator } from 'react-icons/ai';
+import { AiFillHtml5, AiFillGithub, AiOutlineCalculator, AiOutlinePlus } from 'react-icons/ai';
 import { DiCss3 } from 'react-icons/di';
 import { SiJavascript, SiReact, SiDjango, SiGmail, SiTypescript } from 'react-icons/si';
 import { BiStore } from 'react-icons/bi';
@@ -21,6 +21,7 @@ import ProjectCard from '../components/projects/ProjectCard';
 import './styles/mainpage.css';
 import ProfileImg from '../images/profile-image.png';
 import BackTop from '../components/backtop/BackTop';
+import { Header } from '../components/header/Header';
 
 
 function MainPage() {
@@ -28,44 +29,10 @@ function MainPage() {
     <>
 
     <Navbar />
-    <ReactTooltip backgroundColor='#04D361' textColor='rgb(32, 31, 36)' place='bottom' />
-    
-    <section id='header-mainpage'>
-      <div className='header-mainpage-container'>
-        <div className='header-mainpage-information-card'>
-          <img src={ProfileImg} alt='Profile' className='header-information-card-image' />
-          
-          <h1>Olá me chamo <strong>Pedro Felipe</strong>
-            <Typewriter
-              onInit={(typewriter) => {
-                typewriter.typeString('sou ')
-                typewriter.typeString('Desenvolvedor <strong>Front-End</strong>')
-                .pauseFor(2000)
-                .deleteChars(23)
-                .pauseFor(500)
-                typewriter.typeString('<strong>Designer</strong>')
-                .pauseFor(2000)
-                .deleteAll()
-                typewriter.typeString('e você está em meu <strong>Portfólio</strong>!')
-                .pauseFor(5000)
-                .start()
-              }}
-              options={{
-                delay: 90,
-                autoStart: true,
-                loop: true,
-              }}
-            />
-  
-          </h1>
-          <p>Atualmente sou desenvolvedor web e utilizo tecnologias como <strong>HTML5, CSS3, JavaScript e ReactJs</strong> para desenvolver aplicações front-end.</p>
 
-          <Link to="/about" className='seemore-button'>Ver mais sobre!</Link>
-        </div>
-      </div>
-    </section>
+    <Header />
 
-    <section id='habilities'>
+    <section id='skills'>
       <div className='habilities-container'>
         <div className='habilities-title'>
           <h1>Minhas <strong>Habilidades</strong>.</h1>
@@ -182,7 +149,7 @@ function MainPage() {
           </div>
 
           <div className='projects-button-container'>
-            <Link to='/repositories' className='projects-button-repositories' >Ver todos os projetos</Link>
+            <Link to='/repositories' className='projects-button-repositories' >Ver todos os projetos <AiOutlinePlus style={{ marginLeft: '5px' }} size={24} /></Link>
           </div>
       </div>
     </section>
@@ -200,7 +167,7 @@ function MainPage() {
           <a className='instagram-icon contact-card' href='https://instagram.com/_pedroflp' target='_blank' rel='noopener noreferrer'>
             <FaInstagram className='instagram icon' size={60} />
           </a>
-          <a className='email-icon contact-card' href='mailto: pedrofelipe0940@gmail.com' target='_blank' rel='noopener noreferrer'>
+          <a className='email-icon contact-card' href='mailto: pedrofelipe0940@gmail.com' data-tip='pedrofelipe0940@gmail.com' target='_blank' rel='noopener noreferrer'>
             <SiGmail className='email icon' size={60} />
           </a>
 
@@ -208,7 +175,7 @@ function MainPage() {
 
         <div className='contact-title'>
           <h1>Venha me <strong>Contatar</strong>.</h1>
-          <p>Oi mais uma vez. Vou deixar algumas <strong>redes sociais</strong> para me contatar quando necessário!!</p>
+          <p>Oi de novo! Vou deixar algumas <strong>redes sociais</strong> para me contatar quando quiser.</p>
         </div>
       </div>
       
@@ -217,6 +184,13 @@ function MainPage() {
     <Footer />
 
     <BackTop />
+
+    <ReactTooltip 
+    backgroundColor='#dfdfdf'
+    offset={{ top: 30 }}
+    className='global-tooltip' 
+    textColor='rgb(18, 18, 19)' 
+    place='top' />
 
     </>
   )

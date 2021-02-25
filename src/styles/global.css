@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap');
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: 'Inter';
   font-weight: 300;
 
   scroll-behavior: smooth;
-
+  transition: .1s ease;
   -webkit-user-drag: none;
 }
 
@@ -25,7 +27,7 @@ h1, h2, span, a {
   margin: 0;
 }
 
-h1 strong, p strong { 
+strong { 
   font-weight: 700;
   color: #04D361;
 }
@@ -62,5 +64,5 @@ h1 strong, p strong {
   height: 2px;
   width: 120%;
   margin: 20px 0px;
-  background: #29292E;
+  background: #252529;
 }

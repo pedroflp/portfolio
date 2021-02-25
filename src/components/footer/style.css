@@ -1,7 +1,7 @@
 
 #footer {
   background: var(--dark-theme-card-background);
-  padding: 10px;
+  padding: 30px;
 }
 
 .footer-container {
@@ -28,8 +28,10 @@
 
 .footer-left-info p {
   font-size: 16px;
+  font-weight: 500;
 }
-.footer-left-info p strong {
+
+footer p strong {
   margin-left: 40px;
   font-weight: 900;
 }
