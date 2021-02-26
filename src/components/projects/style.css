@@ -1,15 +1,16 @@
 .projects-card {
   background: var(--dark-theme-card-background);
   
+  width: 350px;
   max-width: 350px;
   
   height: 400px;
   max-height: 400px;
 
   padding: 30px;
-  margin: 30px 10px;
+  margin: 20px 10px;
 
-  border-bottom: 4px solid transparent;
+  border-bottom: 4px solid #121214;
   border-radius: 7px;
 
   display: flex;
@@ -21,6 +22,9 @@
   text-align: center;
 
   transition: 0.2s ease-in-out;
+
+  position: relative;
+  overflow: hidden;
 }
 
 .projects-card:hover {
@@ -32,23 +36,33 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  
 }
 
 .projects-card-title h1 {
-  font-size: 30px;
+  font-size: 33px;
+  color: white;
+
+  position: relative;
+  z-index: 10;
 }
 
 .projects-card-title p {
   font-weight: 400;
   font-size: 15px;
-  margin-top: 10px;
+  margin: 20px auto;
+
+  position: relative;
+  z-index: 10;
 }
 
 
 .projects-card-icon {
-  margin-top: -65px;
   margin-bottom: 10px;
-  margin-left: -200px;
+  margin-left: -210px;
+  opacity: 0.07;
+  color: rgb(255, 255, 255);
+  position: absolute;
 }
 
 .projects-card-languages h3{
@@ -85,6 +99,9 @@
 
 
 .projects-card-buttons {
+  position: relative;
+  z-index: 10;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -93,15 +110,13 @@
   width: 100%;
 }
 
-.projects-card-buttons span {
-  font-size: 14px;
+.project-card-button-title {
+  font-size: 12px;
   font-weight: 100;
 
-  max-width: 50px;
-  margin-right: 30px;
-
-  color: #525252;
-  text-align: left;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
 .projects-card-button {
@@ -112,12 +127,12 @@
   align-items: center;
   
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 8px;
 
-  background: #04D361;
-  color: rgb(32, 31, 36);
+  background: #fff;
+  color: rgb(17, 17, 17);
 
-  padding: 10px;
+  padding: 0.7rem;
   margin: 5px;
 
   width: 100%;
@@ -127,5 +142,14 @@
 
 .projects-card-button:hover {
   width: 300%;
-  background: rgb(255, 255, 255);
+  background: #04D361;
+}
+
+.wave-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-50px) translateX(-180px) rotate(260deg);
+  opacity: 0.035;
+  width: 30rem;
 }

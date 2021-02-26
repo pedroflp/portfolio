@@ -32,7 +32,7 @@
 .habilities-cards {
   width: 38rem;
   padding: 0px 50px;
-
+  position: relative;
   
   display: flex;
   flex-direction: row;
@@ -49,30 +49,66 @@
   border: 2px solid transparent;
   border-radius: 8px;
   background: rgb(32, 31, 36);
+  position: relative;
+
+  transition: 0.4s ease;
+}
+
+.habilities-card:hover {
+  border-radius: 8px 8px 0px 0px;
+  border-bottom: 3px solid rgba(66, 66, 66, 0.4);
+}
+
+
+.skill-score {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-bottom: 3px solid transparent;
+  margin: 0 0 -3px -2px;
+  transition: 0.4s ease;
 }
 
 .html:hover > .html-icon {
   color: rgb(243, 121, 6);
 }
+.html:hover .skill-score{
+  border-color: rgb(243, 121, 6);
+}
 
 .css:hover > .css-icon {
   color: rgb(6, 128, 243);
+}
+.css:hover .skill-score{
+  border-color: rgb(6, 128, 243);
 }
 
 .js:hover > .js-icon {
   color: rgb(243, 227, 6);
 }
+.js:hover .skill-score{
+  border-color: rgb(243, 227, 6);
+}
 
 .reactjs:hover > .reactjs-icon {
   color: rgb(6, 215, 243);
+}
+.reactjs:hover .skill-score{
+  border-color: rgb(6, 215, 243);
 }
 
 .typescript:hover > .typescript-icon {
   color: rgb(34, 140, 201);
 }
+.typescript:hover .skill-score{
+  border-color: rgb(34, 140, 201);
+}
 
 .django:hover > .django-icon {
   color: rgb(5, 102, 18);
+}
+.django:hover .skill-score{
+  border-color: rgb(5, 102, 18);
 }
 
 

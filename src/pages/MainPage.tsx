@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Typewriter from 'typewriter-effect';
 
 // Icons
-import { RiHospitalLine, RiTShirt2Line } from 'react-icons/ri';
+import { RiHospitalLine, RiInformationLine, RiTShirt2Line } from 'react-icons/ri';
 import { FiMusic } from 'react-icons/fi';
 import { FaInstagram, FaLinkedin, FaNodeJs } from 'react-icons/fa';
 import { AiFillHtml5, AiFillGithub, AiOutlineCalculator, AiOutlinePlus } from 'react-icons/ai';
@@ -40,23 +40,36 @@ function MainPage() {
         </div>
 
         <div className='habilities-cards'>
+
+          <RiInformationLine 
+          size={25} 
+          style={{ position: 'absolute', top: 0, right: 0, color: '#fff' }} 
+          data-tip="Ao passar o mouse no card da tecnologia, uma barra de score irá aparecer com a porcentagem de skill que eu considero possuir!"
+          />
+
           <div className='html habilities-card' data-tip='HTML5'>
             <AiFillHtml5 className='html-icon' size={50} />
+            <div style={{ width: '90%' }} data-tip="Skill: 90%" className='html skill-score' />
           </div>
           <div className='css habilities-card' data-tip='CSS3'>
             <DiCss3 className='css-icon' size={50} />
+            <div style={{ width: '80%' }} data-tip="Skill: 80%"  className='css skill-score' />
           </div>
           <div className='js habilities-card' data-tip='JavaScript'>
             <SiJavascript className='js-icon' size={50} />
+            <div style={{ width: '75%' }} data-tip="Skill: 75%"  className='js skill-score' />
           </div>
           <div className='reactjs habilities-card' data-tip='ReactJs'>
             <SiReact className='reactjs-icon' size={50} />
+            <div style={{ width: '60%' }} data-tip="Skill: 60%"  className='reactjs skill-score' />
           </div>
           <div className='typescript habilities-card' data-tip='Typescript'>
             <SiTypescript className='typescript-icon' size={50} />
+            <div style={{ width: '50%' }} data-tip="Skill: 50%"  className='typescript skill-score' />
           </div>
           <div className='django habilities-card' data-tip='Django'>
             <SiDjango className='django-icon' size={50} />
+            <div style={{ width: '40%' }} data-tip="Skill: 40%"  className='django skill-score' />
           </div>
         </div>
       </div>
@@ -72,7 +85,7 @@ function MainPage() {
           <div id='projects-cards'> 
 
             <div className='tieri-beats projects-card'>
-              <FiMusic className='projects-card-icon' size={70} />
+              <FiMusic className='projects-card-icon' size={120} />
               <ProjectCard
                 title='Tieri Beats'
                 description='Site de uma loja criado para um cliente produtor musical com finalidade de mostrar e vender seu produto.'
@@ -88,7 +101,7 @@ function MainPage() {
             </div>
 
             <div className='pormazion projects-card'>
-              <BiStore className='projects-card-icon' size={70}/>
+              <BiStore className='projects-card-icon' size={120}/>
                 <ProjectCard
                 title='PORMAZIONStore'
                 description='Site de uma loja criado para um cliente designer gráfico com finalidade de mostrar e vender seu produto.'
@@ -103,7 +116,7 @@ function MainPage() {
             </div>
 
             <div className='medfamilia projects-card'>
-              <RiHospitalLine className='projects-card-icon' size={70} />
+              <RiHospitalLine className='projects-card-icon' size={120} />
               <ProjectCard
               title='MedFamília'
               description='Site de uma clínica criado para o desafio do processo trainee de 2020 da empresa EJECT.'
@@ -119,7 +132,7 @@ function MainPage() {
             </div>
           
             <div className='ufcalc projects-card'>
-              <AiOutlineCalculator className='projects-card-icon' size={70} />
+              <AiOutlineCalculator className='projects-card-icon' size={120} />
               <ProjectCard
               title='UFRN Calc'
               description='Site criado para alunos da UFRN calcularem suas médias semestrais.'
@@ -134,7 +147,7 @@ function MainPage() {
             </div>
 
             <div className='shirtstore projects-card'>
-              <RiTShirt2Line className='projects-card-icon' size={70} />
+              <RiTShirt2Line className='projects-card-icon' size={120} />
               <ProjectCard
               title='T-Shirt Store'
               description='Site criado para estudar criação de Loja usando Next.js com integração da API do Stripe.'
@@ -187,7 +200,7 @@ function MainPage() {
 
     <ReactTooltip 
     backgroundColor='#dfdfdf'
-    offset={{ top: 30 }}
+    offset={{ top: 10 }}
     className='global-tooltip' 
     textColor='rgb(18, 18, 19)' 
     place='top' />
