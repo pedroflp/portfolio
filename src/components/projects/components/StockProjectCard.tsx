@@ -35,10 +35,10 @@ export default function StockProjectCard(){
       <div className='line-divisor'/>
 
         <div className='stockapp-buttons'>
-          <a href='https://stock.pedroflp.vercel.app' target='_blank'><FiPackage size={22} />Acessar Dashboard</a>
+          <a href='https://stock.pedroflp.vercel.app' target="_blank" rel="noopener noreferrer"><FiPackage size={22} />Acessar Dashboard</a>
           <div className='stockapp-github-buttons'>
-            <a href='https://github.com/pedroflp/stock-app-web' target='_blank'><FaGithub size={22} /> StockApp Web</a>
-            <a href='https://github.com/pedroflp/stock-app-api' target='_blank'><FaGithub size={22} /> StockApp API</a>
+            <a href='https://github.com/pedroflp/stock-app-web' target='_blank' rel="noopener noreferrer"><FaGithub size={22} /> StockApp Web</a>
+            <a href='https://github.com/pedroflp/stock-app-api' target='_blank' rel="noopener noreferrer"><FaGithub size={22} /> StockApp API</a>
           </div>
         </div>
       </div>
