@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactTooltip from 'react-tooltip';
 import { Link } from 'react-router-dom';
 
@@ -24,7 +24,25 @@ import StockProjectCard from '../components/projects/components/StockProjectCard
 
 
 function MainPage() {
+  const [canShow, setCanShow] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const checkScroll = () => {
+      if (canShow && (window.pageYOffset > 550 && window.pageYOffset < 750)){
+        setIsVisible(true);
+        setTimeout(() => {
+          setIsVisible(false);
+          setCanShow(false);
+        }, 5000);
+      } else {
+        setIsVisible(false);
+      }
+    }
+    window.addEventListener('scroll', checkScroll);
+  }, [canShow]);
+
+
 
   function handleHover() {
     setIsVisible(true);
@@ -52,13 +70,21 @@ function MainPage() {
 
         <RiInformationLine 
           size={25}
-          style={{marginTop: '-90px', cursor: 'pointer'}} 
+          style={{
+            cursor: 'pointer',
+            position: 'absolute',
+            left: 0,
+            top: 0,
+            marginTop: '10px',
+            marginLeft: '60px'
+          }} 
           onMouseOver={handleHover}
           onMouseOut={handleUnhover}
           />
 
           { isVisible && (
-            <div className='habilities-cards-popup'>
+            <div className='card-popup'>
+              <div className='card-popup-arrow-left'></div>
               <p>Ao passar o mouse no card da tecnologia, uma barra de score irá aparecer com a porcentagem de skill que eu considero possuir!</p>
             </div>
           ) }

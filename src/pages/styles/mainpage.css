@@ -41,15 +41,15 @@
   align-content: center;
 }
 
-.habilities-cards-popup {
+.habilities-cards .card-popup {
   position: absolute;
   z-index: 3;
 
-  left: 0;
+  top: 0;
   right: 0;
 
-  margin-top: -80px;
-  margin-left: -110px;
+  margin-top: -28px;
+  margin-right: 55px;
   
   display: flex;
   justify-content: center;
@@ -57,20 +57,35 @@
 
   text-align: center;
 
-  max-width: 400px;
+  max-width: 410px;
 
-  background: white;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(4px);
   color: black;
   padding: 1.5rem;
   border-radius: 8px;
   font-size: 0.9rem;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
 
 }
 
-.habilities-cards-popup p {
+.habilities-cards .card-popup p {
   font-weight: 600;
 }
+
+.habilities-cards .card-popup-arrow-left {
+  width: 0;
+  height: 0;
+
+  position: absolute;
+  left: 0;
+  margin-left: -10px;
+
+  border-top: 10px solid transparent;
+  border-right: 10px solid rgba(255, 255, 255, 0.7);
+  border-bottom: 10px solid transparent
+}
+
 
 .habilities-card {
   padding: 30px;

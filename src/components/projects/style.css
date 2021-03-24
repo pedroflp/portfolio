@@ -164,10 +164,6 @@
   transition: 0.2s ease;
 }
 
-.stockapp-card:hover {
-  transform: scale(1.01);
-}
-
 .package-icon {
   position: absolute;
   right: 0;
@@ -270,6 +266,7 @@
   display: flex;
   justify-content: space-between;
   margin-top: 2rem;
+  position: relative;
 }
 
 .stockapp-github-buttons {
@@ -315,4 +312,49 @@
 
 .stockapp-github-buttons :last-child {
   background: #339933;
+}
+
+.stockapp-buttons .card-popup {
+  position: absolute;
+  z-index: 1;
+
+  right: 0; 
+
+  margin-top: -4rem;
+  margin-right: 7.8rem;
+  
+  display: flex;
+  flex-direction: column;
+
+  max-width: 410px;
+
+  background: rgba( 255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+
+  color: rgb(0, 0, 0);
+  padding: 1.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.6);
+
+}
+
+.stockapp-buttons .card-popup p {
+  font-weight: 600;
+}
+
+.stockapp-buttons .card-popup-arrow-left {
+  width: 0;
+  height: 0;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  margin-bottom: 31px;
+  margin-left: -10px;
+
+  border-top: 10px solid transparent;
+  border-right: 10px solid rgba( 255, 255, 255, 0.8);
+  border-bottom: 10px solid transparent
 }

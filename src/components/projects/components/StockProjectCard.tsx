@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaGithub, FaNodeJs, FaReact } from 'react-icons/fa';
 import { FiPackage } from 'react-icons/fi';
+import { RiInformationLine } from 'react-icons/ri';
 
 export default function StockProjectCard(){
+  const [isVisible, setIsVisible] = useState(false);
+
+  function handleHover() {
+    setIsVisible(true);
+  } 
+
+  function handleUnhover() {
+    setIsVisible(false)
+  }
+
   return (
     <div className='stockapp-card'>
       <FiPackage className='package-icon' size={300} />
@@ -36,6 +47,29 @@ export default function StockProjectCard(){
 
         <div className='stockapp-buttons'>
           <a href='https://stock.pedroflp.vercel.app' target="_blank" rel="noopener noreferrer"><FiPackage size={22} />Acessar Dashboard</a>
+
+          <RiInformationLine 
+          size={25}
+          style={{
+            cursor: 'pointer',
+            position: 'absolute',
+            left: 0,
+            marginTop: '15px',
+            marginLeft: '13rem'
+          }} 
+          onMouseOver={handleHover}
+          onMouseOut={handleUnhover}
+          />
+
+          { isVisible && (
+            <div className='card-popup'>
+              <div className='card-popup-arrow-left'></div>
+              <p>Você pode acessar a dashboard utilizando a conta teste!</p>
+              <br/>
+              <p><span>Login:</span> test</p>
+              <p><span>Password:</span> test</p>
+            </div>
+          ) }
           <div className='stockapp-github-buttons'>
             <a href='https://github.com/pedroflp/stock-app-web' target='_blank' rel="noopener noreferrer"><FaGithub size={22} /> StockApp Web</a>
             <a href='https://github.com/pedroflp/stock-app-api' target='_blank' rel="noopener noreferrer"><FaGithub size={22} /> StockApp API</a>
