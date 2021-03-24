@@ -41,7 +41,7 @@ export function Header() {
     
 
           <div className='header-buttons'>
-            <a className='continuesee-button' href="/#skills">Ver minhas habilidades</a>
+            <a className='continuesee-button' href="/#projects">Ver meus projetos</a>
             <Link to="/about" className='seemore-button'>Ver mais sobre mim</Link>
           </div>
 

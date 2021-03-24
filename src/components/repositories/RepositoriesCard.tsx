@@ -20,7 +20,7 @@ function RespositoriesCard() {
     setRepositories(data);
   }
 
-  useEffect( () => { loadRepos() }, []) 
+  useEffect(() => { loadRepos() }, []); 
 
   return (
     <>

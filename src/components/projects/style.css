@@ -153,3 +153,166 @@
   opacity: 0.035;
   width: 30rem;
 }
+
+.stockapp-card {
+  position: relative;
+  padding: 2rem;
+  width: 53rem;
+  margin: 20px 300px;
+  background: var(--dark-theme-card-background);
+  border-radius: 8px;
+  transition: 0.2s ease;
+}
+
+.stockapp-card:hover {
+  transform: scale(1.01);
+}
+
+.package-icon {
+  position: absolute;
+  right: 0;
+  top: 10;
+
+  opacity: 0.02;
+}
+
+.stockapp-content {
+  position: relative;
+  z-index: 2;
+}
+
+.stockapp-title h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.stockapp-title p {
+  font-weight: 500;
+  color: #04D361;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stockapp-tecnologies {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.stockapp-web-info {
+  border-right: 1px solid rgb(56, 56, 56);
+  padding-right: 3rem;
+  margin-right: 3rem;
+}
+
+.stockapp-web-info span,
+.stockapp-api-info span{
+  border-left: 2px solid #04D361;
+  padding-left: 0.7rem;
+
+  font-weight: 600;
+}
+
+.stockapp-info-tecnologies {
+  display: flex;
+  margin: 0.5rem 0;
+}
+
+.stockapp-info-tecnologies p {
+  margin: 0.5rem 0 0 0.7rem;
+  padding: 0.4rem 1rem;
+  font-size: 0.75rem;
+  border-radius: 50px;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+}
+
+.stockapp-info-tecnologies p :first-child {
+  margin-right: 5px;
+}
+
+.stockapp-info-tecnologies .reactjs {
+  background: #61DAFB;
+  color: black;
+}
+
+.stockapp-info-tecnologies .typescript {
+  background: #3178C6;
+  color: rgb(255, 255, 255);
+}
+
+.stockapp-info-tecnologies .nodejs {
+  background: #339933;
+  color: rgb(3, 3, 3);
+}
+
+.stockapp-info-tecnologies .expressjs {
+  background: #000000;
+  color: rgb(255, 255, 255);
+}
+
+.stockapp-info-tecnologies .sqlite {
+  background: #003B57;
+  color: rgb(255, 255, 255);
+}
+
+.stockapp-card .line-divisor {
+  margin-left: -32px;
+  width: 53rem;
+}
+
+.stockapp-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.stockapp-github-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.stockapp-buttons a {
+  width: 12rem;
+  height: 3.5rem;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: white;
+  color: black;
+
+  outline: none;
+  transition: 0.4s ease;
+}
+
+.stockapp-buttons a:hover {
+  transform: translateY(-5px);
+  filter: brightness(0.8);
+}
+
+.stockapp-buttons a :first-child {
+  background: none;
+  margin-right: 7px;
+}
+
+.stockapp-github-buttons :first-child {
+  margin-right: 0.8rem;
+  background: #61DAFB;
+}
+
+.stockapp-github-buttons :last-child {
+  background: #339933;
+}

@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactTooltip from 'react-tooltip';
 import { Link } from 'react-router-dom';
-import Typewriter from 'typewriter-effect';
 
 // Icons
 import { RiHospitalLine, RiInformationLine, RiTShirt2Line } from 'react-icons/ri';
@@ -9,7 +8,7 @@ import { FiMusic } from 'react-icons/fi';
 import { FaInstagram, FaLinkedin, FaNodeJs } from 'react-icons/fa';
 import { AiFillHtml5, AiFillGithub, AiOutlineCalculator, AiOutlinePlus } from 'react-icons/ai';
 import { DiCss3 } from 'react-icons/di';
-import { SiJavascript, SiReact, SiDjango, SiGmail, SiTypescript } from 'react-icons/si';
+import { SiJavascript, SiReact, SiGmail, SiTypescript, SiDjango } from 'react-icons/si';
 import { BiStore } from 'react-icons/bi';
 
 // Components
@@ -19,12 +18,22 @@ import ProjectCard from '../components/projects/ProjectCard';
 
 // Other
 import './styles/mainpage.css';
-import ProfileImg from '../images/profile-image.png';
 import BackTop from '../components/backtop/BackTop';
 import { Header } from '../components/header/Header';
+import StockProjectCard from '../components/projects/components/StockProjectCard';
 
 
 function MainPage() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  function handleHover() {
+    setIsVisible(true);
+  } 
+
+  function handleUnhover() {
+    setIsVisible(false)
+  }
+
   return(
     <>
 
@@ -41,35 +50,51 @@ function MainPage() {
 
         <div className='habilities-cards'>
 
-          <RiInformationLine 
+        <RiInformationLine 
+          size={25}
+          style={{marginTop: '-90px', cursor: 'pointer'}} 
+          onMouseOver={handleHover}
+          onMouseOut={handleUnhover}
+          />
+
+          { isVisible && (
+            <div className='habilities-cards-popup'>
+              <p>Ao passar o mouse no card da tecnologia, uma barra de score irá aparecer com a porcentagem de skill que eu considero possuir!</p>
+            </div>
+          ) }
+
+          {/* <RiInformationLine 
           size={25} 
           style={{ position: 'absolute', top: 0, right: 0, color: '#fff' }} 
           data-tip="Ao passar o mouse no card da tecnologia, uma barra de score irá aparecer com a porcentagem de skill que eu considero possuir!"
-          />
+          /> */}
 
           <div className='html habilities-card' data-tip='HTML5'>
             <AiFillHtml5 className='html-icon' size={50} />
-            <div style={{ width: '90%' }} data-tip="Skill: 90%" className='html skill-score' />
+            <div style={{ width: '95%' }} data-tip="Skill: 95%" className='html skill-score' />
           </div>
           <div className='css habilities-card' data-tip='CSS3'>
             <DiCss3 className='css-icon' size={50} />
-            <div style={{ width: '80%' }} data-tip="Skill: 80%"  className='css skill-score' />
+            <div style={{ width: '90%' }} data-tip="Skill: 90%"  className='css skill-score' />
           </div>
           <div className='js habilities-card' data-tip='JavaScript'>
             <SiJavascript className='js-icon' size={50} />
             <div style={{ width: '75%' }} data-tip="Skill: 75%"  className='js skill-score' />
           </div>
-          <div className='reactjs habilities-card' data-tip='ReactJs'>
+          <div className='reactjs habilities-card' data-tip='ReactJS'>
             <SiReact className='reactjs-icon' size={50} />
-            <div style={{ width: '60%' }} data-tip="Skill: 60%"  className='reactjs skill-score' />
+            <div style={{ width: '70%' }} data-tip="Skill: 70%"  className='reactjs skill-score' />
           </div>
           <div className='typescript habilities-card' data-tip='Typescript'>
             <SiTypescript className='typescript-icon' size={50} />
-            <div style={{ width: '50%' }} data-tip="Skill: 50%"  className='typescript skill-score' />
+            <div style={{ width: '45%' }} data-tip="Skill: 45%"  className='typescript skill-score' />
           </div>
-          <div className='django habilities-card' data-tip='Django'>
-            <SiDjango className='django-icon' size={50} />
-            <div style={{ width: '40%' }} data-tip="Skill: 40%"  className='django skill-score' />
+          <div className='nodedjango habilities-card' data-tip='Node.js / Django'>
+            <FaNodeJs className='node-icon' size={40} />
+            <div className='line'></div>
+            <SiDjango className='django-icon' size={40} />
+            <div style={{ width: '45%' }} data-tip="Nodejs Skill: 45%"  className='node skill-score' />
+            <div style={{ width: '30%' }} data-tip="Django Skill: 30%"  className='django skill-score' />
           </div>
         </div>
       </div>
@@ -83,6 +108,8 @@ function MainPage() {
         </div>
 
           <div id='projects-cards'> 
+
+            <StockProjectCard />
 
             <div className='tieri-beats projects-card'>
               <FiMusic className='projects-card-icon' size={120} />

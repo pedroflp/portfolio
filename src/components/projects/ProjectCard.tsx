@@ -23,7 +23,7 @@ function ProjectCard(props: ProjectCard) {
     <>
     
       <div className='projects-card-title'>
-        <img className='wave-image' src={Wave}/>
+        <img className='wave-image' alt='' src={Wave}/>
         <h1><strong>{props.title}</strong></h1>
         <p>{props.description}</p>
       </div>
