@@ -49,7 +49,7 @@
   right: 0;
 
   margin-top: -28px;
-  margin-right: 55px;
+  margin-right: 40px;
   
   display: flex;
   justify-content: center;
@@ -67,6 +67,20 @@
   font-size: 0.9rem;
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
 
+}
+
+@media screen and (max-width: 1200px) {
+  .habilities-cards .card-popup {
+    margin-top: 60px;
+    margin-right: 0;
+  }
+
+  .habilities-cards .card-popup-arrow-left {
+    transform: rotate(90deg) translateY(-73px);
+    top: 0;
+    margin-top: -15px;
+    
+  }
 }
 
 .habilities-cards .card-popup p {
@@ -181,7 +195,7 @@
 }
 
 .nodedjango:hover > .node-icon {
-  color: #339933;
+  color: rgba(140, 200, 75, 1);
 }
 
 .nodedjango:hover .django{
@@ -189,7 +203,7 @@
 }
 
 .nodedjango:hover .node{
-  border-color: #339933;
+  border-color: rgba(140, 200, 75, 1);
 }
 
 .projects-container {

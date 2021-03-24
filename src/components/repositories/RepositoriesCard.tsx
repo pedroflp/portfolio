@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Loader from 'react-loader-spinner';
 
 import { AiFillGithub } from 'react-icons/ai';
 
@@ -20,12 +21,16 @@ function RespositoriesCard() {
     setRepositories(data);
   }
 
-  useEffect(() => { loadRepos() }, []); 
+  useEffect(() => { 
+    setTimeout(() => {
+      loadRepos()
+    }, 1000) 
+  }, [repositories]); 
 
   return (
     <>
 
-      {repositories?.map(repo => (
+      {repositories != null ? repositories?.map(repo => (
         <div key={repo.name} className={`${repo.name} repository-card`}>
           <h1 title={repo.name} >{repo.name}</h1>
           {repo.description ? <p title={repo.description}>{repo.description}</p> : <div className='wireframe-description'></div> }
@@ -36,9 +41,16 @@ function RespositoriesCard() {
             <a href={repo.html_url} target='_blank' rel="noopener noreferrer" ><AiFillGithub size={30}/> <span>Ver repositório no Github</span></a>
           </div>
         </div>
-      ))}
+        )) :
+         <Loader
+            type="TailSpin"
+            color="#04D361"
+            height={100}
+            width={100}
+          />
+      }
 
-  </>
+    </>
   );
 }
 

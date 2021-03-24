@@ -14,12 +14,12 @@ export function Header() {
       <div className='header-mainpage-container'>
         <div className='header-mainpage-title'>
           <img src={ProfileImg} alt=""/>
-          <h1>Olá! Me chamo <strong>Pedro Felipe</strong></h1>
+          <h1>Olá! Me chamo <strong>Pedro Felipe</strong>,</h1>
             <h2>
               <Typewriter
               onInit={(typewriter) => {
                 typewriter.typeString('sou ')
-                typewriter.typeString('Desenvolvedor <strong>Front-End</strong>')
+                typewriter.typeString('Desenvolvedor <strong>Web</strong>...')
                 .pauseFor(3000)
                 .deleteAll()
                 typewriter.typeString('e você está em meu <strong>Portfólio</strong>!')
@@ -36,7 +36,7 @@ export function Header() {
             />
             </h2>
             
-            <p>Atualmente desenvolvo utilizando tecnologias como <strong>HTML5, CSS3, JavaScript</strong> puros e <strong>ReactJs (+frameworks)</strong> para criação de aplicações web.</p>
+            <p>Atualmente desenvolvo utilizando tecnologias como <strong>HTML5, CSS3, JavaScript</strong> puros, <strong>ReactJS (+frameworks)</strong> e <strong>Nodejs</strong> para criação de aplicações web.</p>
         </div>
     
 

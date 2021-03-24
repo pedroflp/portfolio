@@ -72,11 +72,10 @@ function MainPage() {
           size={25}
           style={{
             cursor: 'pointer',
-            position: 'absolute',
-            left: 0,
+            position: 'relative',
             top: 0,
-            marginTop: '10px',
-            marginLeft: '60px'
+            marginLeft: '-50px',
+            marginTop: '-100px'
           }} 
           onMouseOver={handleHover}
           onMouseOut={handleUnhover}

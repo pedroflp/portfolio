@@ -18,9 +18,15 @@ export default function StockProjectCard(){
     <div className='stockapp-card'>
       <FiPackage className='package-icon' size={300} />
       <div className='stockapp-content'>
-        <div className='stockapp-title'>
-          <h1>StockApp - Web & API</h1>
-          <p>Uma dashboard com api própria para controlar a quantidade e preços dos produtos de seu estoque.</p>
+        <div className='stockapp-top-content'>
+          <div className='stockapp-title'>
+            <h1>StockApp - Web & API</h1>
+            <p>Uma dashboard com api própria para controlar a quantidade e preços dos produtos de seu estoque.</p>
+          </div>
+          <div>
+            <FaReact size={80} />
+            <FaNodeJs size={80} />
+          </div>
         </div>
 
       <div className='stockapp-tecnologies'>
