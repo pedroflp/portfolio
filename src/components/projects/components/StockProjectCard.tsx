@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 
 import { FaGithub, FaInfoCircle, FaNodeJs, FaReact } from 'react-icons/fa';
 import { FiPackage } from 'react-icons/fi';
-import { GoAlert } from 'react-icons/go';
-import { RiAlertFill } from 'react-icons/ri';
 
 export default function StockProjectCard(){
   const [isVisible, setIsVisible] = useState(false);
