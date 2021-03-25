@@ -2,7 +2,6 @@ import React from "react";
 import Typewriter from 'typewriter-effect';
 import { Link } from 'react-router-dom';
 
-
 import ProfileImg from '../../images/profile-image.png';
 
 import './style.css';

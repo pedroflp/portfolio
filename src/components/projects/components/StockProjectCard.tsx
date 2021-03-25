@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { FaGithub, FaNodeJs, FaReact } from 'react-icons/fa';
+
+import { FaGithub, FaInfoCircle, FaNodeJs, FaReact } from 'react-icons/fa';
 import { FiPackage } from 'react-icons/fi';
-import { RiInformationLine } from 'react-icons/ri';
+import { GoAlert } from 'react-icons/go';
+import { RiAlertFill } from 'react-icons/ri';
 
 export default function StockProjectCard(){
   const [isVisible, setIsVisible] = useState(false);
@@ -54,8 +56,8 @@ export default function StockProjectCard(){
         <div className='stockapp-buttons'>
           <a href='https://stock.pedroflp.vercel.app' target="_blank" rel="noopener noreferrer"><FiPackage size={22} />Acessar Dashboard</a>
 
-          <RiInformationLine 
-          size={25}
+          <FaInfoCircle 
+          size={20}
           style={{
             cursor: 'pointer',
             position: 'absolute',

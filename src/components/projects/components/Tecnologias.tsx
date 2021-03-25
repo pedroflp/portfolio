@@ -10,7 +10,7 @@ function Tecnologias(props: Tecnologias) {
   
     {props.tecnologiasImageUrl.map((url, i) => {
         return (
-          <img src={url} alt='Ícone' />
+          <img src={url} style={{width: '40px', height: '40px'}} alt='Ícone' />
         )
       })
     }

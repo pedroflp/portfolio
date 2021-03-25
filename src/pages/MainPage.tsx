@@ -3,13 +3,12 @@ import ReactTooltip from 'react-tooltip';
 import { Link } from 'react-router-dom';
 
 // Icons
-import { RiHospitalLine, RiInformationLine, RiTShirt2Line } from 'react-icons/ri';
-import { FiMusic } from 'react-icons/fi';
+import { RiHospitalLine, RiTShirt2Line } from 'react-icons/ri';
 import { FaInstagram, FaLinkedin, FaNodeJs } from 'react-icons/fa';
-import { AiFillHtml5, AiFillGithub, AiOutlineCalculator, AiOutlinePlus } from 'react-icons/ai';
+import { AiFillHtml5, AiFillGithub, AiOutlineCalculator, AiOutlinePlus, AiOutlineQuestionCircle, AiOutlineShop } from 'react-icons/ai';
 import { DiCss3 } from 'react-icons/di';
 import { SiJavascript, SiReact, SiGmail, SiTypescript, SiDjango } from 'react-icons/si';
-import { BiStore } from 'react-icons/bi';
+import { BiHeadphone } from 'react-icons/bi';
 
 // Components
 import Navbar from '../components/navbar/Navbar';
@@ -26,30 +25,39 @@ import StockProjectCard from '../components/projects/components/StockProjectCard
 function MainPage() {
   const [canShow, setCanShow] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const checkScroll = () => {
-      if (canShow && (window.pageYOffset > 550 && window.pageYOffset < 750)){
-        setIsVisible(true);
-        setTimeout(() => {
-          setIsVisible(false);
-          setCanShow(false);
-        }, 5000);
-      } else {
+  const [toggleShow, setToggleShow] = useState(false);
+  
+  const [timer, setTimer] = useState(100);
+  const [timerCount, setTimerCount] = useState(10);
+  
+  const checkScroll = () => {
+    if (canShow && (window.pageYOffset > 550)){
+      setIsVisible(true);
+      setTimeout(() => {
         setIsVisible(false);
-      }
+        setCanShow(false);
+      }, 10000);
     }
-    window.addEventListener('scroll', checkScroll);
-  }, [canShow]);
-
-
-
+  }
+  window.addEventListener('scroll', checkScroll);
+  
+  useEffect(() => {
+    if (canShow && isVisible) {
+      setTimeout(() => {
+        setTimer(timer - 1);
+      }, 85);
+      setTimeout(() => {
+        setTimerCount(timerCount - 1);
+      }, 1000);
+    }
+  }, [isVisible, canShow, timer, timerCount]);
+  
   function handleHover() {
-    setIsVisible(true);
+    setToggleShow(true);
   } 
 
   function handleUnhover() {
-    setIsVisible(false)
+    setToggleShow(false)
   }
 
   return(
@@ -68,31 +76,37 @@ function MainPage() {
 
         <div className='habilities-cards'>
 
-        <RiInformationLine 
-          size={25}
-          style={{
-            cursor: 'pointer',
-            position: 'relative',
-            top: 0,
-            marginLeft: '-50px',
-            marginTop: '-100px'
-          }} 
-          onMouseOver={handleHover}
-          onMouseOut={handleUnhover}
-          />
+        { canShow && isVisible && (
+          <div className='card-popup'>
+            <div className='card-popup-arrow-left'></div>
+            <p>Ao passar o mouse no card da tecnologia, uma barra de score irá aparecer. Colocando o mouse por cima, você verá porcentagem de skill que eu considero possuir!</p>
+            <br/>
+            <div style={{width: `${timer}%`}} className='timer-line'></div>
+            { timerCount < 10 ? <span>00:0{timerCount}</span> : <span>00:{timerCount}</span>}
+          </div> ) 
+        }
 
-          { isVisible && (
-            <div className='card-popup'>
-              <div className='card-popup-arrow-left'></div>
-              <p>Ao passar o mouse no card da tecnologia, uma barra de score irá aparecer com a porcentagem de skill que eu considero possuir!</p>
-            </div>
-          ) }
+          { !canShow && 
+            <AiOutlineQuestionCircle 
+              size={25}
+              style={{
+                cursor: 'pointer',
+                position: 'relative',
+                top: 0,
+                marginTop: '-50px'
+              }} 
+              onMouseOver={handleHover}
+              onMouseOut={handleUnhover}
+            />
+          }
 
-          {/* <RiInformationLine 
-          size={25} 
-          style={{ position: 'absolute', top: 0, right: 0, color: '#fff' }} 
-          data-tip="Ao passar o mouse no card da tecnologia, uma barra de score irá aparecer com a porcentagem de skill que eu considero possuir!"
-          /> */}
+        { !canShow && toggleShow && (
+          <div className='card-popup'>
+            <div className='card-popup-arrow-left'></div>
+            <p>Ao passar o mouse no card da tecnologia, uma barra de score irá aparecer. Colocando o mouse por cima, você verá porcentagem de skill que eu considero possuir!</p>
+          </div>
+          ) 
+        }
 
           <div className='html habilities-card' data-tip='HTML5'>
             <AiFillHtml5 className='html-icon' size={50} />
@@ -118,7 +132,7 @@ function MainPage() {
             <FaNodeJs className='node-icon' size={40} />
             <div className='line'></div>
             <SiDjango className='django-icon' size={40} />
-            <div style={{ width: '45%' }} data-tip="Nodejs Skill: 45%"  className='node skill-score' />
+            <div style={{ width: '45%' }} data-tip="Node.js Skill: 45%"  className='node skill-score' />
             <div style={{ width: '30%' }} data-tip="Django Skill: 30%"  className='django skill-score' />
           </div>
         </div>
@@ -137,15 +151,15 @@ function MainPage() {
             <StockProjectCard />
 
             <div className='tieri-beats projects-card'>
-              <FiMusic className='projects-card-icon' size={120} />
+              <BiHeadphone className='projects-card-icon' size={300} />
               <ProjectCard
                 title='Tieri Beats'
                 description='Site de uma loja criado para um cliente produtor musical com finalidade de mostrar e vender seu produto.'
                 tecnologias={[
-                  'https://img.icons8.com/material-sharp/48/04D361/html-5.png',
-                  'https://img.icons8.com/ios-filled/100/04D361/css3.png',
-                  'https://img.icons8.com/ios-filled/50/04D361/javascript.png',
-                  'https://img.icons8.com/windows/32/04D361/django.png'
+                  'https://img.icons8.com/material-sharp/1000/04D361/html-5.png',
+                  'https://img.icons8.com/ios-filled/1000/04D361/css3.png',
+                  'https://img.icons8.com/ios-filled/1000/04D361/javascript.png',
+                  'https://img.icons8.com/windows/1000/04D361/django.png'
                 ]}
                 ghLink='https://github.com/pedroflp/tieri-beats'
                 brLink='https://tieribeats.herokuapp.com'
@@ -153,14 +167,14 @@ function MainPage() {
             </div>
 
             <div className='pormazion projects-card'>
-              <BiStore className='projects-card-icon' size={120}/>
+              <AiOutlineShop className='projects-card-icon' size={300} />
                 <ProjectCard
                 title='PORMAZIONStore'
                 description='Site de uma loja criado para um cliente designer gráfico com finalidade de mostrar e vender seu produto.'
                 tecnologias={[
-                  'https://img.icons8.com/material-sharp/48/04D361/html-5.png',
-                  'https://img.icons8.com/ios-filled/100/04D361/css3.png',
-                  'https://img.icons8.com/ios-filled/50/04D361/javascript.png',
+                  'https://img.icons8.com/material-sharp/1000/04D361/html-5.png',
+                  'https://img.icons8.com/ios-filled/1000/04D361/css3.png',
+                  'https://img.icons8.com/ios-filled/1000/04D361/javascript.png',
                 ]}
                 ghLink='https://github.com/pedroflp/pormazion-store'
                 brLink='https://pormazion.github.io/store'
@@ -168,15 +182,15 @@ function MainPage() {
             </div>
 
             <div className='medfamilia projects-card'>
-              <RiHospitalLine className='projects-card-icon' size={120} />
+              <RiHospitalLine className='projects-card-icon' size={290}  />
               <ProjectCard
               title='MedFamília'
               description='Site de uma clínica criado para o desafio do processo trainee de 2020 da empresa EJECT.'
               tecnologias={[
                 'https://img.icons8.com/material-sharp/48/04D361/html-5.png',
-                'https://img.icons8.com/ios-filled/100/04D361/css3.png',
-                'https://img.icons8.com/ios-filled/50/04D361/javascript.png',
-                'https://img.icons8.com/windows/32/04D361/django.png',
+                'https://img.icons8.com/ios-filled/1000/04D361/css3.png',
+                'https://img.icons8.com/ios-filled/1000/04D361/javascript.png',
+                'https://img.icons8.com/windows/1000/04D361/django.png',
               ]}
               ghLink='https://github.com/pedroflp/trainee-projeto'
               brLink=''
@@ -184,14 +198,14 @@ function MainPage() {
             </div>
           
             <div className='ufcalc projects-card'>
-              <AiOutlineCalculator className='projects-card-icon' size={120} />
+              <AiOutlineCalculator className='projects-card-icon' size={290}  />
               <ProjectCard
               title='UFRN Calc'
               description='Site criado para alunos da UFRN calcularem suas médias semestrais.'
               tecnologias={[
-                'https://img.icons8.com/material-sharp/48/04D361/html-5.png',
-                'https://img.icons8.com/ios-filled/100/04D361/css3.png',
-                'https://img.icons8.com/ios-filled/50/04D361/javascript.png',
+                'https://img.icons8.com/material-sharp/1000/04D361/html-5.png',
+                'https://img.icons8.com/ios-filled/1000/04D361/css3.png',
+                'https://img.icons8.com/ios-filled/1000/04D361/javascript.png',
               ]}
               ghLink='https://github.com/pedroflp/ufrn-calc'
               brLink='https://pedroflp.github.io/ufrn-calc/'
@@ -199,12 +213,12 @@ function MainPage() {
             </div>
 
             <div className='shirtstore projects-card'>
-              <RiTShirt2Line className='projects-card-icon' size={120} />
+              <RiTShirt2Line className='projects-card-icon' size={300}  />
               <ProjectCard
               title='T-Shirt Store'
               description='Site criado para estudar criação de Loja usando Next.js com integração da API do Stripe.'
               tecnologias={[
-                'https://img.icons8.com/ios-filled/50/04D361/react-native.png',
+                'https://img.icons8.com/ios-filled/1000/04D361/react-native.png',
               ]}
               ghLink='https://github.com/pedroflp/nextjs-stripe-store'
               brLink='https://next-stripe-store.vercel.app/'
