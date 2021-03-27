@@ -3,12 +3,12 @@ import { FiArrowLeft } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
 
-import Footer from '../components/footer/Footer';
-import Navbar from '../components/navbar/Navbar';
-import RepositoriesCard from '../components/repositories/RepositoriesCard';
-import BackTop from '../components/backtop/BackTop';
+import Footer from '../../components/footer/Footer';
+import Navbar from '../../components/navbar/Navbar';
+import RepositoriesCard from '../../components/repositories/RepositoriesCard';
+import BackTop from '../../components/backtop/BackTop';
 
-import './styles/repositories.css';
+import './style/repositories.css';
 
 function Respositories() {
   

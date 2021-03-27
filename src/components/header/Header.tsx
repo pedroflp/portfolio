@@ -2,7 +2,7 @@ import React from "react";
 import Typewriter from 'typewriter-effect';
 import { Link } from 'react-router-dom';
 
-import ProfileImg from '../../images/profile-image.png';
+import ProfileImg from '../../media/images/profile-image.png';
 
 import './style.css';
 
@@ -18,7 +18,7 @@ export function Header() {
               <Typewriter
               onInit={(typewriter) => {
                 typewriter.typeString('sou ')
-                typewriter.typeString('Desenvolvedor <strong>Web</strong>...')
+                typewriter.typeString('Desenvolvedor <strong>Web Front-End</strong>...')
                 .pauseFor(3000)
                 .deleteAll()
                 typewriter.typeString('e você está em meu <strong>Portfólio</strong>!')

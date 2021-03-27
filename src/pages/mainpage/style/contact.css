@@ -1,0 +1,82 @@
+.contact-container {
+  width: 70%;
+
+  padding: 100px 30px;
+  margin: auto;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.contact-cards {
+  max-width: 320px;
+  margin-right: 100px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.contact-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px;
+  margin: 10px;
+
+  border-radius: 8px;
+  background: rgb(32, 31, 36);
+
+  transition: background-color 0.4s ease-in-out;
+}
+
+.contact-title {
+  width: 400px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  align-content: flex-end;
+  text-align: end;
+}
+
+.contact-title h1 {
+  font-size: 60px;
+  line-height: 55px;
+  margin-bottom: 30px;
+
+  width: 300px;
+}
+
+.contact-title p {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.icon {
+  color: #fff;
+}
+
+.github-icon:hover {
+  background: rgb(0, 0, 0);
+}
+
+.linkedin-icon:hover {
+  background: rgb(25, 69, 151);
+}
+
+.instagram-icon:hover {
+  background: rgb(255, 37, 146);
+}
+
+.email-icon:hover {
+  background: rgb(255, 58, 58);
+}

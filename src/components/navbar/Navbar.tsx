@@ -4,7 +4,7 @@ import { FaLinkedin, FaInstagram } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
 import { Link } from 'react-router-dom';
 
-import PLogo from '../../images/p-logo.png';
+import PLogo from '../../media/images/p-logo.png';
 import './style.css';
 
 export default function() {

@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom'
 
-import MainPage from './pages/MainPage';
-import Sobre from './pages/Sobre';
-import Repositories from './pages/Repositories'
+import MainPage from './pages/mainpage/MainPage';
+import Sobre from './pages/about/Sobre';
+import Repositories from './pages/repositories/Repositories'
 
 function Routes () {
   return (

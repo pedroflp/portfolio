@@ -1,0 +1,108 @@
+.habilities-container {
+  width: 85%;
+
+  padding: 50px 30px;
+  margin: auto;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.habilities-title {
+  width: 30rem;
+}
+
+.habilities-title h1 {
+  font-size: 60px;
+  line-height: 60px;
+  margin-bottom: 30px;
+}
+
+.habilities-title p {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.habilities-cards {
+  width: 35rem;
+  padding-left: 40px;
+  position: relative;
+  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+}
+
+.habilities-cards .card-popup {
+  position: absolute;
+  z-index: 3;
+  top: 1;
+  left: 0;
+
+  margin-left: 34px;
+  margin-top: -30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  font-size: 1rem;
+  text-align: center;
+  
+  max-width: 500px;
+  padding: 2rem;
+
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.5);
+}
+
+.habilities-cards .card-popup .timer-line {
+  height: 6px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background:#04D361;
+}
+
+.habilities-cards .card-popup span {
+  color: #04D361;
+  font-weight: 700;
+  font-size: 0.7rem;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.habilities-cards .card-popup p {
+  font-weight: 600;
+}
+
+.habilities-cards .card-popup-arrow-left {
+  width: 0;
+  height: 0;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  margin-left: 55px;
+  margin-top: -15px;
+
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 15px solid rgba(0, 0, 0, 0.6);
+}

@@ -1,17 +1,18 @@
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
 
-import Navbar from '../components/navbar/Navbar';
-import Footer from '../components/footer/Footer';
-
-import ProfileImg from '../images/profile-image.png';
-import './styles/sobre.css';
-
 import { FiUser, FiArrowLeft } from 'react-icons/fi';
 import { HiOutlineCode } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
-import SobreInfo from '../components/sobre/SobreInfo';
-import BackTop from '../components/backtop/BackTop';
+
+import Navbar from '../../components/navbar/Navbar';
+import Footer from '../../components/footer/Footer';
+import SobreInfo from '../../components/sobre/SobreInfo';
+import BackTop from '../../components/backtop/BackTop';
+
+import ProfileImg from '../../media/images/profile-image.png';
+import './style/sobre.css';
+
 
 function Sobre() {
   return (

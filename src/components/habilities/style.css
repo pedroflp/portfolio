@@ -1,0 +1,128 @@
+.habilities-card {
+  position: relative;
+  padding: 20px 25px 25px;
+  margin: 0.6rem;
+
+  min-width: 130px;
+  max-width: 130px;
+  
+  border: 5px solid transparent;
+  border-radius: 8px;
+  background: rgb(32, 31, 36);
+  transition: 0.8s ease-in-out;
+}
+
+.habilities-card:hover {
+  border-radius: 8px 8px 8px 8px;
+  border-bottom: 5px solid rgba(66, 66, 66, 0.4);
+}
+
+.habilities-card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.habilities-card-info span {
+  display: none;
+  font-size: 0.6rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+
+  color: rgb(82, 81, 81);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 0px 0px 8px 8px;
+  border-bottom: 5px solid transparent;
+  margin: 0 0 -5px -3px;
+  transition: 0.8s ease-in-out;
+}
+
+.skill-percent {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 2px;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+
+  opacity: 0;
+  transition: 0.8s ease-in-out;
+}
+
+.habilities-card:hover .skill-percent {
+  opacity: 1;
+}
+
+.html:hover .html-icon {
+  color: rgb(243, 121, 6);
+}
+.html:hover .skill-bar{
+  border-color: rgb(243, 121, 6);
+}
+.html .html-percent {
+  color: rgb(243, 121, 6);
+}
+
+.css:hover .css-icon {
+  color: rgb(6, 128, 243);
+}
+.css:hover .skill-bar{
+  border-color: rgb(6, 128, 243);
+}
+.css > .skill-percent {
+  color: rgb(6, 128, 243);
+}
+
+.javascript:hover .javascript-icon {
+  color: rgb(243, 227, 6);
+}
+.javascript:hover .skill-bar{
+  border-color: rgb(243, 227, 6);
+}
+.javascript> .skill-percent {
+  color: rgb(243, 227, 6);
+}
+
+.reactjs:hover .reactjs-icon {
+  color: rgb(6, 215, 243);
+}
+.reactjs:hover .skill-bar{
+  border-color: rgb(6, 215, 243);
+}
+.reactjs > .skill-percent {
+  color: rgb(6, 215, 243);
+}
+
+.typescript:hover .typescript-icon {
+  color: rgb(34, 140, 201);
+}
+.typescript:hover .skill-bar{
+  border-color: rgb(34, 140, 201);
+}
+.typescript > .skill-percent {
+  color: rgb(34, 140, 201);
+}
+
+.nodejs:hover .nodejs-icon {
+  color: rgba(140, 200, 75, 1);
+}
+.nodejs:hover .skill-bar{
+  border-color: rgba(140, 200, 75, 1);
+}
+.nodejs .skill-percent{
+  color: rgba(140, 200, 75, 1);
+}

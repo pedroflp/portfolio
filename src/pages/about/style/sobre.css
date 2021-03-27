@@ -6,7 +6,7 @@
   width: 1000px;
   margin: auto;
 
-  background: url('../../images/background-codelines.svg') no-repeat;
+  background: url('../../../media/images/background-codelines.svg') no-repeat;
   background-size: cover;
   
   display: flex;

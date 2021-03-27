@@ -1,6 +1,6 @@
 import React from 'react';
 
-import PLogo from '../../images/p-logo.png';
+import PLogo from '../../media/images/p-logo.png';
 import './style.css';
 
 
