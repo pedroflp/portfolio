@@ -1,12 +1,14 @@
 import React from 'react';
 
-import './styles/global.css';
-
-import Routes from './routes';
+import{ ThemeContextProvider } from './styles/themes/context';
+import AppTheme from './AppTheme';
 
 function App() {
   return (
-    <Routes />
+    <ThemeContextProvider>
+      <AppTheme />
+    </ThemeContextProvider>
+
   );
 }
 

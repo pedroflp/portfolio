@@ -18,7 +18,7 @@ function ProjectCard() {
         <div key={project.title} className={`${project.title} projects-card`}>
           { project.icon.length >= 20 && <img src={project.icon} className='projects-card-icon' alt=""/> }
           <div className='projects-card-title'>
-            <h1><strong>{project.title}</strong></h1>
+            <h1>{project.title}</h1>
             <p>{project.description}</p>
           </div>
           <div className='projects-card-languages'>

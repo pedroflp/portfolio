@@ -32,9 +32,9 @@
   margin: 10px;
 
   border-radius: 8px;
-  background: rgb(32, 31, 36);
-
-  transition: background-color 0.4s ease-in-out;
+  background: var(--cardBackground);
+  box-shadow: 0 0 20px var(--shadowColor);
+  transition: 0.4s ease;
 }
 
 .contact-title {
@@ -61,22 +61,35 @@
   line-height: 30px;
 }
 
-.icon {
-  color: #fff;
+.contact-card .icon {
+  color: var(--text);
+  transition: 0.4s ease;
 }
 
 .github-icon:hover {
   background: rgb(0, 0, 0);
 }
+.github-icon:hover .github {
+  color: white;
+}
 
 .linkedin-icon:hover {
   background: rgb(25, 69, 151);
+}
+.linkedin-icon:hover .linkedin {
+  color: white;
 }
 
 .instagram-icon:hover {
   background: rgb(255, 37, 146);
 }
+.instagram-icon:hover .instagram{
+  color: white;
+}
 
 .email-icon:hover {
   background: rgb(255, 58, 58);
+}
+.email-icon:hover .email{
+  color: white;
 }

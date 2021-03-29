@@ -1,5 +1,5 @@
 .projects-card {
-  background: var(--dark-theme-card-background);
+  background: var(--cardBackgroundDarker);
   
   width: 350px;
   max-width: 350px;
@@ -10,8 +10,7 @@
   padding: 30px;
   margin: 20px 10px;
 
-  border-bottom: 4px solid #121214;
-  border-radius: 7px;
+  border-radius: 8px;
 
   display: flex;
   flex-direction: column;
@@ -36,7 +35,7 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: var(--dark-theme-background);
+  background: var(--background);
   z-index: 3;
   overflow: hidden;
 }
@@ -50,7 +49,6 @@
 }
 
 .projects-card:hover {
-  border-bottom: 4px solid #ffffff;
   transform: translateY(-5px);
 }
 
@@ -62,11 +60,9 @@
 }
 
 .projects-card-title h1 {
-  font-size: 33px;
-  color: white;
-
-  position: relative;
-  z-index: 10;
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: var(--main);
 }
 
 .projects-card-title p {
@@ -74,7 +70,7 @@
   align-items: center;
   justify-content: center;
 
-  font-weight: 400;
+  font-weight: 500;
   font-size: 15px;
   margin: 20px auto;
 
@@ -102,7 +98,7 @@
 
   opacity: 0.04;
 
-  color: rgb(255, 255, 255);
+  color: var(--main);
 }
 
 .projects-card-languages h3{
@@ -133,12 +129,13 @@
   width: 35px;
   height: 35px;
 
-  margin: 0px 5px 5px;
+  margin: 0px 7px 5px;
 }
 
 .projects-card-languages-image span {
-  font-size: 0.5rem;
-  color: #04D361;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--main);
 }
 
 
@@ -164,7 +161,7 @@
 }
 
 .line-divisor {
-  border-bottom: 2px dashed rgb(56, 56, 56);
+  border-bottom: 2px dashed var(--background);
   width: 120%;
   margin: 20px 0px;
 }
@@ -202,7 +199,8 @@
   justify-content: center;
   font-size: 0.9rem;
   font-weight: 600;
-  background: #04D361;
+  color: var(--background);
+  background: var(--main);
 }
 
 .projects-card-buttons .browser :first-child {
@@ -212,7 +210,6 @@
 
 .projects-card-buttons a:hover {
   transform: translateY(-3px);
-  filter: brightness(0.9);
 }
 
 
@@ -227,7 +224,7 @@
 
   margin: 20px 100%;
 
-  background: linear-gradient(40deg, rgba(127, 91, 230, 0.4) 10%, rgba(58, 178, 227, 0.4) 40%, rgba(51, 153, 51, 0.4));
+  background: linear-gradient(40deg, rgba(127, 91, 230, 0.5) 10%, rgba(58, 178, 227, 0.5) 40%, rgba(51, 153, 51, 0.5));
 
   border-radius: 20px;
   
@@ -244,11 +241,11 @@
   content: "";
   display: block;
   position: absolute;
-  bottom: 90px;
-  width: 60px;
-  height: 60px;
+  bottom: 95px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  background: var(--dark-theme-background);
+  background: var(--background);
   z-index: 3;
   overflow: hidden;
 }
@@ -304,8 +301,8 @@
 }
 
 .stockapp-title p {
-  font-weight: 500;
-  color: #04D361;
+  font-weight: 600;
+  color: var(--text);
   font-size: 1.1rem;
   margin-bottom: 2rem;
   max-width: 80%;
@@ -320,14 +317,14 @@
 }
 
 .stockapp-web-info {
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
   padding-right: 3rem;
   margin-right: 3rem;
 }
 
 .stockapp-web-info span,
 .stockapp-api-info span{
-  border-left: 2px solid #04D361;
+  border-left: 2px solid var(--main);
   padding-left: 0.7rem;
 
   font-weight: 600;
@@ -381,7 +378,7 @@
 
 .stockapp-card .line-divisor {
   width: 100%;
-  border-bottom: 2px dashed rgba(255, 255, 255, 0.25);
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.4);
   background: none;
 }
 
@@ -420,7 +417,6 @@
 
 .stockapp-buttons a:hover {
   transform: translateY(-5px);
-  filter: brightness(0.9);
 }
 
 .stockapp-buttons a :first-child {
@@ -453,7 +449,8 @@
   max-width: 380px;
   font-size: 1rem;
 
-  background: rgba(0, 0, 0, 0.85);
+  background: var(--popupBackground);
+  color: var(--text);
 
   border-radius: 8px;
   backdrop-filter: blur(5px);
@@ -463,7 +460,7 @@
 .stockapp-buttons .card-popup :nth-child(0),
 .stockapp-buttons .card-popup :nth-child(4),
 .stockapp-buttons .card-popup :nth-child(5) {
-  background: rgb(0, 0, 0, 0.8);
+  background: var(--popupBackground);
   padding: 0.5rem 1rem;
   border-radius: 8px;
   margin: 3px 0px;
@@ -472,12 +469,12 @@
 
 .stockapp-buttons .card-popup span {
   font-weight: 600;
-  color: #04D361;
+  color: var(--main);
 }
 
 .stockapp-buttons .card-popup :nth-child(4),
 .stockapp-buttons .card-popup :nth-child(5) {
-  color: #ffffff;
+  color: var(--text);
   font-size: 0.9rem;
 }
 

@@ -1,6 +1,6 @@
 
 #footer {
-  background: var(--dark-theme-card-background);
+  background: var(--cardBackground);
   padding: 30px;
 }
 

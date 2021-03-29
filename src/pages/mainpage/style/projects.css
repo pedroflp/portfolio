@@ -44,15 +44,15 @@
 
 .projects-button-repositories {
   width: 20rem;
-  background: #04D361;
-  color: rgb(21, 20, 24);
+  background: var(--main);
+  color: var(--background);
 
   padding: 1.5rem 2rem;
   margin-top: 20px;
 
   text-decoration: none;
   font-size: 16px;
-  font-weight: 900;
+  font-weight: 700;
 
   border: none;
   border-radius: 5px;
@@ -68,5 +68,6 @@
 }
 
 .projects-button-repositories:hover {
+  filter: brightness(0.9);
   transform: translateY(-5px);
 }

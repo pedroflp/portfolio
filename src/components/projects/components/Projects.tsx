@@ -9,23 +9,23 @@ const Projects = [
     tecnologias: [
       {
         name: 'HTML',
-        imageUrl: 'https://img.icons8.com/material-sharp/1000/04D361/html-5.png',
+        imageUrl: 'https://img.icons8.com/material-sharp/1000/772ce8/html-5.png',
       },
       {
         name: 'CSS',
-        imageUrl: 'https://img.icons8.com/ios-filled/1000/04D361/css3.png',
+        imageUrl: 'https://img.icons8.com/ios-filled/1000/772ce8/css3.png',
       },
       {
         name: 'Javascript',
-        imageUrl: 'https://img.icons8.com/ios-filled/1000/04D361/javascript.png',
+        imageUrl: 'https://img.icons8.com/ios-filled/1000/772ce8/javascript.png',
       },
       {
         name: 'jQuery',
-        imageUrl: 'https://img.icons8.com/ios-filled/1000/04D361/jquery.png',
+        imageUrl: 'https://img.icons8.com/ios-filled/1000/772ce8/jquery.png',
       },
       {
         name: 'Django',
-        imageUrl: 'https://img.icons8.com/windows/1000/04D361/django.png',
+        imageUrl: 'https://img.icons8.com/windows/1000/772ce8/django.png',
       }
     ],
   },
@@ -38,15 +38,15 @@ const Projects = [
     tecnologias: [
       {
         name: 'HTML',
-        imageUrl: 'https://img.icons8.com/material-sharp/1000/04D361/html-5.png',
+        imageUrl: 'https://img.icons8.com/material-sharp/1000/772ce8/html-5.png',
       },
       {
         name: 'CSS',
-        imageUrl: 'https://img.icons8.com/ios-filled/1000/04D361/css3.png',
+        imageUrl: 'https://img.icons8.com/ios-filled/1000/772ce8/css3.png',
       },
       {
         name: 'Javascript',
-        imageUrl: 'https://img.icons8.com/ios-filled/1000/04D361/javascript.png',
+        imageUrl: 'https://img.icons8.com/ios-filled/1000/772ce8/javascript.png',
       },
     ],
   },
@@ -59,19 +59,19 @@ const Projects = [
     tecnologias: [
       {
         name: 'HTML',
-        imageUrl: 'https://img.icons8.com/material-sharp/1000/04D361/html-5.png',
+        imageUrl: 'https://img.icons8.com/material-sharp/1000/772ce8/html-5.png',
       },
       {
         name: 'CSS',
-        imageUrl: 'https://img.icons8.com/ios-filled/1000/04D361/css3.png',
+        imageUrl: 'https://img.icons8.com/ios-filled/1000/772ce8/css3.png',
       },
       {
         name: 'Javascript',
-        imageUrl: 'https://img.icons8.com/ios-filled/1000/04D361/javascript.png',
+        imageUrl: 'https://img.icons8.com/ios-filled/1000/772ce8/javascript.png',
       },
       {
         name: 'Django',
-        imageUrl: 'https://img.icons8.com/windows/1000/04D361/django.png',
+        imageUrl: 'https://img.icons8.com/windows/1000/772ce8/django.png',
       }
     ],
   },
@@ -84,11 +84,11 @@ const Projects = [
     tecnologias: [
       {
         name: 'ReactJS',
-        imageUrl: 'https://img.icons8.com/ios-filled/1000/04D361/react-native.png',
+        imageUrl: 'https://img.icons8.com/ios-filled/1000/772ce8/react-native.png',
       },
       {
         name: 'Typescript',
-        imageUrl: 'https://img.icons8.com/material-rounded/1000/04D361/typescript.png',
+        imageUrl: 'https://img.icons8.com/material-rounded/1000/772ce8/typescript.png',
       }
     ],
   },

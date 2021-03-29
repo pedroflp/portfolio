@@ -32,19 +32,21 @@ function RespositoriesCard() {
 
       {repositories != null ? repositories?.map(repo => (
         <div key={repo.name} className={`${repo.name} repository-card`}>
-          <h1 title={repo.name} >{repo.name}</h1>
-          {repo.description ? <p title={repo.description}>{repo.description}</p> : <div className='wireframe-description'></div> }
-
-          <div className='line-divisor'></div>
+          <div className='repositiry-card-title'>
+            <h1 title={repo.name} >{repo.name}</h1>
+            {repo.description ? <p title={repo.description}>{repo.description}</p> 
+            : <div className='wireframe-description'></div> }
+          </div>
 
           <div className='repository-buttons-container'>
-            <a href={repo.html_url} target='_blank' rel="noopener noreferrer" ><AiFillGithub size={30}/> <span>Ver repositório no Github</span></a>
+            <a href={repo.html_url} target='_blank' rel="noopener noreferrer" >
+              <AiFillGithub size={30}/></a>
           </div>
         </div>
         )) :
          <Loader
             type="TailSpin"
-            color="#04D361"
+            color="#772CE8"
             height={100}
             width={100}
           />

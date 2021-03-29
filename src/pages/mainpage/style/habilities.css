@@ -59,10 +59,15 @@
   max-width: 500px;
   padding: 2rem;
 
-  background: rgba(0, 0, 0, 0.8);
+  background: var(--popupBackground);
+  color: var(--text);
   backdrop-filter: blur(4px);
   border-radius: 8px;
-  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.habilities-cards .card-popup p {
+  font-weight: 700;
 }
 
 .habilities-cards .card-popup .timer-line {
@@ -72,11 +77,11 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  background:#04D361;
+  background: var(--main);
 }
 
 .habilities-cards .card-popup span {
-  color: #04D361;
+  color: var(--main);
   font-weight: 700;
   font-size: 0.7rem;
 
@@ -85,24 +90,4 @@
   bottom: 0;
   margin-bottom: 10px;
   margin-left: 10px;
-}
-
-.habilities-cards .card-popup p {
-  font-weight: 600;
-}
-
-.habilities-cards .card-popup-arrow-left {
-  width: 0;
-  height: 0;
-
-  position: absolute;
-  left: 0;
-  top: 0;
-
-  margin-left: 55px;
-  margin-top: -15px;
-
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 15px solid rgba(0, 0, 0, 0.6);
 }

@@ -6,15 +6,11 @@
   min-width: 130px;
   max-width: 130px;
   
-  border: 5px solid transparent;
-  border-radius: 8px;
-  background: rgb(32, 31, 36);
+  border-bottom: 5px solid transparent;
+  border-radius: 5px;
+  background: var(--cardBackground);
+  box-shadow: 0px 0px 20px var(--shadowColor);
   transition: 0.8s ease-in-out;
-}
-
-.habilities-card:hover {
-  border-radius: 8px 8px 8px 8px;
-  border-bottom: 5px solid rgba(66, 66, 66, 0.4);
 }
 
 .habilities-card-info {
@@ -44,7 +40,7 @@
   left: 0;
   border-radius: 0px 0px 8px 8px;
   border-bottom: 5px solid transparent;
-  margin: 0 0 -5px -3px;
+  margin: 0 0 -5px;
   transition: 0.8s ease-in-out;
 }
 

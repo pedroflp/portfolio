@@ -1,38 +1,70 @@
 .repository-card{
-  background: var(--dark-theme-card-background);
+  background: var(--cardBackgroundDarker);
 
-  width: 320px;
-  max-width: 320px;
-  max-height: 400px;
+  width: 400px;
+
+  max-height: 200px;
   overflow: hidden;
 
   padding: 30px;
-  margin: 20px 10px;
+  margin: 15px;
 
-  border-bottom: 5px solid transparent;
   border-radius: 10px;
 
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   align-content: center;
 
-  text-align: center;
 
-  transition: 0.2s ease;
+  transition: 0.3s ease;
 }
 
+.repository-card:before,
+.repository-card:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 140px;
+  right: 85px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--background);
+  z-index: 3;
+  overflow: hidden;
+}
+
+.repository-cardbefore {
+  top: -30px;
+}
+
+.repository-card:after {
+  bottom: -30px;
+}
+
+
 .repository-card:hover {
-  border-bottom: 5px solid #04D361;
   transform: translateY(-5px)
+}
+
+.repository-card-title {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  text-align: left;
 }
 
 .repository-card h1{
   font-weight: 700;
-  font-size: 24px;
+  font-size: 1.7rem;
 
-  width: 250px;
+  margin-bottom: 10px;
+
+  width: 230px;
   display: block;
 
   white-space: pre;
@@ -41,16 +73,19 @@
 }
 
 .repository-card p {
-  color: #04D361;
-
-  padding: 0px 10px;
+  color: var(--main);
 
   max-width: 300px;
-  max-height: 80px;
-  font-weight: 400;
+
+  min-height: 60px;
+  max-height: 60px;
+
+  font-weight: 700;
+  font-size: 1rem;
 
   display: block; 
   display: -webkit-box;
+  
   
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -62,62 +97,43 @@
 .repository-buttons-container {
   width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: flex-end;
   align-items: center;
-  align-content: center;
+  height: 100%;
+
+  border-left: 2px dashed var(--secundary);
+  margin-left: 30px;
 }
 
 .repository-buttons-container a {
-  width: 30%;
-
-  max-height: 50px;
-
   overflow: hidden;
   
   display: flex;
   justify-content: center;
   align-items: center;
 
-  padding: 10px 20px;
+  padding: 10px;
+  margin-left: 20px;
   border-radius: 7px;
 
-  color: black;
+  color: var(--background);
   text-decoration: none;
-  background: white;
+  background: var(--text);
 
   transition: 0.4s ease;
 }
 
-.repository-buttons-container a > span {
-  display: none;
-}
-
-.repository-card:hover .repository-buttons-container a {
-  width: 100%;
-  justify-content: space-between;
-}
-
-.repository-card:hover .repository-buttons-container a > span {
-  display: flex;
-  width: 190px;
-  min-width: 190px;
-  font-weight: 400;
-  margin-left: 10px;
-}
-
 .repository-buttons-container a:hover {
-  color: #ffffff;
-  background: #000000;
+  transform: translateY(-5px);
 }
-
 
 /* Wireframe */
 
 .wireframe-description {
-  width: 100%;
-  margin: 10px auto 5px;
-  height: 70px;
+  width: 90%;
+  margin: 10px 5px 5px;
+  height: 55px;
   border-radius: 5px;
 
   /* WIREFRAME ANIMATION */
@@ -126,8 +142,8 @@
   animation-iteration-count: infinite;
   animation-name: wireframe-animation;
   animation-timing-function: linear;
-  background: #292a2b;
-  background: linear-gradient(to right, #27262c 8%, #313036 38%, #27262c 54%);
+  background: var(--background);
+  background: linear-gradient(to right, var(--background) 8%, var(--popupBackground) 38%, var(--background) 54%);
   background-size: 1000px 640px;
   
   position: relative;

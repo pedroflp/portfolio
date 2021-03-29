@@ -16,7 +16,7 @@
 }
 
 .header-mainpage-title {
-  text-shadow: 0 0 10px black;
+  text-shadow: 0 0 10px var(--shadowColor);
 }
 
 .header-mainpage-title img {
@@ -27,7 +27,7 @@
   min-height: 220px;
   max-height: 220px;
 
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0));
   -webkit-mask-size: 100% 75%;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: left top, left bottom;
@@ -83,24 +83,24 @@
 }
 
 .seemore-button {
-  color: rgb(26, 26, 26);
-  background: #00ff73;
+  color: var(--background);
+  background: var(--main);
 
 }
 
 .seemore-button:hover {
-  background: #03c058;
+  filter: brightness(0.9);
   transform: translateY(-5px);
 }
 
 .continuesee-button {
-  color: rgb(20, 20, 20);
-  background: #eeeeee;
+  color: var(--background);
+  background: var(--text);
 
 
 }
 
 .continuesee-button:hover {
-  background: #c7c7c7;
+  filter: brightness(0.9);
   transform: translateY(-5px);
 }

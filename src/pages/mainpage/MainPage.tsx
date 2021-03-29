@@ -29,9 +29,9 @@ function MainPage() {
   
   const [timer, setTimer] = useState(100);
   const [timerCount, setTimerCount] = useState(10);
-  
+
   const checkScroll = () => {
-    if (canShow && (window.pageYOffset > 560)){
+    if (canShow && (window.pageYOffset > 450)){
       setIsVisible(true);
       setTimeout(() => {
         setIsVisible(false);

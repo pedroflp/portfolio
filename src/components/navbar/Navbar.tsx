@@ -1,16 +1,24 @@
-import React from 'react';
-import { AiFillGithub } from 'react-icons/ai';
-import { FaLinkedin, FaInstagram } from 'react-icons/fa';
-import { SiGmail } from 'react-icons/si';
+import React, { useContext } from 'react';
+import Switch from 'react-switch';
 import { Link } from 'react-router-dom';
+import { ThemeContext } from 'styled-components';
+
+import { useTheme } from '../../styles/themes/context'
+
+import { FaRegSun, FaSun } from 'react-icons/fa';
+import { RiMoonClearFill, RiMoonClearLine } from 'react-icons/ri';
 
 import PLogo from '../../media/images/p-logo.png';
 import './style.css';
 
-export default function() {
+export default function Navbar() {
+  const { colors } = useContext(ThemeContext);
+  const { defaultTheme, toggleTheme } = useTheme();
+
   return (
     <div id='navbar'>
       <div className='navbar-container'>
+
 
         <Link to='/' className='navbar-logo'>
             <img src={PLogo} alt='Logo'/>
@@ -35,21 +43,25 @@ export default function() {
               <a href="/#contact">Contato</a>
             </li>
           </ul>
-          <ul className='navbar-links-social'>
-            <a href='https://github.com/pedroflp' target='_blank' rel='noopener noreferrer'>
-              <AiFillGithub className='github icon' size={17} />
-            </a>
-            <a href='https://www.linkedin.com/in/pedroflp' target='_blank' rel='noopener noreferrer'>
-              <FaLinkedin className='linkedin icon' size={17} />
-            </a>
-            <a href='https://instagram.com/_pedroflp' target='_blank' rel='noopener noreferrer'>
-              <FaInstagram className='instagram icon' size={17} />
-            </a>
-            <a href='mailto: pedrofelipe0940@gmail.com' target='_blank' rel='noopener noreferrer'>
-              <SiGmail className='email icon' size={17} />
-            </a>
-          </ul>
+          <div className='theme-switcher'>
+            { defaultTheme.title === 'dark' ? <RiMoonClearFill /> : <RiMoonClearLine />}
+            <Switch
+              onChange={toggleTheme}
+              checked={defaultTheme.title === 'light'}
+              checkedIcon={true}
+              uncheckedIcon={false}
+              height={10}
+              width={40}
+              handleDiameter={20}
+              offHandleColor={colors.main}
+              onHandleColor={colors.text}
+              offColor={colors.background}
+              onColor={colors.main}
+            />
+            { defaultTheme.title === 'light' ? <FaSun /> : <FaRegSun />}
+          </div>
         </div>
+
 
       </div>
     </div>

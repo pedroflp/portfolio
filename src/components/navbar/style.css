@@ -3,12 +3,12 @@
 #navbar {
   padding: 20px 0px;
   width: 100%;
-  background: var(--dark-theme-card-background);
-
+  background: var(--cardBackground);
+  box-shadow: var(--boxShadow);
 }
 
 .navbar-container {
-  width: 70%;
+  width: 80%;
   margin: auto;
 
   display: flex;
@@ -23,7 +23,7 @@
   align-items: center;
   align-content: center;
   text-decoration: none;
-  color: white;
+  color: var(--text);
   cursor: poiter;
 }
 
@@ -50,14 +50,14 @@
 
 .navbar-links-sections li {
   list-style: none;
-  margin: 0px 10px;
+  margin: 0px 15px;
 }
 
 .navbar-links-sections li a {
-  color: white;
+  color: var(--text);
 
-  font-weight: 700;
-  font-size: 16px;
+  font-weight: 600;
+  font-size: 1rem;
   text-decoration: none;
 
   transition: 0.3s;
@@ -65,20 +65,20 @@
   cursor: pointer;
 }
 
-.navbar-links-sections li a:hover,
-.navbar-links-social a:hover :only-child {
-  color: #04D361;
+.navbar-links-sections li a:hover{
+  color: var(--main);
 }
 
-.navbar-links-social {
+.theme-switcher {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding-left: 25px;
-
-  border-left: 1px solid rgb(59, 59, 59);
+  justify-content: center;
+  
+  padding-left: 30px;
+  border-left: 1px solid var(--text);
 }
 
-.navbar-links-social a {
-  margin: 0 0.2rem;
+.theme-switcher :first-child,
+.theme-switcher :last-child {
+  margin: 0 10px;
 }
