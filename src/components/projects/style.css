@@ -138,6 +138,11 @@
   color: var(--main);
 }
 
+.line-divisor {
+  border-bottom: 2px dashed var(--secundary);
+  width: 120%;
+  margin: 20px 0px;
+}
 
 .projects-card-buttons {
   position: relative;
@@ -151,20 +156,15 @@
   width: 100%;
 }
 
-.project-card-button-title {
+/* .project-card-button-title {
   font-size: 12px;
   font-weight: 100;
 
   color: #ffffff;
   text-align: center;
   margin-bottom: 0.5rem;
-}
+} */
 
-.line-divisor {
-  border-bottom: 2px dashed var(--background);
-  width: 120%;
-  margin: 20px 0px;
-}
 
 .projects-card-button {
   display: flex;
@@ -187,6 +187,7 @@
 
 .projects-card-buttons .github {
   width: 20%;
+  padding: 0.9rem;
   flex: 1;
 
   display: flex;

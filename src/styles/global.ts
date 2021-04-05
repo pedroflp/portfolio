@@ -13,7 +13,6 @@ export default createGlobalStyle`
   scroll-behavior: smooth;
   -webkit-user-drag: none;
   
-  filter: saturate(1.03);
 }
 
 :root {
@@ -44,6 +43,10 @@ strong {
   color: var(--main);
 }
 
+button {
+  cursor: pointer;
+}
+
 ::selection { 
   background: rgba(15, 231, 98, 0.2);
 }
@@ -61,10 +64,6 @@ strong {
   background: var(--main);
   border-radius: 50px;
   
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #009c46;
 }
 
 .global-tooltip {

@@ -7,6 +7,7 @@ import { FaInstagram, FaLinkedin, FaNodeJs } from 'react-icons/fa';
 import { AiFillHtml5, AiFillGithub, AiOutlinePlus, AiOutlineQuestionCircle } from 'react-icons/ai';
 import { DiCss3 } from 'react-icons/di';
 import { SiJavascript, SiReact, SiGmail, SiTypescript } from 'react-icons/si';
+import { FiMessageSquare } from 'react-icons/fi';
 
 // Components
 import Navbar from '../../components/navbar/Navbar';
@@ -31,7 +32,7 @@ function MainPage() {
   const [timerCount, setTimerCount] = useState(10);
 
   const checkScroll = () => {
-    if (canShow && (window.pageYOffset > 450)){
+    if (canShow && (window.pageYOffset > 400)){
       setIsVisible(true);
       setTimeout(() => {
         setIsVisible(false);
@@ -76,17 +77,18 @@ function MainPage() {
 
         <div className='habilities-cards'>
 
-          <AiOutlineQuestionCircle 
-            size={25}
-            style={{
-              cursor: 'pointer',
-              position: 'relative',
-              top: 0,
-              marginTop: '-80px'
-            }} 
-            onMouseOver={handleHover}
-            onMouseOut={handleUnhover}
-          />
+        <AiOutlineQuestionCircle 
+          size={25}
+          style={{
+            cursor: 'pointer',
+            position: 'relative',
+            top: 0,
+            marginTop: '-90px',
+            marginRight: '10px'
+          }} 
+          onMouseOver={handleHover}
+          onMouseOut={handleUnhover}
+        />
 
         { canShow && isVisible && (
           <div className='card-popup'>
@@ -95,9 +97,9 @@ function MainPage() {
             <br/>
             <div style={{width: `${timer}%`}} className='timer-line'></div>
             { timerCount < 10 ? <span>00:0{timerCount}</span> : <span>00:{timerCount}</span>}
-          </div> ) 
+          </div> 
+          ) 
         }
-
 
         { !canShow && toggleShow && (
           <div className='card-popup'>
@@ -176,20 +178,21 @@ function MainPage() {
     <section id='contact'>
       <div className='contact-container'>
         <div className='contact-cards'>
-
-          <a className='github-icon contact-card' href='https://github.com/pedroflp' target='_blank' rel='noopener noreferrer'>
-            <AiFillGithub className='github icon' size={50} />
-          </a>
-          <a className='linkedin-icon contact-card' href='https://www.linkedin.com/in/pedroflp' target='_blank' rel='noopener noreferrer'>
-            <FaLinkedin className='linkedin icon' size={50} />
-          </a>
-          <a className='instagram-icon contact-card' href='https://instagram.com/_pedroflp' target='_blank' rel='noopener noreferrer'>
-            <FaInstagram className='instagram icon' size={50} />
-          </a>
-          <a className='email-icon contact-card' href='mailto: pedrofelipe0940@gmail.com' data-tip='pedrofelipe0940@gmail.com' target='_blank' rel='noopener noreferrer'>
-            <SiGmail className='email icon' size={50} />
-          </a>
-
+         <div className="contact-card-social">
+            <a className='github-icon contact-card' href='https://github.com/pedroflp' target='_blank' rel='noopener noreferrer'>
+              <AiFillGithub className='github icon' size={50} />
+            </a>
+            <a className='linkedin-icon contact-card' href='https://www.linkedin.com/in/pedroflp' target='_blank' rel='noopener noreferrer'>
+              <FaLinkedin className='linkedin icon' size={50} />
+            </a>
+            <a className='instagram-icon contact-card' href='https://instagram.com/_pedroflp' target='_blank' rel='noopener noreferrer'>
+              <FaInstagram className='instagram icon' size={50} />
+            </a>
+            <a className='email-icon contact-card' href='mailto: pedrofelipe0940@gmail.com' data-tip='pedrofelipe0940@gmail.com' target='_blank' rel='noopener noreferrer'>
+              <SiGmail className='email icon' size={50} />
+            </a>
+         </div>
+         <Link to='/direct-message' className="contact-card-dmbutton">Enviar mensagem <FiMessageSquare size={22} /></Link>
         </div>
 
         <div className='contact-title'>

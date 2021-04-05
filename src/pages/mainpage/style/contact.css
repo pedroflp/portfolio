@@ -1,7 +1,7 @@
 .contact-container {
-  width: 70%;
+  width: 90%;
 
-  padding: 100px 30px;
+  padding: 4rem 3rem 5rem;
   margin: auto;
 
   display: flex;
@@ -12,9 +12,15 @@
 }
 
 .contact-cards {
-  max-width: 320px;
-  margin-right: 100px;
+  width: 17rem;
+  margin-right: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
+.contact-card-social {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -35,6 +41,38 @@
   background: var(--cardBackground);
   box-shadow: 0 0 20px var(--shadowColor);
   transition: 0.4s ease;
+}
+
+.contact-card-dmbutton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+  border-radius: 8px;
+
+  background: var(--main);
+  color: var(--background);
+  box-shadow: 0 0 20px var(--shadowColor);
+
+  width: 15rem;
+  height: 4rem;
+  margin-top: 10px;
+  
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+
+  transition: 0.25s ease-in-out;
+}
+
+.contact-card-dmbutton :first-child {
+  margin-left: 5px;
+}
+
+.contact-card-dmbutton:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px 10px var(--shadowColor);
 }
 
 .contact-title {

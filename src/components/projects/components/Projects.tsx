@@ -1,7 +1,7 @@
 const Projects = [
 
   {
-    icon: 'https://img.icons8.com/fluent-systems-regular/1000/ffffff/headphones.png',
+    icon: `https://img.icons8.com/fluent-systems-regular/1000/ffffff/headphones.png`,
     title: 'Tieri Beats',
     description: 'Site de uma loja criado para um cliente produtor musical com finalidade de mostrar e vender seu produto.',
     ghLink: 'https://github.com/pedroflp/tieri-beats',
@@ -9,23 +9,23 @@ const Projects = [
     tecnologias: [
       {
         name: 'HTML',
-        imageUrl: 'https://img.icons8.com/material-sharp/1000/772ce8/html-5.png',
+        imageUrl: 'https://img.icons8.com/material-sharp/1000/6430d4/html-5.png',
       },
       {
         name: 'CSS',
-        imageUrl: 'https://img.icons8.com/ios-filled/1000/772ce8/css3.png',
+        imageUrl: 'https://img.icons8.com/ios-filled/1000/6430d4/css3.png',
       },
       {
         name: 'Javascript',
-        imageUrl: 'https://img.icons8.com/ios-filled/1000/772ce8/javascript.png',
+        imageUrl: 'https://img.icons8.com/ios-filled/1000/6430d4/javascript.png',
       },
       {
         name: 'jQuery',
-        imageUrl: 'https://img.icons8.com/ios-filled/1000/772ce8/jquery.png',
+        imageUrl: 'https://img.icons8.com/ios-filled/1000/6430d4/jquery.png',
       },
       {
         name: 'Django',
-        imageUrl: 'https://img.icons8.com/windows/1000/772ce8/django.png',
+        imageUrl: 'https://img.icons8.com/windows/1000/6430d4/django.png',
       }
     ],
   },
@@ -38,15 +38,15 @@ const Projects = [
     tecnologias: [
       {
         name: 'HTML',
-        imageUrl: 'https://img.icons8.com/material-sharp/1000/772ce8/html-5.png',
+        imageUrl: 'https://img.icons8.com/material-sharp/1000/6430d4/html-5.png',
       },
       {
         name: 'CSS',
-        imageUrl: 'https://img.icons8.com/ios-filled/1000/772ce8/css3.png',
+        imageUrl: 'https://img.icons8.com/ios-filled/1000/6430d4/css3.png',
       },
       {
         name: 'Javascript',
-        imageUrl: 'https://img.icons8.com/ios-filled/1000/772ce8/javascript.png',
+        imageUrl: 'https://img.icons8.com/ios-filled/1000/6430d4/javascript.png',
       },
     ],
   },
@@ -59,19 +59,19 @@ const Projects = [
     tecnologias: [
       {
         name: 'HTML',
-        imageUrl: 'https://img.icons8.com/material-sharp/1000/772ce8/html-5.png',
+        imageUrl: 'https://img.icons8.com/material-sharp/1000/6430d4/html-5.png',
       },
       {
         name: 'CSS',
-        imageUrl: 'https://img.icons8.com/ios-filled/1000/772ce8/css3.png',
+        imageUrl: 'https://img.icons8.com/ios-filled/1000/6430d4/css3.png',
       },
       {
         name: 'Javascript',
-        imageUrl: 'https://img.icons8.com/ios-filled/1000/772ce8/javascript.png',
+        imageUrl: 'https://img.icons8.com/ios-filled/1000/6430d4/javascript.png',
       },
       {
         name: 'Django',
-        imageUrl: 'https://img.icons8.com/windows/1000/772ce8/django.png',
+        imageUrl: 'https://img.icons8.com/windows/1000/6430d4/django.png',
       }
     ],
   },
@@ -84,12 +84,25 @@ const Projects = [
     tecnologias: [
       {
         name: 'ReactJS',
-        imageUrl: 'https://img.icons8.com/ios-filled/1000/772ce8/react-native.png',
+        imageUrl: 'https://img.icons8.com/ios-filled/1000/6430d4/react-native.png',
       },
       {
         name: 'Typescript',
-        imageUrl: 'https://img.icons8.com/material-rounded/1000/772ce8/typescript.png',
+        imageUrl: 'https://img.icons8.com/material-rounded/1000/6430d4/typescript.png',
       }
+    ],
+  },
+  {
+    icon: 'https://img.icons8.com/fluent-systems-regular/1000/ffffff/calculator.png',
+    title: 'UFRN Calc',
+    description: 'Site criado para calcular média semestral de alunos da Universidade Federal do Rio Grande do Norte.',
+    ghLink: 'https://github.com/pedroflp/vue-ufrn-calc',
+    brLink: '',
+    tecnologias: [
+      {
+        name: 'Vue.js',
+        imageUrl: 'https://img.icons8.com/windows/1000/6430d4/vuejs.png',
+      },
     ],
   },
 

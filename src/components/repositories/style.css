@@ -2,10 +2,10 @@
   background: var(--cardBackgroundDarker);
 
   width: 400px;
-
   max-height: 200px;
   overflow: hidden;
 
+  position: relative;
   padding: 30px;
   margin: 15px;
 
@@ -16,12 +16,11 @@
   align-items: center;
   align-content: center;
 
-
   transition: 0.3s ease;
 }
 
-.repository-card:before,
-.repository-card:after {
+.repository-card::before,
+.repository-card::after {
   content: "";
   display: block;
   position: absolute;
@@ -35,17 +34,12 @@
   overflow: hidden;
 }
 
-.repository-cardbefore {
-  top: -30px;
+.repository-card::before {
+  top: -25px;
 }
 
-.repository-card:after {
-  bottom: -30px;
-}
-
-
-.repository-card:hover {
-  transform: translateY(-5px)
+.repository-card::after {
+  bottom: -25px;
 }
 
 .repository-card-title {

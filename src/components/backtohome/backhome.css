@@ -1,0 +1,32 @@
+
+.backhome-button {
+  padding: 15px 30px;
+  background: var(--main);
+  color: var(--background);
+  
+  width: 225px;
+  margin-top: 30px;
+  
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  outline: none;
+  
+  border: none;
+  border-radius: 7px;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  
+  transition: 0.3s ease;
+}
+
+.backhome-button:hover {
+  transform: translateX(-5px);
+}
+
+.backhome-button :first-child {
+  color: var(--background);
+}

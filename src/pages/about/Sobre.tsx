@@ -1,7 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-import { FiArrowLeft } from 'react-icons/fi';
 import { TiUserOutline } from 'react-icons/ti';
 import { BiCodeAlt } from 'react-icons/bi';
 
@@ -12,6 +10,7 @@ import BackTop from '../../components/backtop/BackTop';
 
 import ProfileImg from '../../media/images/profile-image.png';
 import './style/sobre.css';
+import BackHome from '../../components/backtohome/BackHome';
 
 
 function Sobre() {
@@ -39,11 +38,9 @@ function Sobre() {
             <SobreInfo text='Comecei a programar com 17 anos criando coisas em python, até que resolvi criar algo que precisava de uma interface bonita, foi quando aprendi HTML, CSS e peguei o gancho para aprender JavaScript, jQuery e Electron, pois o que eu queria era criar um aplicativo desktop (para computadores). Foquei bastante em desenvolvimento front-end (parte visual das aplicações) ao longo do tempo, mas hoje consigo construir uma aplicaçao completa utilizando tecnologias como as listadas na seção Habilidades. Participei de alguns treinamentos seletivos de empresas juniores e bolsistas, trabalhando em grupo com outros desenvolvedores e sempre caminhando em busca do próximo nível.  Atualmente estou aprofudando meus estudos em React e frameworks/bibliotecas para criar aplicações web e mobile.' />          
 
           </div>
+          
+          <BackHome />
 
-          <Link to='/' className='backhome-button'>
-            <FiArrowLeft size={20} />  
-            Voltar para o Início
-          </Link>
         </div>
       </div>
     </section>

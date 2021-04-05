@@ -1,7 +1,7 @@
 .projects-container {
   width: 90%;
   margin: auto;
-  padding: 30px;
+  padding: 4rem 3rem;
 
   display: flex;
   flex-direction: column;
