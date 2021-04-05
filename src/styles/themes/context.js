@@ -1,7 +1,8 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext } from 'react';
 
 import light from '../themes/light';
 import dark from '../themes/dark';
+import usePersistedState from '../utils/usePersistedState';
 
 const Context = createContext({
   defaultTheme: dark,
@@ -9,7 +10,7 @@ const Context = createContext({
 });
 
 export function ThemeContextProvider({ children }) {
-  const [theme, setTheme] = useState(dark);
+  const [theme, setTheme] = usePersistedState('theme', dark);
 
   function toggleTheme() {
     setTheme(theme === dark ? light : dark);
