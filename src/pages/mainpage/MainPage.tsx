@@ -156,7 +156,7 @@ function MainPage() {
 
           <HabilitiesCard
             name='django'
-            skillPercent={40}
+            skillPercent={30}
           >
             <SiDjango className='django-icon' size={60} />
           </HabilitiesCard>
@@ -171,7 +171,7 @@ function MainPage() {
           <p>Abaixo estão meus <strong>projetos favoritos</strong> que desenvolvi para <strong>estudos</strong> e para <strong>clientes</strong>.</p>
         </div>
 
-          <div id='projects-cards'> 
+          <div className='projects-cards'> 
 
             <StockProjectCard />
 

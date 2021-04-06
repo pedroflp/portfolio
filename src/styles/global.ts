@@ -12,7 +12,7 @@ export default createGlobalStyle`
 
   scroll-behavior: smooth;
   -webkit-user-drag: none;
-  
+  outline: none !important;
 }
 
 :root {
@@ -33,7 +33,9 @@ body {
   margin: 0;
   padding: 0;  
 
-  transition: 0.4s ease-in-out
+  transition: 0.4s ease-in-out;
+
+  overflow-x: hidden;
 }
 
 h1, h2 {
@@ -50,7 +52,7 @@ button {
 }
 
 ::selection { 
-  background: rgba(15, 231, 98, 0.2);
+  background: rgba(100, 48, 212, 0.3);
 }
 
 ::-webkit-scrollbar {

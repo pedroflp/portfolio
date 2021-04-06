@@ -105,3 +105,18 @@
     opacity: 1;
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .navbar-container {
+    width: 90%;
+  }
+  .navbar-links-sections {
+    margin-right: 10px;
+  }
+  .navbar-links-sections li {
+    margin: 0 10px;
+  }
+  .theme-switcher {
+    padding-left: 10px;
+  }
+}

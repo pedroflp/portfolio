@@ -52,9 +52,10 @@ export default function StockProjectCard(){
       <div className='line-divisor'/>
 
         <div className='stockapp-buttons'>
-          <a href='https://stock.pedroflp.vercel.app' target="_blank" rel="noopener noreferrer"><FiPackage size={22} />Acessar Dashboard</a>
+          <a href='https://stock.pedroflp.vercel.app' className="stockapp-button-openwebapp" target="_blank" rel="noopener noreferrer"><FiPackage size={22} />Acessar Dashboard</a>
 
           <FaInfoCircle 
+          className="stockapp-buttons-popup-toggle"
           size={20}
           style={{
             cursor: 'pointer',

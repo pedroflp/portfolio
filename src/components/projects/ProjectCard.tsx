@@ -1,5 +1,8 @@
 import React from 'react';
 
+import "react-responsive-carousel/lib/styles/carousel.min.css"; 
+import { Carousel } from 'react-responsive-carousel';
+
 import { FiGithub } from 'react-icons/fi';
 import { BsLink45Deg } from 'react-icons/bs';
 
@@ -11,6 +14,15 @@ import './style.css';
 function ProjectCard() {
   return (
   <>
+  <Carousel
+    width={300}
+    showStatus={false}
+    useKeyboardArrows={true}
+    centerMode={true}
+    autoFocus={true}
+    centerSlidePercentage={110}
+    showArrows={false}
+  >
     { Projects.map(project => {
       return (
         <>
@@ -57,6 +69,7 @@ function ProjectCard() {
         </>
       )
     }) }
+    </Carousel>
   </>
   )
 }

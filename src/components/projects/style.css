@@ -3,13 +3,12 @@
   
   width: 350px;
   max-width: 350px;
-  
   height: 400px;
   max-height: 400px;
-
   padding: 30px;
-  margin: 20px 10px;
-
+  margin-bottom: 20px;
+  
+  text-align: center;
   border-radius: 8px;
 
   display: flex;
@@ -17,8 +16,6 @@
   justify-content: space-between;
   align-items: center;
   align-content: center;
-
-  text-align: center;
 
   transition: 0.2s ease-in-out;
 
@@ -46,10 +43,6 @@
 
 .projects-card:after {
   right: -30px;
-}
-
-.projects-card:hover {
-  transform: translateY(-5px);
 }
 
 .projects-card-title {
@@ -126,8 +119,8 @@
 }
 
 .projects-card-languages-image img {
-  width: 35px;
-  height: 35px;
+  width: 35px !important;
+  height: 35px !important;
 
   margin: 0px 7px 5px;
 }
@@ -220,10 +213,8 @@
   position: relative;
   padding: 2rem;
 
-  min-width: 53rem;
-  max-width: 53rem;
 
-  margin: 20px 100%;
+  margin: 0px 100% 40px;
 
   background: linear-gradient(40deg, 
   rgba(127, 91, 230, 0.4) 10%,
@@ -303,6 +294,7 @@
   font-size: 2.2rem;
   font-weight: 600;
   margin-bottom: 1rem;
+  margin-right: 1rem;
 }
 
 .stockapp-title p {
@@ -485,4 +477,54 @@
 
 .stockapp-buttons .card-popup p {
   font-weight: 600;
+}
+
+@media screen and (max-width: 1100px) {
+  .stockapp-card {
+    width: 30rem;
+  }
+  .stockapp-card::after,
+  .stockapp-card::before {
+    bottom: 165px;
+  }
+  
+  .stockapp-title p {
+    max-width: 95%;
+  }
+  .stockapp-top-content :last-child {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .stockapp-top-content :last-child :first-child {
+    margin-right: 0px;
+    margin-bottom: 10px;
+  }
+  .stockapp-tecnologies {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .stockapp-web-info{
+    border: none;
+    margin-bottom: 20px;
+  }
+  .stockapp-buttons {
+    flex-direction: column-reverse;
+  }
+  .stockapp-github-buttons {
+    margin-bottom: 15px;
+    margin-left: 0px;
+  }
+  .stockapp-button-openwebapp {
+    width: 90% !important;
+    margin-left: 8px;
+  }
+  .stockapp-buttons-popup-toggle {
+    left: 400px !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+  }
+  .stockapp-card .card-popup {
+    margin-left: 0 !important;
+  }
 }
