@@ -12,6 +12,7 @@
 #navbar-fixed {
   position: fixed;
   padding: 20px 0px;
+  top: 0;
   width: 100%;
   background: var(--popupBackground);
   box-shadow: var(--boxShadow);
