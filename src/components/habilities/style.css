@@ -103,6 +103,16 @@
   color: rgb(6, 215, 243);
 }
 
+.vuejs:hover .vuejs-icon {
+  color: rgb(4, 204, 117);
+}
+.vuejs:hover .skill-bar{
+  border-color: rgb(4, 204, 117);
+}
+.vuejs > .skill-percent {
+  color: rgb(4, 204, 117);
+}
+
 .typescript:hover .typescript-icon {
   color: rgb(34, 140, 201);
 }
@@ -122,3 +132,14 @@
 .nodejs .skill-percent{
   color: rgba(140, 200, 75, 1);
 }
+
+.django:hover .django-icon {
+  color: rgb(13, 114, 84);
+}
+.django:hover .skill-bar{
+  border-color: rgb(13, 114, 84);
+}
+.django .skill-percent{
+  color: rgb(13, 114, 84);
+}
+

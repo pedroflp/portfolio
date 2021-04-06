@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Switch from 'react-switch';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from 'styled-components';
@@ -11,12 +11,23 @@ import { RiMoonClearFill, RiMoonClearLine } from 'react-icons/ri';
 import PLogo from '../../media/images/p-logo.png';
 import './style.css';
 
+
 export default function Navbar() {
   const { colors } = useContext(ThemeContext);
   const { defaultTheme, toggleTheme } = useTheme();
 
+  const [navFixed, setNavFixed] = useState(false);
+  
+  const checkScroll = () => {
+    if (window.pageYOffset > 600){
+      setNavFixed(true);
+    } else
+    setNavFixed(false);
+  }
+  window.addEventListener('scroll', checkScroll);
+
   return (
-    <div id='navbar'>
+    <div id={ navFixed ? 'navbar-fixed' : 'navbar'}>
       <div className='navbar-container'>
 
 

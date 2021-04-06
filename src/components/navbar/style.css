@@ -5,6 +5,19 @@
   width: 100%;
   background: var(--cardBackground);
   box-shadow: var(--boxShadow);
+  transition: 0.5s ease-in-out;
+  animation: showNav 0.7s ease-in-out;
+}
+
+#navbar-fixed {
+  position: fixed;
+  padding: 20px 0px;
+  width: 100%;
+  background: var(--popupBackground);
+  box-shadow: var(--boxShadow);
+  backdrop-filter: blur(6px);
+  animation: showNavFixed 0.7s ease-in-out;
+  z-index: 99;
 }
 
 .navbar-container {
@@ -81,4 +94,13 @@
 .theme-switcher :first-child,
 .theme-switcher :last-child {
   margin: 0 10px;
+}
+
+
+@keyframes showNavFixed {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
 }

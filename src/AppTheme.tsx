@@ -1,13 +1,13 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
-import Routes from './routes';
+import { BrowserRouter as Router } from 'react-router-dom';
+import MainRoutes from './routes';
 
-import{ useTheme } from './styles/themes/context';
+import { ThemeProvider } from 'styled-components';
+import { useTheme } from './styles/themes/context';
+import GlobalStyle from './styles/global';
 
 import dark from './styles/themes/dark';
 import light from './styles/themes/light';
-
-import GlobalStyle from './styles/global';
 
 function AppTheme() {
   const { defaultTheme } = useTheme();
@@ -15,7 +15,9 @@ function AppTheme() {
   return (
     <ThemeProvider theme={defaultTheme.title === 'dark' ? dark : light}>
       <GlobalStyle />
-      <Routes />
+      <Router>
+        <MainRoutes />
+      </Router>
     </ThemeProvider>
   );
 }

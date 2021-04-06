@@ -225,7 +225,11 @@
 
   margin: 20px 100%;
 
-  background: linear-gradient(40deg, rgba(127, 91, 230, 0.5) 10%, rgba(58, 178, 227, 0.5) 40%, rgba(51, 153, 51, 0.5));
+  background: linear-gradient(40deg, 
+  rgba(127, 91, 230, 0.4) 10%,
+  rgba(58, 178, 227, 0.4) 40%,
+  rgba(51, 153, 51, 0.4)
+  );
 
   border-radius: 20px;
   

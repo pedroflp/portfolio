@@ -32,6 +32,8 @@ body {
   
   margin: 0;
   padding: 0;  
+
+  transition: 0.4s ease-in-out
 }
 
 h1, h2 {
@@ -65,6 +67,7 @@ button {
   border-radius: 50px;
   
 }
+
 
 .global-tooltip {
   backdrop-filter: blur(5px) !important;

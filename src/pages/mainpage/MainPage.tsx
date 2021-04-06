@@ -3,10 +3,10 @@ import ReactTooltip from 'react-tooltip';
 import { Link } from 'react-router-dom';
 
 // Icons
-import { FaInstagram, FaLinkedin, FaNodeJs } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaNodeJs, FaVuejs } from 'react-icons/fa';
 import { AiFillHtml5, AiFillGithub, AiOutlinePlus, AiOutlineQuestionCircle } from 'react-icons/ai';
 import { DiCss3 } from 'react-icons/di';
-import { SiJavascript, SiReact, SiGmail, SiTypescript } from 'react-icons/si';
+import { SiJavascript, SiReact, SiGmail, SiTypescript, SiDjango } from 'react-icons/si';
 import { FiMessageSquare } from 'react-icons/fi';
 
 // Components
@@ -27,7 +27,7 @@ function MainPage() {
   const [canShow, setCanShow] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
   const [toggleShow, setToggleShow] = useState(false);
-  
+
   const [timer, setTimer] = useState(100);
   const [timerCount, setTimerCount] = useState(10);
 
@@ -53,13 +53,9 @@ function MainPage() {
     }
   }, [isVisible, canShow, timer, timerCount]);
   
-  function handleHover() {
-    setToggleShow(true);
+  function handleToggleShow() {
+    setToggleShow(!toggleShow);
   } 
-
-  function handleUnhover() {
-    setToggleShow(false)
-  }
 
   return(
     <>
@@ -81,13 +77,12 @@ function MainPage() {
           size={25}
           style={{
             cursor: 'pointer',
-            position: 'relative',
+            position: 'absolute',
             top: 0,
-            marginTop: '-90px',
-            marginRight: '10px'
+            right: 0,
           }} 
-          onMouseOver={handleHover}
-          onMouseOut={handleUnhover}
+          onMouseOver={handleToggleShow}
+          onMouseOut={handleToggleShow}
         />
 
         { canShow && isVisible && (
@@ -123,18 +118,12 @@ function MainPage() {
             <DiCss3 className='css-icon' size={60} />
           </HabilitiesCard>
 
+
           <HabilitiesCard
             name='javascript'
             skillPercent={75}
           >
             <SiJavascript className='javascript-icon' size={60} />
-          </HabilitiesCard>
-
-          <HabilitiesCard
-            name='reactjs'
-            skillPercent={70}
-          >
-            <SiReact className='reactjs-icon' size={60} />
           </HabilitiesCard>
 
           <HabilitiesCard
@@ -145,10 +134,31 @@ function MainPage() {
           </HabilitiesCard>
 
           <HabilitiesCard
+            name='reactjs'
+            skillPercent={70}
+          >
+            <SiReact className='reactjs-icon' size={60} />
+          </HabilitiesCard>
+
+          <HabilitiesCard
+            name='vuejs'
+            skillPercent={50}
+          >
+            <FaVuejs className='vuejs-icon' size={60} />
+          </HabilitiesCard>
+
+          <HabilitiesCard
             name='nodejs'
             skillPercent={40}
           >
             <FaNodeJs className='nodejs-icon' size={60} />
+          </HabilitiesCard>
+
+          <HabilitiesCard
+            name='django'
+            skillPercent={40}
+          >
+            <SiDjango className='django-icon' size={60} />
           </HabilitiesCard>
         </div>
       </div>
