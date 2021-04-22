@@ -5,10 +5,10 @@ import { ThemeContext } from 'styled-components';
 
 import { useTheme } from '../../styles/themes/ThemeContext'
 
-import { FaRegSun, FaSun } from 'react-icons/fa';
-import { RiMoonClearFill, RiMoonClearLine } from 'react-icons/ri';
+import { FaSun } from 'react-icons/fa';
+import { RiMoonClearFill } from 'react-icons/ri';
 
-import PLogo from '../../media/images/p-logo.png';
+import PLogo from '../../media/images/p-logo2.png';
 import './style.css';
 
 
@@ -55,21 +55,21 @@ export default function Navbar() {
             </li>
           </ul>
           <div className='theme-switcher'>
-            { defaultTheme.title === 'dark' ? <RiMoonClearFill /> : <RiMoonClearLine />}
+            { defaultTheme.title === 'dark' && <RiMoonClearFill style={{marginLeft: 20}} className='theme-switcher-icon' />}
             <Switch
               onChange={toggleTheme}
               checked={defaultTheme.title === 'light'}
               checkedIcon={true}
               uncheckedIcon={false}
-              height={10}
-              width={40}
               handleDiameter={20}
+              height={25}
+              width={50}
               offHandleColor={colors.main}
               onHandleColor={colors.text}
               offColor={colors.background}
               onColor={colors.main}
             />
-            { defaultTheme.title === 'light' ? <FaSun /> : <FaRegSun />}
+            { defaultTheme.title === 'light' && <FaSun style={{marginLeft: -20}} className='theme-switcher-icon' />}
           </div>
         </div>
 

@@ -13,8 +13,6 @@ import './style.css';
 
 function ProjectCard() {
   return (
-  <>
-  
   <Carousel
     width={300}
     showStatus={false}
@@ -26,8 +24,6 @@ function ProjectCard() {
   >
     { Projects.map(project => {
       return (
-        <>
-        { project.title && 
         <div key={project.title} className={`${project.title} projects-card`}>
           { project.icon.length >= 20 && <img src={project.icon} className='projects-card-icon' alt=""/> }
           <div className='projects-card-title'>
@@ -39,18 +35,12 @@ function ProjectCard() {
             <div className='projects-card-languages-image'>
               {project.tecnologias.map(tecnologia => {
                 return (
-                  <>
-                  { tecnologia && (
-
-                    <div>
-                      <img key={tecnologia.name} src={tecnologia.imageUrl} alt=""/>
-                      <span>{tecnologia.name}</span>
-                    </div>
-
-                  ) }
-                  </>
+                  <div key={tecnologia.name}>
+                    <img src={tecnologia.imageUrl} alt=""/>
+                    <span>{tecnologia.name}</span>
+                  </div>
                 )
-              }) }
+              })}
             </div>
           </div>
 
@@ -65,13 +55,10 @@ function ProjectCard() {
               <BsLink45Deg size={30} /> Acessar aplicação
             </a> }
           </div>
-        </div> 
-        }
-        </>
+        </div>
       )
     }) }
     </Carousel>
-  </>
   )
 }
 

@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap');
 
 * {
   margin: 0;
@@ -17,6 +16,7 @@ export default createGlobalStyle`
 
 :root {
   --main: ${props => props.theme.colors.main};
+  --mainLight: ${props => props.theme.colors.mainLight};
   --secundary: ${props => props.theme.colors.secundary};
   --text: ${props => props.theme.colors.text};
   --background: ${props => props.theme.colors.background};

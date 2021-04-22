@@ -37,9 +37,9 @@
   padding: 30px;
   margin: 10px 20px 10px 0px;
 
-  border-radius: 8px;
+  border-radius: 10px;
   background: var(--cardBackground);
-  box-shadow: 0 0 20px var(--shadowColor);
+  box-shadow: 0 10px 20px var(--shadowColor);
   transition: 0.4s ease;
 }
 
@@ -53,7 +53,7 @@
 
   background: var(--main);
   color: var(--background);
-  box-shadow: 0 0 20px var(--shadowColor);
+  box-shadow: 0 10px 20px var(--shadowColor);
 
   width: 15rem;
   height: 4rem;

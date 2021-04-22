@@ -12,6 +12,7 @@
   margin: 100px -30px;
   outline: none;
   cursor: pointer;
+  text-shadow: 0 0 10px rgb(0, 0, 0);
   transform: rotate(-90deg);
   transition: 0.4s ease;
 }

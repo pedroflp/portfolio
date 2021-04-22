@@ -58,8 +58,8 @@
   max-width: 600px;
   padding: 2rem;
 
-  background: var(--popupBackground);
-  color: var(--text);
+  background: var(--text);
+  color: var(--background);
   backdrop-filter: blur(6px);
   border-radius: 8px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);

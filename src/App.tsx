@@ -1,14 +1,16 @@
 import React from 'react';
 
-import { ThemeContextProvider } from './contexts/context';
+import { AppContextProvider } from './contexts/Context';
+import { ThemeContextProvider } from './styles/themes/ThemeContext';
 import AppTheme from './AppTheme';
 
 function App() {
   return (
-    <ThemeContextProvider>
-      <AppTheme />
-    </ThemeContextProvider>
-
+    <AppContextProvider>
+      <ThemeContextProvider>
+        <AppTheme />
+      </ThemeContextProvider>
+    </AppContextProvider>
   );
 }
 

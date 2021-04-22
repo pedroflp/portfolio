@@ -1,9 +1,8 @@
 #sobre {
-  padding: 50px;
+  padding: 30px 0 10px;
 }
 
 .sobre-container {
-  width: 80rem;
   margin: auto;
 
   background: url('../../../media/images/background-codelines.svg') no-repeat;
@@ -24,7 +23,7 @@
 
 .sobre-card {
   position: relative;
-  width: 60rem;
+  width: 50rem;
   padding: 50px 50px;
   border-radius: 8px;
 
@@ -40,14 +39,14 @@
   top: 0;
 
   margin-top: -120px;
-  margin-left: -100px;
+  margin-left: -50px;
   margin-bottom: 30px;
 
   border-radius: 10px;
 }
 
 .image-1 {
-  width: 300px;
+  width: 15rem;
   transform: rotate(-3deg);
   box-shadow: 0px 0px 20px var(--shadowColor);
 }

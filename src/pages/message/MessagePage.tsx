@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useForm, ValidationError } from '@formspree/react';
+import { useForm } from '@formspree/react';
 
 import BackHome from '../../components/backtohome/BackHome';
 import Footer from '../../components/footer/Footer';
@@ -62,22 +62,12 @@ export default function MessagePage() {
             onChange={e => setEmail(e.target.value)}
             required
           />
-          <ValidationError 
-            prefix="Email" 
-            field="email"
-            errors={state.errors}
-          />
           <textarea
             id="message"
             name="message"
             placeholder="Message"
             required
             rows={3}
-          />
-          <ValidationError 
-            prefix="Message" 
-            field="message"
-            errors={state.errors}
           />
           <button type="submit" disabled={state.submitting}>
             Enviar

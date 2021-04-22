@@ -62,8 +62,7 @@ function MainPage() {
 
     <Navbar />
 
-   <main>
-   <Header />
+    <Header />
 
     <section id='skills'>
       <div className='habilities-container'>
@@ -189,7 +188,7 @@ function MainPage() {
     <section id='contact'>
       <div className='contact-container'>
         <div className='contact-cards'>
-        <div className="contact-card-social">
+         <div className="contact-card-social">
             <a className='github-icon contact-card' href='https://github.com/pedroflp' target='_blank' rel='noopener noreferrer'>
               <AiFillGithub className='github icon' size={50} />
             </a>
@@ -202,8 +201,8 @@ function MainPage() {
             <a className='email-icon contact-card' href='mailto: pedrofelipe0940@gmail.com' data-tip='pedrofelipe0940@gmail.com' target='_blank' rel='noopener noreferrer'>
               <SiGmail className='email icon' size={50} />
             </a>
-        </div>
-        <Link to='/direct-message' className="contact-card-dmbutton">Enviar mensagem <FiMessageSquare size={22} /></Link>
+         </div>
+         <Link to='/direct-message' className="contact-card-dmbutton">Enviar mensagem <FiMessageSquare size={22} /></Link>
         </div>
 
         <div className='contact-title'>
@@ -214,7 +213,6 @@ function MainPage() {
       
     </section>
 
-   </main>
     <Footer />
 
     <BackTop />

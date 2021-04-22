@@ -42,8 +42,8 @@
 }
 
 .navbar-logo img {
-  width: 20px;
-  margin-right: 1px;
+  width: 30px;
+  margin-right: -4px;
 }
 
 .navbar-logo h1 {
@@ -84,19 +84,19 @@
 }
 
 .theme-switcher {
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   
-  padding-left: 30px;
-  border-left: 1px solid var(--text);
+  position: relative;
 }
 
-.theme-switcher :first-child,
-.theme-switcher :last-child {
-  margin: 0 10px;
+.theme-switcher-icon {
+  position: absolute;
+  z-index: 2;
+  color: var(--secundary);
 }
-
 
 @keyframes showNavFixed {
   from {

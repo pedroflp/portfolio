@@ -13,6 +13,7 @@ declare module 'styled-components' {
       cardBackgroundDarker: string;
       shadowColor: string;
       popupBackground: string;
+      mainLight: string;
     }
   }
 }
