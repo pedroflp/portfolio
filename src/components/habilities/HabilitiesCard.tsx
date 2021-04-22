@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 
 import './style.css';
 
-interface HabilitiesCard{ 
+interface HabilitiesProps{ 
   name: string,
   skillPercent: number,
   children: React.ReactChild,
 }
 
-export default function HabilitiesCard(props: HabilitiesCard) {
+export default function HabilitiesCard(props: HabilitiesProps) {
   const [isHover, setIsHover] = useState(false);
   const [skillPercent, setSkillPercent] = useState(0);
 

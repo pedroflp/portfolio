@@ -3,7 +3,7 @@ import Switch from 'react-switch';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from 'styled-components';
 
-import { useTheme } from '../../styles/themes/context'
+import { useTheme } from '../../styles/themes/ThemeContext'
 
 import { FaRegSun, FaSun } from 'react-icons/fa';
 import { RiMoonClearFill, RiMoonClearLine } from 'react-icons/ri';

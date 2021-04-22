@@ -33,8 +33,6 @@ body {
   margin: 0;
   padding: 0;  
 
-  transition: 0.4s ease-in-out;
-
   overflow-x: hidden;
 }
 

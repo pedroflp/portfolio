@@ -14,14 +14,15 @@ import './style.css';
 function ProjectCard() {
   return (
   <>
+  
   <Carousel
     width={300}
     showStatus={false}
     useKeyboardArrows={true}
     centerMode={true}
-    autoFocus={true}
     centerSlidePercentage={110}
-    showArrows={false}
+    showArrows={true}
+    showThumbs={false}
   >
     { Projects.map(project => {
       return (

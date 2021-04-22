@@ -72,7 +72,8 @@
 /* CAROUSEL STYLE */
 .carousel-slider {
   margin-left: -10px !important;
-  margin-bottom: 20px !important;
+  margin-top: 20px !important;
+  margin-bottom: 50px !important;
 }
 
 .carousel .slider-wrapper {
@@ -94,11 +95,12 @@
 .slide {
   background: none !important;
   height: 400px;
-  opacity: 0.4;
+  opacity: 0.3;
   transform: scale(0.9);
   transition: 0.4s ease-in-out;
-  filter: saturate(0.3);
+  filter: blur(1px) saturate(0.3);
   cursor: pointer !important;
+  transition: all 0.4s ease-in-out;
 }
 
 .selected {
@@ -113,6 +115,32 @@
 .carousel {
   overflow: visible !important;
 }
+
+.control-arrow {
+  background: none !important;
+  position: absolute;
+  margin: 0 -300px 0 -280px;
+}
+
+.control-next::before {
+  display: none !important;
+}
+.control-prev::before {
+  display: none !important;
+}
+
+.control-prev::after{
+  content: '<--' !important;
+  color: var(--text) !important;
+  font-size: 3rem !important;
+}
+
+.control-next::after{
+  content: '-->' !important;
+  color: var(--text) !important;
+  font-size: 3rem !important;
+}
+
 
 .control-dots {
   margin: 0px 5px -40px !important;

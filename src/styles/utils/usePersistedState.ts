@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-export default function usePersistedState<T>(key: string, initialState: any) {
+export default function usePersistedState(key: string, initialState: any) {
   const [state, setState] = useState(() => {
     const storageValue = localStorage.getItem(key);
 

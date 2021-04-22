@@ -1,7 +1,7 @@
-import React, { createContext, useContext } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
-import light from '../themes/light';
-import dark from '../themes/dark';
+import { light } from './light';
+import { dark } from './dark';
 import usePersistedState from '../utils/usePersistedState';
 
 const Context = createContext({
@@ -9,13 +9,17 @@ const Context = createContext({
   toggleTheme: () => {},
 });
 
-export function ThemeContextProvider({ children }) {
+type Props = {
+  children: React.ReactChild;
+}
+
+export function ThemeContextProvider({ children }: Props) {
   const [theme, setTheme] = usePersistedState('theme', dark);
 
   function toggleTheme() {
     setTheme(theme === dark ? light : dark);
   }
-  
+
   return (
     <Context.Provider value={{ defaultTheme: theme, toggleTheme }}>
     {children}
