@@ -29,16 +29,6 @@
   margin-bottom: 50px;
 }
 
-.projects-cards {
-  padding: 20px;
-  margin: auto;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .projects-button-repositories {
   width: 20rem;
   background: var(--main);
@@ -67,6 +57,18 @@
 .projects-button-repositories:hover {
   filter: brightness(0.9);
   transform: translateY(-5px);
+}
+
+.projects-cards {
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100vw;
+  min-width: 100vw;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* CAROUSEL STYLE */
@@ -119,7 +121,7 @@
 .control-arrow {
   background: none !important;
   position: absolute;
-  margin: 0 -300px 0 -280px;
+  margin: 0 -200px 0 -200px;
 }
 
 .control-next::before {

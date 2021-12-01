@@ -20,7 +20,7 @@
   transition: 0.2s ease-in-out;
 
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .projects-card:before,
@@ -54,7 +54,7 @@
 
 .projects-card-title h1 {
   font-size: 2.3rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--main);
 }
 
@@ -212,9 +212,8 @@
 .stockapp-card {
   position: relative;
   padding: 2rem;
-
-
-  margin: 0px 100% 40px;
+  margin-bottom: 30px;
+  max-width: 60%;
 
   background: linear-gradient(40deg, 
   rgba(127, 91, 230, 0.4) 10%,
