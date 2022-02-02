@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useForm } from '@formspree/react';
 
 import BackHome from '../../components/backtohome/BackHome';
-import Footer from '../../components/footer/Footer';
 import Navbar from '../../components/navbar/Navbar';
 import MailBox from '../../media/images/mailbox';
 

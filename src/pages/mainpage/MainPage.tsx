@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import ReactTooltip from 'react-tooltip';
 import { Link } from 'react-router-dom';
 
 // Icons
-import { FaInstagram, FaLinkedin, FaNodeJs, FaVuejs } from 'react-icons/fa';
-import { AiFillHtml5, AiFillGithub, AiOutlinePlus, AiOutlineQuestionCircle } from 'react-icons/ai';
+import { FaInstagram, FaLinkedin, FaNodeJs } from 'react-icons/fa';
+import { AiFillHtml5, AiFillGithub, AiOutlinePlus } from 'react-icons/ai';
 import { DiCss3 } from 'react-icons/di';
-import { SiJavascript, SiReact, SiGmail, SiTypescript, SiDjango } from 'react-icons/si';
+import { SiJavascript, SiReact, SiGmail, SiTypescript } from 'react-icons/si';
 import { FiMessageSquare } from 'react-icons/fi';
 
 // Components
@@ -15,14 +15,12 @@ import Footer from '../../components/footer/Footer';
 import ProjectCard from '../../components/projects/ProjectCard';
 import { Header } from '../../components/header/Header';
 import StockProjectCard from '../../components/projects/components/StockProjectCard';
-import BackTop from '../../components/backtop/BackTop';
 
 // Other
 import '../mainpage/style/habilities.css';
 import '../mainpage/style/projects.css';
 import '../mainpage/style/contact.css';
 import HabilitiesCard from '../../components/habilities/HabilitiesCard';
-import { ThemeSwitcher } from '../../components/themeswitcher/ThemeSwitcher';
 
 function MainPage() {
 

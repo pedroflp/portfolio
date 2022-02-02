@@ -4,9 +4,7 @@ import { TiUserOutline } from 'react-icons/ti';
 import { BiCodeAlt } from 'react-icons/bi';
 
 import Navbar from '../../components/navbar/Navbar';
-import Footer from '../../components/footer/Footer';
 import SobreInfo from '../../components/sobre/SobreInfo';
-import BackTop from '../../components/backtop/BackTop';
 
 import ProfileImg from '../../media/images/profile-image.png';
 import './style/sobre.css';

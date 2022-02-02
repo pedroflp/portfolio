@@ -1,21 +1,12 @@
-import React, { useContext, useEffect, useState } from 'react';
-import Switch from 'react-switch';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ThemeContext } from 'styled-components';
 
-import { useTheme } from '../../styles/themes/ThemeContext'
-
-import { FaSun } from 'react-icons/fa';
-import { RiMoonClearFill } from 'react-icons/ri';
 
 import PLogo from '../../media/images/p-logo2.png';
 import './style.css';
 
 
 export default function Navbar() {
-  const { colors } = useContext(ThemeContext);
-  const { defaultTheme, toggleTheme } = useTheme();
-
   const [navFixed, setNavFixed] = useState(false);
 
   const checkScroll = () => {
@@ -27,7 +18,7 @@ export default function Navbar() {
 
   useEffect(() => {
     window.addEventListener('scroll', checkScroll);
-  }, [])
+  })
 
 
   return (
@@ -58,26 +49,7 @@ export default function Navbar() {
               <a href="/#contact">Contato</a>
             </li>
           </ul>
-          {/* <div className='theme-switcher'>
-            {defaultTheme.title === 'dark' && <RiMoonClearFill style={{ marginLeft: 20 }} className='theme-switcher-icon' />}
-            <Switch
-              onChange={toggleTheme}
-              checked={defaultTheme.title === 'light'}
-              checkedIcon={true}
-              uncheckedIcon={false}
-              handleDiameter={20}
-              height={25}
-              width={50}
-              offHandleColor={colors.main}
-              onHandleColor={colors.text}
-              offColor={colors.background}
-              onColor={colors.main}
-            />
-            {defaultTheme.title === 'light' && <FaSun style={{ marginLeft: -20 }} className='theme-switcher-icon' />}
-          </div> */}
         </div>
-
-
       </div>
     </div>
   )
