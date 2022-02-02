@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Switch from 'react-switch';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from 'styled-components';
@@ -17,27 +17,31 @@ export default function Navbar() {
   const { defaultTheme, toggleTheme } = useTheme();
 
   const [navFixed, setNavFixed] = useState(false);
-  
+
   const checkScroll = () => {
-    if (window.pageYOffset > 600){
-      setNavFixed(true);
+    if (window.pageYOffset > 200) {
+      if (!navFixed) setNavFixed(true);
     } else
-    setNavFixed(false);
+      setNavFixed(false);
   }
-  window.addEventListener('scroll', checkScroll);
+
+  useEffect(() => {
+    window.addEventListener('scroll', checkScroll);
+  }, [])
+
 
   return (
-    <div id={ navFixed ? 'navbar-fixed' : 'navbar'}>
+    <div id={navFixed ? 'navbar-fixed' : 'navbar'}>
       <div className='navbar-container'>
 
 
         <Link to='/' className='navbar-logo'>
-            <img src={PLogo} alt='Logo'/>
-            <h1>edro Felipe</h1>
+          <img src={PLogo} alt='Logo' />
+          <h1>edro Felipe</h1>
         </Link>
-      
-      <div className='navbar-links'>
-        <ul className='navbar-links-sections'>
+
+        <div className='navbar-links'>
+          <ul className='navbar-links-sections'>
             <li>
               <Link to="/">Home</Link>
             </li>
@@ -54,8 +58,8 @@ export default function Navbar() {
               <a href="/#contact">Contato</a>
             </li>
           </ul>
-          <div className='theme-switcher'>
-            { defaultTheme.title === 'dark' && <RiMoonClearFill style={{marginLeft: 20}} className='theme-switcher-icon' />}
+          {/* <div className='theme-switcher'>
+            {defaultTheme.title === 'dark' && <RiMoonClearFill style={{ marginLeft: 20 }} className='theme-switcher-icon' />}
             <Switch
               onChange={toggleTheme}
               checked={defaultTheme.title === 'light'}
@@ -69,8 +73,8 @@ export default function Navbar() {
               offColor={colors.background}
               onColor={colors.main}
             />
-            { defaultTheme.title === 'light' && <FaSun style={{marginLeft: -20}} className='theme-switcher-icon' />}
-          </div>
+            {defaultTheme.title === 'light' && <FaSun style={{ marginLeft: -20 }} className='theme-switcher-icon' />}
+          </div> */}
         </div>
 
 

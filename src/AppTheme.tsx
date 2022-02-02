@@ -8,6 +8,8 @@ import GlobalStyle from './styles/global';
 
 import { dark } from './styles/themes/dark';
 import { light } from './styles/themes/light';
+import BackTop from './components/backtop/BackTop';
+import { ThemeSwitcher } from './components/themeswitcher/ThemeSwitcher';
 
 function AppTheme() {
   const { defaultTheme } = useTheme();
@@ -17,6 +19,8 @@ function AppTheme() {
       <GlobalStyle />
       <Router>
         <MainRoutes />
+        <ThemeSwitcher />
+        <BackTop />
       </Router>
     </ThemeProvider>
   );

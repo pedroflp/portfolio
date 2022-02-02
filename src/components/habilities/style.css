@@ -10,7 +10,7 @@
   border-radius: 10px;
   background: var(--cardBackground);
   box-shadow: 0px 10px 20px var(--shadowColor);
-  transition: 0.8s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .habilities-card-info {
@@ -34,112 +34,30 @@
   align-items: center;
 }
 
-.skill-bar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  border-radius: 0px 0px 8px 8px;
-  border-bottom: 5px solid transparent;
-  margin: 0 0 -5px;
-  transition: 0.8s ease-in-out;
-}
-
-.skill-percent {
-  display: flex;
-  justify-content: flex-end;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  margin-bottom: 2px;
-
-  font-size: 0.7rem;
-  font-weight: 600;
-
-  opacity: 0;
-  transition: 0.8s ease-in-out;
-}
-
-.habilities-card:hover .skill-percent {
-  opacity: 1;
+.html-icon, .css-icon, .javascript-icon, .react-icon, .typescript-icon, .nodejs-icon {
+  transition: 0.1s ease-in;
 }
 
 .html:hover .html-icon {
-  color: rgb(243, 121, 6);
-}
-.html:hover .skill-bar{
-  border-color: rgb(243, 121, 6);
-}
-.html .html-percent {
   color: rgb(243, 121, 6);
 }
 
 .css:hover .css-icon {
   color: rgb(6, 128, 243);
 }
-.css:hover .skill-bar{
-  border-color: rgb(6, 128, 243);
-}
-.css > .skill-percent {
-  color: rgb(6, 128, 243);
-}
 
 .javascript:hover .javascript-icon {
   color: rgb(243, 227, 6);
 }
-.javascript:hover .skill-bar{
-  border-color: rgb(243, 227, 6);
-}
-.javascript> .skill-percent {
-  color: rgb(243, 227, 6);
-}
 
-.reactjs:hover .reactjs-icon {
+.react:hover .react-icon {
   color: rgb(6, 215, 243);
-}
-.reactjs:hover .skill-bar{
-  border-color: rgb(6, 215, 243);
-}
-.reactjs > .skill-percent {
-  color: rgb(6, 215, 243);
-}
-
-.vuejs:hover .vuejs-icon {
-  color: rgb(4, 204, 117);
-}
-.vuejs:hover .skill-bar{
-  border-color: rgb(4, 204, 117);
-}
-.vuejs > .skill-percent {
-  color: rgb(4, 204, 117);
 }
 
 .typescript:hover .typescript-icon {
-  color: rgb(34, 140, 201);
-}
-.typescript:hover .skill-bar{
-  border-color: rgb(34, 140, 201);
-}
-.typescript > .skill-percent {
   color: rgb(34, 140, 201);
 }
 
 .nodejs:hover .nodejs-icon {
   color: rgba(140, 200, 75, 1);
 }
-.nodejs:hover .skill-bar{
-  border-color: rgba(140, 200, 75, 1);
-}
-.nodejs .skill-percent{
-  color: rgba(140, 200, 75, 1);
-}
-
-.django:hover .django-icon {
-  color: rgb(13, 114, 84);
-}
-.django:hover .skill-bar{
-  border-color: rgb(13, 114, 84);
-}
-.django .skill-percent{
-  color: rgb(13, 114, 84);
-}
-

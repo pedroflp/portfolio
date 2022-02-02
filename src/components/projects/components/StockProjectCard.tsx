@@ -3,12 +3,12 @@ import React, { useState } from 'react';
 import { FaGithub, FaInfoCircle, FaNodeJs, FaReact } from 'react-icons/fa';
 import { FiPackage } from 'react-icons/fi';
 
-export default function StockProjectCard(){
+export default function StockProjectCard() {
   const [isVisible, setIsVisible] = useState(false);
 
   function handleHover() {
     setIsVisible(true);
-  } 
+  }
 
   function handleUnhover() {
     setIsVisible(false)
@@ -20,7 +20,7 @@ export default function StockProjectCard(){
       <div className='stockapp-content'>
         <div className='stockapp-top-content'>
           <div className='stockapp-title'>
-            <h1>StockApp - Web & API</h1>
+            <h1>📦 StockApp - Web & API</h1>
             <p>Uma dashboard com api própria para controlar a quantidade e preços dos produtos de seu estoque.</p>
           </div>
           <div>
@@ -29,8 +29,8 @@ export default function StockProjectCard(){
           </div>
         </div>
 
-      <div className='stockapp-tecnologies'>
-        <div className='stockapp-web-info'>
+        <div className='stockapp-tecnologies'>
+          <div className='stockapp-web-info'>
             <span>Front-End:</span>
             <div className='stockapp-info-tecnologies'>
               <p className='reactjs'><FaReact size={15} /> ReactJS</p>
@@ -47,36 +47,36 @@ export default function StockProjectCard(){
               <p className='sqlite'>SQLite</p>
             </div>
           </div>
-      </div>
+        </div>
 
-      <div className='line-divisor'/>
+        <div className='line-divisor' />
 
         <div className='stockapp-buttons'>
           <a href='https://stock.pedroflp.vercel.app' className="stockapp-button-openwebapp" target="_blank" rel="noopener noreferrer"><FiPackage size={22} />Acessar Dashboard</a>
 
-          <FaInfoCircle 
-          className="stockapp-buttons-popup-toggle"
-          size={20}
-          style={{
-            cursor: 'pointer',
-            position: 'absolute',
-            left: 0,
-            marginTop: '15px',
-            marginLeft: '13rem'
-          }} 
-          onMouseOver={handleHover}
-          onMouseOut={handleUnhover}
+          <FaInfoCircle
+            className="stockapp-buttons-popup-toggle"
+            size={20}
+            style={{
+              cursor: 'pointer',
+              position: 'absolute',
+              left: 0,
+              marginTop: '15px',
+              marginLeft: '13rem'
+            }}
+            onMouseOver={handleHover}
+            onMouseOut={handleUnhover}
           />
 
-          { isVisible && (
+          {isVisible && (
             <div className='card-popup'>
               <div className='card-popup-arrow-left'></div>
               <p>Você pode acessar a dashboard utilizando a conta teste!</p>
-              <br/>
+              <br />
               <p><span>Login:</span> test</p>
               <p><span>Password:</span> test</p>
             </div>
-          ) }
+          )}
           <div className='stockapp-github-buttons'>
             <a href='https://github.com/pedroflp/stock-app-web' target='_blank' rel="noopener noreferrer"><FaGithub size={22} /> StockApp Web</a>
             <a href='https://github.com/pedroflp/stock-app-api' target='_blank' rel="noopener noreferrer"><FaGithub size={22} /> StockApp API</a>

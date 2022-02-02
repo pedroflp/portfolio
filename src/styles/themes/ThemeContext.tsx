@@ -5,8 +5,8 @@ import { dark } from './dark';
 import usePersistedState from '../utils/usePersistedState';
 
 const Context = createContext({
-  defaultTheme: dark,
-  toggleTheme: () => {},
+  defaultTheme: light,
+  toggleTheme: () => { },
 });
 
 type Props = {
@@ -14,7 +14,7 @@ type Props = {
 }
 
 export function ThemeContextProvider({ children }: Props) {
-  const [theme, setTheme] = usePersistedState('theme', dark);
+  const [theme, setTheme] = usePersistedState('light', light);
 
   function toggleTheme() {
     setTheme(theme === dark ? light : dark);
@@ -22,7 +22,7 @@ export function ThemeContextProvider({ children }: Props) {
 
   return (
     <Context.Provider value={{ defaultTheme: theme, toggleTheme }}>
-    {children}
+      {children}
     </Context.Provider>
   )
 }

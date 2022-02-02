@@ -1,10 +1,10 @@
 import React from 'react';
 
 interface SobreProps {
-  text: string;
+  text: string | any;
 }
 
-function SobreInfo(props: SobreProps){
+function SobreInfo(props: SobreProps) {
   return (
     <div>
       <p>{props.text}</p>

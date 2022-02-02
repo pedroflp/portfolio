@@ -32,8 +32,9 @@ body {
   
   margin: 0;
   padding: 0;  
-
+  
   overflow-x: hidden;
+  transition: 0.3s ease-in;
 }
 
 h1, h2 {
