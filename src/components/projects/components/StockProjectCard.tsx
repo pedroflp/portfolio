@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { FaGithub, FaInfoCircle, FaNodeJs, FaReact } from 'react-icons/fa';
+import { FaGithub, FaNodeJs, FaReact } from 'react-icons/fa';
 import { FiPackage } from 'react-icons/fi';
 
 export default function StockProjectCard() {
@@ -52,9 +52,9 @@ export default function StockProjectCard() {
         <div className='line-divisor' />
 
         <div className='stockapp-buttons'>
-          <a href='https://stock.pedroflp.vercel.app' className="stockapp-button-openwebapp" target="_blank" rel="noopener noreferrer"><FiPackage size={22} />Acessar Dashboard</a>
+          {/* <a href='https://stock.pedroflp.vercel.app' className="stockapp-button-openwebapp" target="_blank" rel="noopener noreferrer"><FiPackage size={22} />Acessar Dashboard</a> */}
 
-          <FaInfoCircle
+          {/* <FaInfoCircle
             className="stockapp-buttons-popup-toggle"
             size={20}
             style={{
@@ -66,9 +66,9 @@ export default function StockProjectCard() {
             }}
             onMouseOver={handleHover}
             onMouseOut={handleUnhover}
-          />
+          /> */}
 
-          {isVisible && (
+          {/* {isVisible && (
             <div className='card-popup'>
               <div className='card-popup-arrow-left'></div>
               <p>Você pode acessar a dashboard utilizando a conta teste!</p>
@@ -76,7 +76,7 @@ export default function StockProjectCard() {
               <p><span>Login:</span> test</p>
               <p><span>Password:</span> test</p>
             </div>
-          )}
+          )} */}
           <div className='stockapp-github-buttons'>
             <a href='https://github.com/pedroflp/stock-app-web' target='_blank' rel="noopener noreferrer"><FaGithub size={22} /> StockApp Web</a>
             <a href='https://github.com/pedroflp/stock-app-api' target='_blank' rel="noopener noreferrer"><FaGithub size={22} /> StockApp API</a>

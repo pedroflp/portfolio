@@ -1,13 +1,13 @@
 import React from 'react';
 
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-import './style.css';
-import { FiGithub } from 'react-icons/fi';
-import { BsLink45Deg } from 'react-icons/bs';
 import { darken } from 'polished';
+import { BsLink45Deg } from 'react-icons/bs';
+import { FiGithub } from 'react-icons/fi';
 import { useTheme } from '../../styles/themes/ThemeContext';
+import './style.css';
 
 function ProjectCard() {
   const { defaultTheme } = useTheme()
@@ -15,33 +15,46 @@ function ProjectCard() {
   const iconColor = darken(0.1, defaultTheme.colors.text).replace('#', '')
 
   const projectList = [
+    // {
+    //   icon: `https://img.icons8.com/fluent-systems-regular/1000/${iconColor}/headphones.png`,
+    //   title: '🎧 Tieri Beats',
+    //   description: 'Plataforma de audio stream & loja de músicas digitais para um produtor.',
+    //   ghLink: 'https://github.com/pedroflp/tieri-beats',
+    //   brLink: 'https://tieribeats.herokuapp.com',
+    //   tecnologias: [
+    //     {
+    //       name: 'HTML',
+    //       imageUrl: 'https://img.icons8.com/material-sharp/100/6430d4/html-5.png',
+    //     },
+    //     {
+    //       name: 'CSS',
+    //       imageUrl: 'https://img.icons8.com/ios-filled/100/6430d4/css3.png',
+    //     },
+    //     {
+    //       name: 'Javascript',
+    //       imageUrl: 'https://img.icons8.com/ios-filled/100/6430d4/javascript.png',
+    //     },
+    //     {
+    //       name: 'jQuery',
+    //       imageUrl: 'https://img.icons8.com/ios-filled/100/6430d4/jquery.png',
+    //     },
+    //     {
+    //       name: 'Django',
+    //       imageUrl: 'https://img.icons8.com/windows/100/6430d4/django.png',
+    //     }
+    //   ],
+    // },
     {
-      icon: `https://img.icons8.com/fluent-systems-regular/1000/${iconColor}/headphones.png`,
-      title: '🎧 Tieri Beats',
-      description: 'Plataforma de audio stream & loja de músicas digitais para um produtor.',
-      ghLink: 'https://github.com/pedroflp/tieri-beats',
-      brLink: 'https://tieribeats.herokuapp.com',
+      icon: `https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/10000/${iconColor}/external-package-advertising-kiranshastry-lineal-kiranshastry.png`,
+      title: '🔍📦 TrackIt',
+      description: 'Site de busca e tracking de encomendas nacionais postadas pelos correios.',
+      ghLink: 'https://github.com/pedroflp/track.it',
+      brLink: 'https://tracking-it.vercel.app',
       tecnologias: [
         {
-          name: 'HTML',
-          imageUrl: 'https://img.icons8.com/material-sharp/100/6430d4/html-5.png',
+          name: 'ReactJS',
+          imageUrl: 'https://img.icons8.com/ios-filled/100/6430d4/react-native.png',
         },
-        {
-          name: 'CSS',
-          imageUrl: 'https://img.icons8.com/ios-filled/100/6430d4/css3.png',
-        },
-        {
-          name: 'Javascript',
-          imageUrl: 'https://img.icons8.com/ios-filled/100/6430d4/javascript.png',
-        },
-        {
-          name: 'jQuery',
-          imageUrl: 'https://img.icons8.com/ios-filled/100/6430d4/jquery.png',
-        },
-        {
-          name: 'Django',
-          imageUrl: 'https://img.icons8.com/windows/100/6430d4/django.png',
-        }
       ],
     },
     {
@@ -57,57 +70,44 @@ function ProjectCard() {
         },
       ],
     },
-    {
-      icon: `https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/10000/${iconColor}/external-package-advertising-kiranshastry-lineal-kiranshastry.png`,
-      title: '🔍📦 TrackIt',
-      description: 'Site de busca e tracking de encomendas nacionais postadas pelos correios.',
-      ghLink: 'https://github.com/pedroflp/track.it',
-      brLink: 'https://trackerit.vercel.app',
-      tecnologias: [
-        {
-          name: 'ReactJS',
-          imageUrl: 'https://img.icons8.com/ios-filled/100/6430d4/react-native.png',
-        },
-      ],
-    },
-    {
-      icon: `https://img.icons8.com/material-outlined/1000/${iconColor}/pen.png`,
-      title: '✒️ PORMAZION',
-      description: 'Loja criada para estúdio de design e artes visuais',
-      ghLink: 'https://github.com/pormazion/store',
-      brLink: 'https://pormazion.github.io/store',
-      tecnologias: [
-        {
-          name: 'HTML',
-          imageUrl: 'https://img.icons8.com/material-sharp/100/6430d4/html-5.png',
-        },
-        {
-          name: 'CSS',
-          imageUrl: 'https://img.icons8.com/ios-filled/100/6430d4/css3.png',
-        },
-        {
-          name: 'Javascript',
-          imageUrl: 'https://img.icons8.com/ios-filled/100/6430d4/javascript.png',
-        },
-      ],
-    },
-    {
-      icon: `https://img.icons8.com/material-outlined/1000/${iconColor}/t-shirt.png`,
-      title: '🎽 T-Shirt Store',
-      description: 'Site criado para estudar criação de Loja usando Next.js com integração da API de pagamento do Stripe.',
-      ghLink: 'https://github.com/pedroflp/trainee-projeto',
-      brLink: 'https://next-stripe-store.vercel.app',
-      tecnologias: [
-        {
-          name: 'ReactJS',
-          imageUrl: 'https://img.icons8.com/ios-filled/100/6430d4/react-native.png',
-        },
-        {
-          name: 'Typescript',
-          imageUrl: 'https://img.icons8.com/material-rounded/100/6430d4/typescript.png',
-        }
-      ],
-    },
+    // {
+    //   icon: `https://img.icons8.com/material-outlined/1000/${iconColor}/pen.png`,
+    //   title: '✒️ PORMAZION',
+    //   description: 'Loja criada para estúdio de design e artes visuais',
+    //   ghLink: 'https://github.com/pormazion/store',
+    //   brLink: 'https://pormazion.github.io/store',
+    //   tecnologias: [
+    //     {
+    //       name: 'HTML',
+    //       imageUrl: 'https://img.icons8.com/material-sharp/100/6430d4/html-5.png',
+    //     },
+    //     {
+    //       name: 'CSS',
+    //       imageUrl: 'https://img.icons8.com/ios-filled/100/6430d4/css3.png',
+    //     },
+    //     {
+    //       name: 'Javascript',
+    //       imageUrl: 'https://img.icons8.com/ios-filled/100/6430d4/javascript.png',
+    //     },
+    //   ],
+    // },
+    // {
+    //   icon: `https://img.icons8.com/material-outlined/1000/${iconColor}/t-shirt.png`,
+    //   title: '🎽 T-Shirt Store',
+    //   description: 'Site criado para estudar criação de Loja usando Next.js com integração da API de pagamento do Stripe.',
+    //   ghLink: 'https://github.com/pedroflp/trainee-projeto',
+    //   brLink: 'https://next-stripe-store.vercel.app',
+    //   tecnologias: [
+    //     {
+    //       name: 'ReactJS',
+    //       imageUrl: 'https://img.icons8.com/ios-filled/100/6430d4/react-native.png',
+    //     },
+    //     {
+    //       name: 'Typescript',
+    //       imageUrl: 'https://img.icons8.com/material-rounded/100/6430d4/typescript.png',
+    //     }
+    //   ],
+    // },
     // {
     //   icon: 'https://img.icons8.com/fluent-systems-regular/1000/${iconColor}/calculator.png',
     //   title: '➗ UFRN Calc',
