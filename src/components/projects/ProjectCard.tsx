@@ -49,7 +49,7 @@ function ProjectCard() {
       title: '🔍📦 TrackIt',
       description: 'Site de busca e tracking de encomendas nacionais postadas pelos correios.',
       ghLink: 'https://github.com/pedroflp/track.it',
-      brLink: 'https://tracking-it.vercel.app',
+      brLink: 'https://trackit.pedroflp.dev/',
       tecnologias: [
         {
           name: 'ReactJS',
