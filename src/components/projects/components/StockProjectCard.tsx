@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { FaGithub, FaNodeJs, FaReact } from 'react-icons/fa';
 import { FiPackage } from 'react-icons/fi';
 
 export default function StockProjectCard() {
-  const [isVisible, setIsVisible] = useState(false);
+  // const [isVisible, setIsVisible] = useState(false);
 
-  function handleHover() {
-    setIsVisible(true);
-  }
+  // function handleHover() {
+  //   setIsVisible(true);
+  // }
 
-  function handleUnhover() {
-    setIsVisible(false)
-  }
+  // function handleUnhover() {
+  //   setIsVisible(false)
+  // }
 
   return (
     <div className='stockapp-card'>
