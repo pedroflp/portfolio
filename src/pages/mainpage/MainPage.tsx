@@ -1,26 +1,25 @@
 import React from 'react';
-import ReactTooltip from 'react-tooltip';
 import { Link } from 'react-router-dom';
+import ReactTooltip from 'react-tooltip';
 
 // Icons
-import { FaInstagram, FaLinkedin, FaNodeJs } from 'react-icons/fa';
-import { AiFillHtml5, AiFillGithub, AiOutlinePlus } from 'react-icons/ai';
+import { AiFillGithub, AiFillHtml5, AiOutlinePlus } from 'react-icons/ai';
 import { DiCss3 } from 'react-icons/di';
-import { SiJavascript, SiReact, SiGmail, SiTypescript } from 'react-icons/si';
-import { FiMessageSquare } from 'react-icons/fi';
+import { FaLinkedin, FaNodeJs } from 'react-icons/fa';
+import { SiGmail, SiJavascript, SiReact, SiTypescript } from 'react-icons/si';
 
 // Components
-import Navbar from '../../components/navbar/Navbar';
 import Footer from '../../components/footer/Footer';
-import ProjectCard from '../../components/projects/ProjectCard';
 import { Header } from '../../components/header/Header';
+import Navbar from '../../components/navbar/Navbar';
 import StockProjectCard from '../../components/projects/components/StockProjectCard';
+import ProjectCard from '../../components/projects/ProjectCard';
 
 // Other
+import HabilitiesCard from '../../components/habilities/HabilitiesCard';
+import '../mainpage/style/contact.css';
 import '../mainpage/style/habilities.css';
 import '../mainpage/style/projects.css';
-import '../mainpage/style/contact.css';
-import HabilitiesCard from '../../components/habilities/HabilitiesCard';
 
 function MainPage() {
 
@@ -109,14 +108,14 @@ function MainPage() {
               <a className='linkedin-icon contact-card' href='https://www.linkedin.com/in/pedroflp' target='_blank' rel='noopener noreferrer'>
                 <FaLinkedin className='linkedin icon' size={50} />
               </a>
-              <a className='instagram-icon contact-card' href='https://instagram.com/_pedroflp' target='_blank' rel='noopener noreferrer'>
+              {/* <a className='instagram-icon contact-card' href='https://instagram.com/_pedroflp' target='_blank' rel='noopener noreferrer'>
                 <FaInstagram className='instagram icon' size={50} />
-              </a>
+              </a> */}
               <a className='email-icon contact-card' href='mailto: pedrofelipe0940@gmail.com' data-tip='pedrofelipe0940@gmail.com' target='_blank' rel='noopener noreferrer'>
                 <SiGmail className='email icon' size={50} />
               </a>
             </div>
-            <Link to='/direct-message' className="contact-card-dmbutton">Enviar mensagem <FiMessageSquare size={22} /></Link>
+            {/* <Link to='/direct-message' className="contact-card-dmbutton">Enviar mensagem <FiMessageSquare size={22} /></Link> */}
           </div>
 
           <div className='contact-title'>
