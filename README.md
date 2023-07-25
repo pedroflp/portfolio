@@ -9,4 +9,4 @@
 ![Typscript](https://img.shields.io/static/v1?label=Front-end&message=Typescript&color=3178C6&style=for-the-badge&logo=typescript)
 
 
-🚀 [Click here to acess the website](http://pedroflp.me)
+🚀 [Click here to acess the website](http://pedroflp.dev)
